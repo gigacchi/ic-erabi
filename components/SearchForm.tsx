@@ -95,11 +95,8 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
     setAddress(addr ?? label);
   }, []);
 
-  // 乗るIC: 選択中の道路でフィルタ、なければ最寄り30件
-  const filteredEntranceIcs = useMemo(() => {
-    const byRoad = nearbyIcs.filter((ic) => ic.roadId === selectedRoadId);
-    return byRoad.length > 0 ? byRoad : nearbyIcs.slice(0, 30);
-  }, [nearbyIcs, selectedRoadId]);
+  // 乗るIC: 高速に連動せず、最寄り順で表示
+  const filteredEntranceIcs = useMemo(() => nearbyIcs.slice(0, 30), [nearbyIcs]);
 
   // 降りるIC: 選択中の道路でフィルタ
   const filteredExitIcs = useMemo(
@@ -110,10 +107,9 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
   // 降りるICのインデックス（IDから逆引き）
   const exitIdx = Math.max(0, filteredExitIcs.findIndex((ic) => ic.id === exitIcId));
 
-  // 高速ボタン選択: 降りるICをデフォルトにセット
+  // 高速ボタン選択: 出口OUTのみ切り替え（入口INは変えない）
   const handleHighwaySelect = (roadId: string, defaultExitIcId: string) => {
     setSelectedRoadId(roadId);
-    setEntranceIdx(0);
     setExitIcId(defaultExitIcId);
   };
 
