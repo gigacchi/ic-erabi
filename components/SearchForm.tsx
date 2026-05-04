@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback, useMemo, useEffect } from 'react';
+import { useState, useCallback, useMemo } from 'react';
 import type { SearchCondition, Interchange } from '@/types';
 import interchangesData from '@/data/interchanges.json';
 import destinationAreasData from '@/data/destinationAreas.json';
@@ -16,20 +16,15 @@ const DEFAULT_ORIGIN = {
   address: '東京都新宿区西新宿',
 };
 
-const ROAD_LABELS: Record<string, string> = {
-  shuto: '首都高',
-  tomei: '東名',
-  shin_tomei: '新東名',
-  chuo: '中央道',
-  tohoku: '東北道',
-  kanetsu: '関越道',
-  hokuriku: '北陸道',
-  joban: '常磐道',
-  higashikanto: '東関東道',
-  kenodo: '圏央道',
-  gaikan: '外環道',
-  odawara_atsugi: '小田原厚木',
-};
+// 固定の高速ボタン（3路線のみ）
+const HIGHWAY_BUTTONS = [
+  { roadId: 'tohoku',    label: '東北道', defaultExitIcId: 'tohoku_sendai_miyagi' },
+  { roadId: 'hokuriku',  label: '北陸道', defaultExitIcId: 'hokuriku_sanjo_tsubame' },
+  { roadId: 'shin_tomei', label: '東名',  defaultExitIcId: 'shin_tomei_nagaizumi_numazu' },
+] as const;
+
+const DEFAULT_ROAD_ID = 'shin_tomei';
+const DEFAULT_EXIT_IC_ID = 'shin_tomei_nagaizumi_numazu';
 
 const allInterchanges = interchangesData as Interchange[];
 
@@ -39,7 +34,6 @@ const allExitIcs = exitIcIds
   .map((id) => allInterchanges.find((ic) => ic.id === id))
   .filter((ic): ic is Interchange => ic !== undefined);
 
-// デフォルト乗るIC
 const DEFAULT_ENTRANCE_IC_ID = 'gaikan_oizumi';
 
 function computeNearbyIcs(origin: { lat: number; lng: number }): NearbyIc[] {
@@ -47,8 +41,7 @@ function computeNearbyIcs(origin: { lat: number; lng: number }): NearbyIc[] {
     .filter((ic) => ic.entranceAvailable && ic.lat !== 0 && !exitIcIds.includes(ic.id))
     .map((ic) => ({
       ...ic,
-      distanceKm:
-        Math.round(calculateDistanceKm(origin, { lat: ic.lat, lng: ic.lng }) * 10) / 10,
+      distanceKm: Math.round(calculateDistanceKm(origin, { lat: ic.lat, lng: ic.lng }) * 10) / 10,
     }))
     .sort((a, b) => a.distanceKm - b.distanceKm);
 }
@@ -83,54 +76,48 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
   const [geoLoading, setGeoLoading] = useState(false);
   const [geoError, setGeoError] = useState<string | null>(null);
 
-  const [nearbyIcs, setNearbyIcs] = useState<NearbyIc[]>(() =>
-    computeNearbyIcs(DEFAULT_ORIGIN)
-  );
-  const [selectedRoadId, setSelectedRoadId] = useState<string | null>(null);
-  // 大泉ICをデフォルト選択
+  const [nearbyIcs, setNearbyIcs] = useState<NearbyIc[]>(() => computeNearbyIcs(DEFAULT_ORIGIN));
+  const [selectedRoadId, setSelectedRoadId] = useState<string>(DEFAULT_ROAD_ID);
+
   const [entranceIdx, setEntranceIdx] = useState(() => {
     const ics = computeNearbyIcs(DEFAULT_ORIGIN).slice(0, 30);
     const idx = ics.findIndex((ic) => ic.id === DEFAULT_ENTRANCE_IC_ID);
     return idx >= 0 ? idx : 0;
   });
-  const [exitIdx, setExitIdx] = useState(0);
+
+  // 降りるICはIDで管理（リストが変わっても正しいICを維持）
+  const [exitIcId, setExitIcId] = useState<string>(DEFAULT_EXIT_IC_ID);
 
   const applyNewOrigin = useCallback(async (lat: number, lng: number, label: string) => {
     setOrigin({ lat, lng, label, address: '' });
     const nearby = computeNearbyIcs({ lat, lng });
     setNearbyIcs(nearby);
     setEntranceIdx(0);
-    setSelectedRoadId(null);
     const addr = await reverseGeocode(lat, lng);
     setAddress(addr ?? label);
   }, []);
 
-  // 道路指定あり → その道路の全IC、なし → 最寄り30件
-  const filteredEntranceIcs = useMemo(
-    () =>
-      selectedRoadId
-        ? nearbyIcs.filter((ic) => ic.roadId === selectedRoadId)
-        : nearbyIcs.slice(0, 30),
-    [nearbyIcs, selectedRoadId]
+  // 乗るIC: 選択中の道路でフィルタ、なければ最寄り30件
+  const filteredEntranceIcs = useMemo(() => {
+    const byRoad = nearbyIcs.filter((ic) => ic.roadId === selectedRoadId);
+    return byRoad.length > 0 ? byRoad : nearbyIcs.slice(0, 30);
+  }, [nearbyIcs, selectedRoadId]);
+
+  // 降りるIC: 選択中の道路でフィルタ
+  const filteredExitIcs = useMemo(
+    () => allExitIcs.filter((ic) => ic.roadId === selectedRoadId),
+    [selectedRoadId]
   );
 
-  // 降りるICも「高速を指定」と連動: 東名/新東名のときだけ絞り込み
-  const filteredExitIcs = useMemo(() => {
-    if (selectedRoadId === 'tomei') return allExitIcs.filter((ic) => ic.roadId === 'tomei');
-    if (selectedRoadId === 'shin_tomei') return allExitIcs.filter((ic) => ic.roadId === 'shin_tomei');
-    return allExitIcs;
-  }, [selectedRoadId]);
+  // 降りるICのインデックス（IDから逆引き）
+  const exitIdx = Math.max(0, filteredExitIcs.findIndex((ic) => ic.id === exitIcId));
 
-  // 降りるICリストが変わったら exitIdx をリセット
-  useEffect(() => {
-    setExitIdx(0);
-  }, [filteredExitIcs]);
-
-  // 道路ボタンは最寄り30件から導出（現在地周辺の道路のみ表示）
-  const availableRoads = useMemo(() => {
-    const ids = [...new Set(nearbyIcs.slice(0, 30).map((ic) => ic.roadId))];
-    return ids.filter((id) => id in ROAD_LABELS);
-  }, [nearbyIcs]);
+  // 高速ボタン選択: 降りるICをデフォルトにセット
+  const handleHighwaySelect = (roadId: string, defaultExitIcId: string) => {
+    setSelectedRoadId(roadId);
+    setEntranceIdx(0);
+    setExitIcId(defaultExitIcId);
+  };
 
   const handleGetLocation = () => {
     if (!navigator.geolocation) {
@@ -170,25 +157,65 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
   const exit = filteredExitIcs[exitIdx];
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+    <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
       {/* 現在地 */}
       <div>
-        <label className="text-sm font-medium text-gray-700 block mb-1">現在地</label>
-        <div className="flex items-center gap-2">
-          <div className="flex-1 bg-gray-50 rounded-lg px-3 py-2 text-sm text-gray-800 border border-gray-200 truncate">
+        <div style={{ fontSize: 11, fontWeight: 600, color: '#6f6a5a', marginBottom: 6 }}>現在地</div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+          <div style={{
+            flex: 1, background: '#f7f5ed', borderRadius: 8,
+            padding: '8px 12px', fontSize: 13, color: '#1a1810',
+            border: '1px solid #d8d3c4', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
+          }}>
             {origin.label}
           </div>
           <button
             type="button"
             onClick={handleGetLocation}
             disabled={geoLoading}
-            className="px-3 py-2 text-sm bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors disabled:opacity-60 whitespace-nowrap flex-shrink-0"
+            style={{
+              padding: '8px 12px', fontSize: 12, fontWeight: 600,
+              background: '#fff', border: '1px solid #d8d3c4',
+              borderRadius: 8, cursor: geoLoading ? 'default' : 'pointer',
+              opacity: geoLoading ? 0.6 : 1, whiteSpace: 'nowrap', flexShrink: 0,
+              color: '#3a352a', fontFamily: 'inherit',
+            }}
           >
             {geoLoading ? '取得中…' : '📍 取得'}
           </button>
         </div>
-        <p className="text-xs text-gray-500 mt-1 px-1">{address}</p>
-        {geoError && <p className="text-xs text-red-500 mt-1">{geoError}</p>}
+        {geoError && <p style={{ fontSize: 11, color: '#c83232', margin: '4px 0 0' }}>{geoError}</p>}
+      </div>
+
+      {/* 高速を指定（固定3路線） */}
+      <div>
+        <div style={{ fontSize: 11, fontWeight: 600, color: '#6f6a5a', marginBottom: 6 }}>高速を指定</div>
+        <div style={{ display: 'flex', gap: 6 }}>
+          {HIGHWAY_BUTTONS.map(({ roadId, label, defaultExitIcId }) => {
+            const isSelected = selectedRoadId === roadId;
+            return (
+              <button
+                key={roadId}
+                type="button"
+                onClick={() => handleHighwaySelect(roadId, defaultExitIcId)}
+                style={{
+                  flex: 1,
+                  padding: '8px 4px',
+                  fontSize: 12, fontWeight: isSelected ? 700 : 500,
+                  borderRadius: 8,
+                  border: isSelected ? '1.5px solid #e89000' : '1px solid #d8d3c4',
+                  background: isSelected ? '#fff8e6' : '#fff',
+                  color: isSelected ? '#c87b00' : '#3a352a',
+                  cursor: 'pointer',
+                  fontFamily: 'inherit',
+                  transition: 'all 0.15s',
+                }}
+              >
+                {label}
+              </button>
+            );
+          })}
+        </div>
       </div>
 
       {/* 乗るIC */}
@@ -205,16 +232,16 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
           hasNext={entranceIdx < filteredEntranceIcs.length - 1}
         />
       ) : (
-        <p className="text-sm text-gray-400 text-center py-2">
+        <p style={{ fontSize: 13, color: '#9f9b8e', textAlign: 'center', padding: '4px 0' }}>
           付近に乗れるICが見つかりません
         </p>
       )}
 
       {/* 入れ替えボタン */}
-      <div style={{ display: 'flex', justifyContent: 'center', margin: '-4px 0' }}>
+      <div style={{ display: 'flex', justifyContent: 'center', margin: '-6px 0' }}>
         <button
           type="button"
-          onClick={() => { setEntranceIdx(0); setExitIdx(0); }}
+          onClick={() => { setEntranceIdx(0); setExitIcId(HIGHWAY_BUTTONS.find(h => h.roadId === selectedRoadId)?.defaultExitIcId ?? DEFAULT_EXIT_IC_ID); }}
           title="ICをリセット"
           style={{
             width: 32, height: 32, borderRadius: 999,
@@ -239,53 +266,29 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
           kind="to"
           icName={exit.name}
           icRoadName={exit.roadName}
-          onPrev={() => setExitIdx((i) => Math.max(0, i - 1))}
-          onNext={() => setExitIdx((i) => Math.min(filteredExitIcs.length - 1, i + 1))}
+          onPrev={() => setExitIcId(filteredExitIcs[Math.max(0, exitIdx - 1)].id)}
+          onNext={() => setExitIcId(filteredExitIcs[Math.min(filteredExitIcs.length - 1, exitIdx + 1)].id)}
           hasPrev={exitIdx > 0}
           hasNext={exitIdx < filteredExitIcs.length - 1}
         />
       ) : (
-        <p className="text-sm text-gray-400 text-center py-2">該当するICがありません</p>
-      )}
-
-      {/* 高速を指定 */}
-      {availableRoads.length > 1 && (
-        <div>
-          <label className="text-sm font-medium text-gray-700 block mb-1">高速を指定</label>
-          <div className="flex flex-wrap gap-1.5">
-            <button
-              type="button"
-              onClick={() => { setSelectedRoadId(null); setEntranceIdx(0); }}
-              className={`px-3 py-1.5 text-xs rounded-lg border transition-colors ${
-                selectedRoadId === null
-                  ? 'bg-blue-500 text-white border-blue-500'
-                  : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
-              }`}
-            >
-              すべて
-            </button>
-            {availableRoads.map((roadId) => (
-              <button
-                key={roadId}
-                type="button"
-                onClick={() => { setSelectedRoadId(roadId); setEntranceIdx(0); }}
-                className={`px-3 py-1.5 text-xs rounded-lg border transition-colors ${
-                  selectedRoadId === roadId
-                    ? 'bg-blue-500 text-white border-blue-500'
-                    : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
-                }`}
-              >
-                {ROAD_LABELS[roadId] ?? roadId}
-              </button>
-            ))}
-          </div>
-        </div>
+        <p style={{ fontSize: 13, color: '#9f9b8e', textAlign: 'center', padding: '4px 0' }}>
+          該当するICがありません
+        </p>
       )}
 
       <button
         type="submit"
         disabled={loading || !entrance || !exit}
-        className="w-full py-3 bg-blue-500 text-white font-semibold rounded-xl disabled:opacity-60 hover:bg-blue-600 transition-colors text-sm"
+        style={{
+          width: '100%', padding: '13px',
+          background: loading || !entrance || !exit ? '#bcb6a3' : '#1a1810',
+          color: '#f3efe2',
+          border: 'none', borderRadius: 10,
+          fontSize: 14, fontWeight: 700,
+          cursor: loading || !entrance || !exit ? 'default' : 'pointer',
+          fontFamily: 'inherit',
+        }}
       >
         {loading ? '計算中…' : '料金・時間を調べる'}
       </button>
