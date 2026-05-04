@@ -77,35 +77,30 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
   const [nearbyIcs, setNearbyIcs] = useState<NearbyIc[]>(() => computeNearbyIcs(DEFAULT_ORIGIN));
   const [selectedRoadId, setSelectedRoadId] = useState<string>(DEFAULT_ROAD_ID);
 
-  const [entranceIdx, setEntranceIdx] = useState(() => {
-    const ics = computeNearbyIcs(DEFAULT_ORIGIN).slice(0, 30);
-    const idx = ics.findIndex((ic) => ic.id === DEFAULT_ENTRANCE_IC_ID);
-    return idx >= 0 ? idx : 0;
-  });
-
-  // 降りるICはIDで管理（リストが変わっても正しいICを維持）
+  // 乗るIC・降りるICともにIDで管理（インデックスはリストから逆引き）
+  const [entranceIcId, setEntranceIcId] = useState<string>(DEFAULT_ENTRANCE_IC_ID);
   const [exitIcId, setExitIcId] = useState<string>(DEFAULT_EXIT_IC_ID);
 
   const applyNewOrigin = useCallback(async (lat: number, lng: number, label: string) => {
     setOrigin({ lat, lng, label, address: '' });
     const nearby = computeNearbyIcs({ lat, lng });
     setNearbyIcs(nearby);
-    setEntranceIdx(0);
+    // 現在地変更時は最寄りIC（index 0）にリセット
+    setEntranceIcId(nearby[0]?.id ?? DEFAULT_ENTRANCE_IC_ID);
     const addr = await reverseGeocode(lat, lng);
     setAddress(addr ?? label);
   }, []);
 
   // 乗るIC: 高速に連動せず、最寄り順で表示
-  const filteredEntranceIcs = useMemo(() => nearbyIcs.slice(0, 30), [nearbyIcs]);
+  const entranceIcs = useMemo(() => nearbyIcs.slice(0, 30), [nearbyIcs]);
+  const entranceIdx = Math.max(0, entranceIcs.findIndex((ic) => ic.id === entranceIcId));
 
   // 降りるIC: 選択中の道路でフィルタ
-  const filteredExitIcs = useMemo(
+  const exitIcs = useMemo(
     () => allExitIcs.filter((ic) => ic.roadId === selectedRoadId),
     [selectedRoadId]
   );
-
-  // 降りるICのインデックス（IDから逆引き）
-  const exitIdx = Math.max(0, filteredExitIcs.findIndex((ic) => ic.id === exitIcId));
+  const exitIdx = Math.max(0, exitIcs.findIndex((ic) => ic.id === exitIcId));
 
   // 高速ボタン選択: 出口OUTのみ切り替え（入口INは変えない）
   const handleHighwaySelect = (roadId: string, defaultExitIcId: string) => {
@@ -134,8 +129,8 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const entrance = filteredEntranceIcs[entranceIdx];
-    const exit = filteredExitIcs[exitIdx];
+    const entrance = entranceIcs[entranceIdx];
+    const exit = exitIcs[exitIdx];
     if (!entrance || !exit) return;
     onSearch({
       origin: { lat: origin.lat, lng: origin.lng, label: origin.label, address },
@@ -147,8 +142,8 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
     });
   };
 
-  const entrance = filteredEntranceIcs[entranceIdx];
-  const exit = filteredExitIcs[exitIdx];
+  const entrance = entranceIcs[entranceIdx];
+  const exit = exitIcs[exitIdx];
 
   return (
     <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
@@ -196,10 +191,10 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
           icName={entrance.name}
           icRoadName={entrance.roadName}
           info={`現在地から ${entrance.distanceKm.toFixed(1)} km`}
-          onPrev={() => setEntranceIdx((i) => Math.max(0, i - 1))}
-          onNext={() => setEntranceIdx((i) => Math.min(filteredEntranceIcs.length - 1, i + 1))}
+          onPrev={() => setEntranceIcId(entranceIcs[Math.max(0, entranceIdx - 1)].id)}
+          onNext={() => setEntranceIcId(entranceIcs[Math.min(entranceIcs.length - 1, entranceIdx + 1)].id)}
           hasPrev={entranceIdx > 0}
-          hasNext={entranceIdx < filteredEntranceIcs.length - 1}
+          hasNext={entranceIdx < entranceIcs.length - 1}
         />
       )}
 
@@ -207,7 +202,7 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
       <div style={{ display: 'flex', justifyContent: 'center', margin: '-6px 0' }}>
         <button
           type="button"
-          onClick={() => { setEntranceIdx(0); setExitIcId(HIGHWAY_BUTTONS.find(h => h.roadId === selectedRoadId)?.defaultExitIcId ?? DEFAULT_EXIT_IC_ID); }}
+          onClick={() => { setEntranceIcId(entranceIcs[0]?.id ?? DEFAULT_ENTRANCE_IC_ID); setExitIcId(HIGHWAY_BUTTONS.find(h => h.roadId === selectedRoadId)?.defaultExitIcId ?? DEFAULT_EXIT_IC_ID); }}
           title="ICをリセット"
           style={{
             width: 32, height: 32, borderRadius: 999,
@@ -232,10 +227,10 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
           kind="to"
           icName={exit.name}
           icRoadName={exit.roadName}
-          onPrev={() => setExitIcId(filteredExitIcs[Math.max(0, exitIdx - 1)].id)}
-          onNext={() => setExitIcId(filteredExitIcs[Math.min(filteredExitIcs.length - 1, exitIdx + 1)].id)}
+          onPrev={() => setExitIcId(exitIcs[Math.max(0, exitIdx - 1)].id)}
+          onNext={() => setExitIcId(exitIcs[Math.min(exitIcs.length - 1, exitIdx + 1)].id)}
           hasPrev={exitIdx > 0}
-          hasNext={exitIdx < filteredExitIcs.length - 1}
+          hasNext={exitIdx < exitIcs.length - 1}
         />
       )}
 
