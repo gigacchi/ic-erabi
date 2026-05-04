@@ -6,8 +6,13 @@ const LOGIN_PATH = '/login';
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // ログインページ・静的アセットはスルー
-  if (pathname === LOGIN_PATH || pathname.startsWith('/_next') || pathname.startsWith('/favicon')) {
+  // ログインページ・静的アセット・デバッグエンドポイントはスルー
+  if (
+    pathname === LOGIN_PATH ||
+    pathname.startsWith('/_next') ||
+    pathname.startsWith('/favicon') ||
+    pathname.startsWith('/api/auth/')
+  ) {
     return NextResponse.next();
   }
 
