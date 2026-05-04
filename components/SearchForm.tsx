@@ -18,21 +18,19 @@ const DEFAULT_ORIGIN = {
 
 // 固定の高速ボタン（3路線のみ）
 const HIGHWAY_BUTTONS = [
-  { roadId: 'tohoku',    label: '東北道', defaultExitIcId: 'tohoku_sendai_miyagi' },
+  { roadId: 'tohoku',    label: '東北道', defaultExitIcId: 'tohoku_izumi' },
   { roadId: 'hokuriku',  label: '北陸道', defaultExitIcId: 'hokuriku_sanjo_tsubame' },
   { roadId: 'shin_tomei', label: '東名',  defaultExitIcId: 'shin_tomei_nagaizumi_numazu' },
 ] as const;
 
-const DEFAULT_ROAD_ID = 'shin_tomei';
-const DEFAULT_EXIT_IC_ID = 'shin_tomei_nagaizumi_numazu';
+const DEFAULT_ROAD_ID = 'tohoku';
+const DEFAULT_EXIT_IC_ID = 'tohoku_izumi';
 
 const allInterchanges = interchangesData as Interchange[];
 
-// 降りるIC: destinationAreas に登録された全ユニークIC
+// 降りるIC: 全路線の exitAvailable な IC
 const exitIcIds = [...new Set(destinationAreasData.flatMap((a) => a.destinationIcIds))];
-const allExitIcs = exitIcIds
-  .map((id) => allInterchanges.find((ic) => ic.id === id))
-  .filter((ic): ic is Interchange => ic !== undefined);
+const allExitIcs = allInterchanges.filter((ic) => ic.exitAvailable);
 
 const DEFAULT_ENTRANCE_IC_ID = 'gaikan_oizumi';
 
@@ -162,12 +160,19 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
       <div>
         <div style={{ fontSize: 11, fontWeight: 600, color: '#6f6a5a', marginBottom: 6 }}>現在地</div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-          <div style={{
-            flex: 1, background: '#f7f5ed', borderRadius: 8,
-            padding: '8px 12px', fontSize: 13, color: '#1a1810',
-            border: '1px solid #d8d3c4', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
-          }}>
-            {origin.label}
+          <div style={{ flex: 1, minWidth: 0 }}>
+            <div style={{
+              background: '#f7f5ed', borderRadius: 8,
+              padding: '8px 12px', fontSize: 13, color: '#1a1810',
+              border: '1px solid #d8d3c4', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
+            }}>
+              {origin.label}
+            </div>
+            {address && address !== origin.label && (
+              <div style={{ fontSize: 11, color: '#6f6a5a', marginTop: 4, paddingLeft: 4 }}>
+                {address}
+              </div>
+            )}
           </div>
           <button
             type="button"
@@ -187,7 +192,58 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
         {geoError && <p style={{ fontSize: 11, color: '#c83232', margin: '4px 0 0' }}>{geoError}</p>}
       </div>
 
-      {/* 高速を指定（固定3路線） */}
+      {/* 乗るIC */}
+      {entrance && (
+        <IcPicker
+          label="乗るIC"
+          kind="from"
+          icName={entrance.name}
+          icRoadName={entrance.roadName}
+          info={`現在地から ${entrance.distanceKm.toFixed(1)} km`}
+          onPrev={() => setEntranceIdx((i) => Math.max(0, i - 1))}
+          onNext={() => setEntranceIdx((i) => Math.min(filteredEntranceIcs.length - 1, i + 1))}
+          hasPrev={entranceIdx > 0}
+          hasNext={entranceIdx < filteredEntranceIcs.length - 1}
+        />
+      )}
+
+      {/* 入れ替えボタン */}
+      <div style={{ display: 'flex', justifyContent: 'center', margin: '-6px 0' }}>
+        <button
+          type="button"
+          onClick={() => { setEntranceIdx(0); setExitIcId(HIGHWAY_BUTTONS.find(h => h.roadId === selectedRoadId)?.defaultExitIcId ?? DEFAULT_EXIT_IC_ID); }}
+          title="ICをリセット"
+          style={{
+            width: 32, height: 32, borderRadius: 999,
+            border: '1px solid #d8d3c4',
+            background: '#fff', color: '#3a352a',
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            padding: 0, cursor: 'pointer',
+            boxShadow: '0 2px 6px rgba(0,0,0,0.06)',
+          }}
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <path d="M7 3L3 7L7 11M3 7H17C19.2 7 21 8.8 21 11V13M17 21L21 17L17 13M21 17H7C4.8 17 3 15.2 3 13V11"
+              stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </button>
+      </div>
+
+      {/* 降りるIC */}
+      {exit && (
+        <IcPicker
+          label="降りるIC"
+          kind="to"
+          icName={exit.name}
+          icRoadName={exit.roadName}
+          onPrev={() => setExitIcId(filteredExitIcs[Math.max(0, exitIdx - 1)].id)}
+          onNext={() => setExitIcId(filteredExitIcs[Math.min(filteredExitIcs.length - 1, exitIdx + 1)].id)}
+          hasPrev={exitIdx > 0}
+          hasNext={exitIdx < filteredExitIcs.length - 1}
+        />
+      )}
+
+      {/* 高速を指定（固定3路線）— 出口OUTの下 */}
       <div>
         <div style={{ fontSize: 11, fontWeight: 600, color: '#6f6a5a', marginBottom: 6 }}>高速を指定</div>
         <div style={{ display: 'flex', gap: 6 }}>
@@ -217,65 +273,6 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
           })}
         </div>
       </div>
-
-      {/* 乗るIC */}
-      {entrance ? (
-        <IcPicker
-          label="乗るIC"
-          kind="from"
-          icName={entrance.name}
-          icRoadName={entrance.roadName}
-          info={`現在地から ${entrance.distanceKm.toFixed(1)} km`}
-          onPrev={() => setEntranceIdx((i) => Math.max(0, i - 1))}
-          onNext={() => setEntranceIdx((i) => Math.min(filteredEntranceIcs.length - 1, i + 1))}
-          hasPrev={entranceIdx > 0}
-          hasNext={entranceIdx < filteredEntranceIcs.length - 1}
-        />
-      ) : (
-        <p style={{ fontSize: 13, color: '#9f9b8e', textAlign: 'center', padding: '4px 0' }}>
-          付近に乗れるICが見つかりません
-        </p>
-      )}
-
-      {/* 入れ替えボタン */}
-      <div style={{ display: 'flex', justifyContent: 'center', margin: '-6px 0' }}>
-        <button
-          type="button"
-          onClick={() => { setEntranceIdx(0); setExitIcId(HIGHWAY_BUTTONS.find(h => h.roadId === selectedRoadId)?.defaultExitIcId ?? DEFAULT_EXIT_IC_ID); }}
-          title="ICをリセット"
-          style={{
-            width: 32, height: 32, borderRadius: 999,
-            border: '1px solid #d8d3c4',
-            background: '#fff', color: '#3a352a',
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
-            padding: 0, cursor: 'pointer',
-            boxShadow: '0 2px 6px rgba(0,0,0,0.06)',
-          }}
-        >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-            <path d="M7 3L3 7L7 11M3 7H17C19.2 7 21 8.8 21 11V13M17 21L21 17L17 13M21 17H7C4.8 17 3 15.2 3 13V11"
-              stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </button>
-      </div>
-
-      {/* 降りるIC */}
-      {exit ? (
-        <IcPicker
-          label="降りるIC"
-          kind="to"
-          icName={exit.name}
-          icRoadName={exit.roadName}
-          onPrev={() => setExitIcId(filteredExitIcs[Math.max(0, exitIdx - 1)].id)}
-          onNext={() => setExitIcId(filteredExitIcs[Math.min(filteredExitIcs.length - 1, exitIdx + 1)].id)}
-          hasPrev={exitIdx > 0}
-          hasNext={exitIdx < filteredExitIcs.length - 1}
-        />
-      ) : (
-        <p style={{ fontSize: 13, color: '#9f9b8e', textAlign: 'center', padding: '4px 0' }}>
-          該当するICがありません
-        </p>
-      )}
 
       <button
         type="submit"
