@@ -1,0 +1,26 @@
+[
+  {
+    "id": "shizuoka_city_center",
+    "name": "静岡市中心部",
+    "description": "静岡駅、駿河区、市街地方面",
+    "destinationIcIds": ["tomei_shizuoka", "shin_tomei_shin_shizuoka"]
+  },
+  {
+    "id": "shimizu_area",
+    "name": "清水区・清水港",
+    "description": "清水港、三保、清水区方面",
+    "destinationIcIds": ["tomei_shimizu", "shin_tomei_shin_shimizu"]
+  },
+  {
+    "id": "nihondaira_kunozan",
+    "name": "日本平・久能山",
+    "description": "日本平、久能山東照宮方面",
+    "destinationIcIds": ["tomei_nihondaira_kunozan_smart", "tomei_shizuoka", "tomei_shimizu"]
+  },
+  {
+    "id": "shizuoka_north",
+    "name": "静岡市北部",
+    "description": "葵区北側、新東名方面",
+    "destinationIcIds": ["shin_tomei_shin_shizuoka", "shin_tomei_shizuoka_sa_smart"]
+  }
+]

@@ -1,0 +1,8210 @@
+[
+  {
+    "fromIcId": "tomei_tokyo",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4300,
+    "distanceKm": 160.9,
+    "durationMinutes": 115
+  },
+  {
+    "fromIcId": "tomei_tokyo",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5680,
+    "distanceKm": 153.6,
+    "durationMinutes": 106
+  },
+  {
+    "fromIcId": "tomei_tokyo",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5420,
+    "distanceKm": 146.2,
+    "durationMinutes": 104
+  },
+  {
+    "fromIcId": "tomei_tokyo",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5140,
+    "distanceKm": 138.2,
+    "durationMinutes": 99
+  },
+  {
+    "fromIcId": "tomei_tokyo",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5820,
+    "distanceKm": 157.8,
+    "durationMinutes": 114
+  },
+  {
+    "fromIcId": "tomei_tokyo",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6110,
+    "distanceKm": 165.9,
+    "durationMinutes": 116
+  },
+  {
+    "fromIcId": "tomei_kawasaki",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5720,
+    "distanceKm": 154.9,
+    "durationMinutes": 111
+  },
+  {
+    "fromIcId": "tomei_kawasaki",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5470,
+    "distanceKm": 147.6,
+    "durationMinutes": 101
+  },
+  {
+    "fromIcId": "tomei_kawasaki",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5210,
+    "distanceKm": 140.2,
+    "durationMinutes": 100
+  },
+  {
+    "fromIcId": "tomei_kawasaki",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4930,
+    "distanceKm": 132.3,
+    "durationMinutes": 95
+  },
+  {
+    "fromIcId": "tomei_kawasaki",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5620,
+    "distanceKm": 151.9,
+    "durationMinutes": 109
+  },
+  {
+    "fromIcId": "tomei_kawasaki",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5900,
+    "distanceKm": 159.9,
+    "durationMinutes": 111
+  },
+  {
+    "fromIcId": "tomei_yokohama_aoba",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5950,
+    "distanceKm": 161.5,
+    "durationMinutes": 117
+  },
+  {
+    "fromIcId": "tomei_yokohama_aoba",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5700,
+    "distanceKm": 154.2,
+    "durationMinutes": 108
+  },
+  {
+    "fromIcId": "tomei_yokohama_aoba",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5440,
+    "distanceKm": 146.8,
+    "durationMinutes": 106
+  },
+  {
+    "fromIcId": "tomei_yokohama_aoba",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5160,
+    "distanceKm": 138.9,
+    "durationMinutes": 101
+  },
+  {
+    "fromIcId": "tomei_yokohama_aoba",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5850,
+    "distanceKm": 158.5,
+    "durationMinutes": 115
+  },
+  {
+    "fromIcId": "tomei_yokohama_aoba",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6130,
+    "distanceKm": 166.5,
+    "durationMinutes": 117
+  },
+  {
+    "fromIcId": "tomei_yokohama_machida",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5300,
+    "distanceKm": 142.8,
+    "durationMinutes": 102
+  },
+  {
+    "fromIcId": "tomei_yokohama_machida",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5040,
+    "distanceKm": 135.5,
+    "durationMinutes": 93
+  },
+  {
+    "fromIcId": "tomei_yokohama_machida",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4780,
+    "distanceKm": 128.1,
+    "durationMinutes": 91
+  },
+  {
+    "fromIcId": "tomei_yokohama_machida",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4500,
+    "distanceKm": 120.1,
+    "durationMinutes": 86
+  },
+  {
+    "fromIcId": "tomei_yokohama_machida",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5190,
+    "distanceKm": 139.7,
+    "durationMinutes": 100
+  },
+  {
+    "fromIcId": "tomei_yokohama_machida",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5470,
+    "distanceKm": 147.7,
+    "durationMinutes": 103
+  },
+  {
+    "fromIcId": "tomei_atsugi",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4910,
+    "distanceKm": 131.8,
+    "durationMinutes": 95
+  },
+  {
+    "fromIcId": "tomei_atsugi",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4660,
+    "distanceKm": 124.5,
+    "durationMinutes": 85
+  },
+  {
+    "fromIcId": "tomei_atsugi",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4400,
+    "distanceKm": 117.1,
+    "durationMinutes": 84
+  },
+  {
+    "fromIcId": "tomei_atsugi",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4120,
+    "distanceKm": 109.1,
+    "durationMinutes": 79
+  },
+  {
+    "fromIcId": "tomei_atsugi",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4800,
+    "distanceKm": 128.7,
+    "durationMinutes": 93
+  },
+  {
+    "fromIcId": "tomei_atsugi",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5090,
+    "distanceKm": 136.8,
+    "durationMinutes": 95
+  },
+  {
+    "fromIcId": "tomei_hadano_nakai",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5430,
+    "distanceKm": 146.7,
+    "durationMinutes": 105
+  },
+  {
+    "fromIcId": "tomei_hadano_nakai",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5180,
+    "distanceKm": 139.4,
+    "durationMinutes": 96
+  },
+  {
+    "fromIcId": "tomei_hadano_nakai",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4920,
+    "distanceKm": 132,
+    "durationMinutes": 94
+  },
+  {
+    "fromIcId": "tomei_hadano_nakai",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4640,
+    "distanceKm": 124,
+    "durationMinutes": 89
+  },
+  {
+    "fromIcId": "tomei_hadano_nakai",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5330,
+    "distanceKm": 143.6,
+    "durationMinutes": 104
+  },
+  {
+    "fromIcId": "tomei_hadano_nakai",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5610,
+    "distanceKm": 151.7,
+    "durationMinutes": 106
+  },
+  {
+    "fromIcId": "tomei_oiwa_matsuda",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3960,
+    "distanceKm": 104.6,
+    "durationMinutes": 75
+  },
+  {
+    "fromIcId": "tomei_oiwa_matsuda",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3710,
+    "distanceKm": 97.3,
+    "durationMinutes": 65
+  },
+  {
+    "fromIcId": "tomei_oiwa_matsuda",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3450,
+    "distanceKm": 89.9,
+    "durationMinutes": 63
+  },
+  {
+    "fromIcId": "tomei_oiwa_matsuda",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3170,
+    "distanceKm": 81.9,
+    "durationMinutes": 59
+  },
+  {
+    "fromIcId": "tomei_oiwa_matsuda",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3850,
+    "distanceKm": 101.5,
+    "durationMinutes": 73
+  },
+  {
+    "fromIcId": "tomei_oiwa_matsuda",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4140,
+    "distanceKm": 109.6,
+    "durationMinutes": 75
+  },
+  {
+    "fromIcId": "tomei_gotemba",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3300,
+    "distanceKm": 85.8,
+    "durationMinutes": 66
+  },
+  {
+    "fromIcId": "tomei_gotemba",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3050,
+    "distanceKm": 78.5,
+    "durationMinutes": 56
+  },
+  {
+    "fromIcId": "tomei_gotemba",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 2790,
+    "distanceKm": 71.1,
+    "durationMinutes": 54
+  },
+  {
+    "fromIcId": "tomei_gotemba",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 2510,
+    "distanceKm": 63.2,
+    "durationMinutes": 50
+  },
+  {
+    "fromIcId": "tomei_gotemba",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3200,
+    "distanceKm": 82.8,
+    "durationMinutes": 64
+  },
+  {
+    "fromIcId": "tomei_gotemba",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3480,
+    "distanceKm": 90.8,
+    "durationMinutes": 66
+  },
+  {
+    "fromIcId": "tomei_susono",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 2010,
+    "distanceKm": 68.8,
+    "durationMinutes": 49
+  },
+  {
+    "fromIcId": "tomei_susono",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 2560,
+    "distanceKm": 64.6,
+    "durationMinutes": 45
+  },
+  {
+    "fromIcId": "tomei_susono",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 2190,
+    "distanceKm": 54.1,
+    "durationMinutes": 38
+  },
+  {
+    "fromIcId": "tomei_susono",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 2020,
+    "distanceKm": 49.2,
+    "durationMinutes": 38
+  },
+  {
+    "fromIcId": "tomei_susono",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 2600,
+    "distanceKm": 65.7,
+    "durationMinutes": 48
+  },
+  {
+    "fromIcId": "tomei_susono",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 2990,
+    "distanceKm": 76.9,
+    "durationMinutes": 55
+  },
+  {
+    "fromIcId": "tomei_numazu",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3040,
+    "distanceKm": 78.4,
+    "durationMinutes": 58
+  },
+  {
+    "fromIcId": "tomei_numazu",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 2900,
+    "distanceKm": 74.2,
+    "durationMinutes": 53
+  },
+  {
+    "fromIcId": "tomei_numazu",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 2530,
+    "distanceKm": 63.7,
+    "durationMinutes": 47
+  },
+  {
+    "fromIcId": "tomei_numazu",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 2360,
+    "distanceKm": 58.8,
+    "durationMinutes": 47
+  },
+  {
+    "fromIcId": "tomei_numazu",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 2940,
+    "distanceKm": 75.4,
+    "durationMinutes": 56
+  },
+  {
+    "fromIcId": "tomei_numazu",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3330,
+    "distanceKm": 86.5,
+    "durationMinutes": 63
+  },
+  {
+    "fromIcId": "tomei_fuji",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 2860,
+    "distanceKm": 73,
+    "durationMinutes": 54
+  },
+  {
+    "fromIcId": "tomei_fuji",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 2930,
+    "distanceKm": 75.1,
+    "durationMinutes": 51
+  },
+  {
+    "fromIcId": "tomei_fuji",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 2340,
+    "distanceKm": 58.3,
+    "durationMinutes": 43
+  },
+  {
+    "fromIcId": "tomei_fuji",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 2390,
+    "distanceKm": 59.7,
+    "durationMinutes": 44
+  },
+  {
+    "fromIcId": "tomei_fuji",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 2750,
+    "distanceKm": 70,
+    "durationMinutes": 53
+  },
+  {
+    "fromIcId": "tomei_fuji",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3360,
+    "distanceKm": 87.4,
+    "durationMinutes": 61
+  },
+  {
+    "fromIcId": "shin_tomei_atsugi_minami",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4730,
+    "distanceKm": 126.6,
+    "durationMinutes": 91
+  },
+  {
+    "fromIcId": "shin_tomei_atsugi_minami",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4480,
+    "distanceKm": 119.4,
+    "durationMinutes": 81
+  },
+  {
+    "fromIcId": "shin_tomei_atsugi_minami",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4220,
+    "distanceKm": 111.9,
+    "durationMinutes": 79
+  },
+  {
+    "fromIcId": "shin_tomei_atsugi_minami",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3940,
+    "distanceKm": 104,
+    "durationMinutes": 75
+  },
+  {
+    "fromIcId": "shin_tomei_atsugi_minami",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4630,
+    "distanceKm": 123.6,
+    "durationMinutes": 89
+  },
+  {
+    "fromIcId": "shin_tomei_atsugi_minami",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4910,
+    "distanceKm": 131.6,
+    "durationMinutes": 91
+  },
+  {
+    "fromIcId": "shin_tomei_isehara_oyama",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4710,
+    "distanceKm": 126,
+    "durationMinutes": 95
+  },
+  {
+    "fromIcId": "shin_tomei_isehara_oyama",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4450,
+    "distanceKm": 118.7,
+    "durationMinutes": 86
+  },
+  {
+    "fromIcId": "shin_tomei_isehara_oyama",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4200,
+    "distanceKm": 111.3,
+    "durationMinutes": 84
+  },
+  {
+    "fromIcId": "shin_tomei_isehara_oyama",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3920,
+    "distanceKm": 103.4,
+    "durationMinutes": 79
+  },
+  {
+    "fromIcId": "shin_tomei_isehara_oyama",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4610,
+    "distanceKm": 123,
+    "durationMinutes": 93
+  },
+  {
+    "fromIcId": "shin_tomei_isehara_oyama",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4890,
+    "distanceKm": 131,
+    "durationMinutes": 96
+  },
+  {
+    "fromIcId": "shin_tomei_hadano_tanzawa",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4350,
+    "distanceKm": 115.7,
+    "durationMinutes": 88
+  },
+  {
+    "fromIcId": "shin_tomei_hadano_tanzawa",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4090,
+    "distanceKm": 108.4,
+    "durationMinutes": 78
+  },
+  {
+    "fromIcId": "shin_tomei_hadano_tanzawa",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3840,
+    "distanceKm": 101,
+    "durationMinutes": 76
+  },
+  {
+    "fromIcId": "shin_tomei_hadano_tanzawa",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3560,
+    "distanceKm": 93,
+    "durationMinutes": 72
+  },
+  {
+    "fromIcId": "shin_tomei_hadano_tanzawa",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4240,
+    "distanceKm": 112.6,
+    "durationMinutes": 86
+  },
+  {
+    "fromIcId": "shin_tomei_hadano_tanzawa",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4520,
+    "distanceKm": 120.7,
+    "durationMinutes": 88
+  },
+  {
+    "fromIcId": "shin_tomei_shin_gotemba",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 2350,
+    "distanceKm": 82.1,
+    "durationMinutes": 59
+  },
+  {
+    "fromIcId": "shin_tomei_shin_gotemba",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 2920,
+    "distanceKm": 74.8,
+    "durationMinutes": 49
+  },
+  {
+    "fromIcId": "shin_tomei_shin_gotemba",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 2660,
+    "distanceKm": 67.4,
+    "durationMinutes": 48
+  },
+  {
+    "fromIcId": "shin_tomei_shin_gotemba",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 2380,
+    "distanceKm": 59.4,
+    "durationMinutes": 43
+  },
+  {
+    "fromIcId": "shin_tomei_shin_gotemba",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3070,
+    "distanceKm": 79,
+    "durationMinutes": 57
+  },
+  {
+    "fromIcId": "shin_tomei_shin_gotemba",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3350,
+    "distanceKm": 87.1,
+    "durationMinutes": 59
+  },
+  {
+    "fromIcId": "shin_tomei_nagaizumi_numazu",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3040,
+    "distanceKm": 78.4,
+    "durationMinutes": 58
+  },
+  {
+    "fromIcId": "shin_tomei_nagaizumi_numazu",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 2900,
+    "distanceKm": 74.2,
+    "durationMinutes": 53
+  },
+  {
+    "fromIcId": "shin_tomei_nagaizumi_numazu",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 2530,
+    "distanceKm": 63.7,
+    "durationMinutes": 47
+  },
+  {
+    "fromIcId": "shin_tomei_nagaizumi_numazu",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 2360,
+    "distanceKm": 58.8,
+    "durationMinutes": 47
+  },
+  {
+    "fromIcId": "shin_tomei_nagaizumi_numazu",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 2940,
+    "distanceKm": 75.4,
+    "durationMinutes": 56
+  },
+  {
+    "fromIcId": "shin_tomei_nagaizumi_numazu",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3330,
+    "distanceKm": 86.5,
+    "durationMinutes": 63
+  },
+  {
+    "fromIcId": "shin_tomei_shin_fuji",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 1880,
+    "distanceKm": 45,
+    "durationMinutes": 31
+  },
+  {
+    "fromIcId": "shin_tomei_shin_fuji",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 1480,
+    "distanceKm": 33.8,
+    "durationMinutes": 21
+  },
+  {
+    "fromIcId": "shin_tomei_shin_fuji",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 1360,
+    "distanceKm": 30.3,
+    "durationMinutes": 20
+  },
+  {
+    "fromIcId": "shin_tomei_shin_fuji",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 940,
+    "distanceKm": 18.4,
+    "durationMinutes": 15
+  },
+  {
+    "fromIcId": "shin_tomei_shin_fuji",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 1770,
+    "distanceKm": 42,
+    "durationMinutes": 29
+  },
+  {
+    "fromIcId": "shin_tomei_shin_fuji",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 1910,
+    "distanceKm": 46.1,
+    "durationMinutes": 31
+  },
+  {
+    "fromIcId": "shin_tomei_shimizu_ihara",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 960,
+    "distanceKm": 18.9,
+    "durationMinutes": 14
+  },
+  {
+    "fromIcId": "shin_tomei_shimizu_ihara",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 990,
+    "distanceKm": 19.7,
+    "durationMinutes": 15
+  },
+  {
+    "fromIcId": "shin_tomei_shimizu_ihara",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 450,
+    "distanceKm": 4.2,
+    "durationMinutes": 3
+  },
+  {
+    "fromIcId": "shin_tomei_shimizu_ihara",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 1130,
+    "distanceKm": 23.7,
+    "durationMinutes": 21
+  },
+  {
+    "fromIcId": "shin_tomei_shimizu_ihara",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 860,
+    "distanceKm": 15.9,
+    "durationMinutes": 13
+  },
+  {
+    "fromIcId": "shin_tomei_shimizu_ihara",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 1420,
+    "distanceKm": 32,
+    "durationMinutes": 25
+  },
+  {
+    "fromIcId": "tohoku_kawaguchi",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7340,
+    "distanceKm": 201.2,
+    "durationMinutes": 156
+  },
+  {
+    "fromIcId": "tohoku_kawaguchi",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7090,
+    "distanceKm": 193.9,
+    "durationMinutes": 146
+  },
+  {
+    "fromIcId": "tohoku_kawaguchi",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6830,
+    "distanceKm": 186.5,
+    "durationMinutes": 145
+  },
+  {
+    "fromIcId": "tohoku_kawaguchi",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6550,
+    "distanceKm": 178.5,
+    "durationMinutes": 140
+  },
+  {
+    "fromIcId": "tohoku_kawaguchi",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7230,
+    "distanceKm": 198.1,
+    "durationMinutes": 154
+  },
+  {
+    "fromIcId": "tohoku_kawaguchi",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7520,
+    "distanceKm": 206.2,
+    "durationMinutes": 156
+  },
+  {
+    "fromIcId": "tohoku_urawa",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6000,
+    "distanceKm": 204.2,
+    "durationMinutes": 160
+  },
+  {
+    "fromIcId": "tohoku_urawa",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7190,
+    "distanceKm": 196.9,
+    "durationMinutes": 151
+  },
+  {
+    "fromIcId": "tohoku_urawa",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6930,
+    "distanceKm": 189.5,
+    "durationMinutes": 149
+  },
+  {
+    "fromIcId": "tohoku_urawa",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6660,
+    "distanceKm": 181.6,
+    "durationMinutes": 144
+  },
+  {
+    "fromIcId": "tohoku_urawa",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7340,
+    "distanceKm": 201.2,
+    "durationMinutes": 159
+  },
+  {
+    "fromIcId": "tohoku_urawa",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7620,
+    "distanceKm": 209.2,
+    "durationMinutes": 161
+  },
+  {
+    "fromIcId": "tohoku_iwatsuki",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7660,
+    "distanceKm": 210.4,
+    "durationMinutes": 162
+  },
+  {
+    "fromIcId": "tohoku_iwatsuki",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7410,
+    "distanceKm": 203.2,
+    "durationMinutes": 153
+  },
+  {
+    "fromIcId": "tohoku_iwatsuki",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7150,
+    "distanceKm": 195.7,
+    "durationMinutes": 151
+  },
+  {
+    "fromIcId": "tohoku_iwatsuki",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6870,
+    "distanceKm": 187.8,
+    "durationMinutes": 146
+  },
+  {
+    "fromIcId": "tohoku_iwatsuki",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7560,
+    "distanceKm": 207.4,
+    "durationMinutes": 161
+  },
+  {
+    "fromIcId": "tohoku_iwatsuki",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7840,
+    "distanceKm": 215.4,
+    "durationMinutes": 163
+  },
+  {
+    "fromIcId": "tohoku_kuki",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8840,
+    "distanceKm": 244.1,
+    "durationMinutes": 184
+  },
+  {
+    "fromIcId": "tohoku_kuki",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8590,
+    "distanceKm": 236.8,
+    "durationMinutes": 174
+  },
+  {
+    "fromIcId": "tohoku_kuki",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8330,
+    "distanceKm": 229.4,
+    "durationMinutes": 173
+  },
+  {
+    "fromIcId": "tohoku_kuki",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8050,
+    "distanceKm": 221.4,
+    "durationMinutes": 168
+  },
+  {
+    "fromIcId": "tohoku_kuki",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8740,
+    "distanceKm": 241,
+    "durationMinutes": 182
+  },
+  {
+    "fromIcId": "tohoku_kuki",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9020,
+    "distanceKm": 249.1,
+    "durationMinutes": 184
+  },
+  {
+    "fromIcId": "tohoku_kazo",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9040,
+    "distanceKm": 249.6,
+    "durationMinutes": 190
+  },
+  {
+    "fromIcId": "tohoku_kazo",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8780,
+    "distanceKm": 242.3,
+    "durationMinutes": 180
+  },
+  {
+    "fromIcId": "tohoku_kazo",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8520,
+    "distanceKm": 234.9,
+    "durationMinutes": 179
+  },
+  {
+    "fromIcId": "tohoku_kazo",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8240,
+    "distanceKm": 226.9,
+    "durationMinutes": 174
+  },
+  {
+    "fromIcId": "tohoku_kazo",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8930,
+    "distanceKm": 246.6,
+    "durationMinutes": 188
+  },
+  {
+    "fromIcId": "tohoku_kazo",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9210,
+    "distanceKm": 254.6,
+    "durationMinutes": 190
+  },
+  {
+    "fromIcId": "tohoku_hanyu",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8740,
+    "distanceKm": 241,
+    "durationMinutes": 180
+  },
+  {
+    "fromIcId": "tohoku_hanyu",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8480,
+    "distanceKm": 233.7,
+    "durationMinutes": 170
+  },
+  {
+    "fromIcId": "tohoku_hanyu",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8220,
+    "distanceKm": 226.3,
+    "durationMinutes": 169
+  },
+  {
+    "fromIcId": "tohoku_hanyu",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7940,
+    "distanceKm": 218.3,
+    "durationMinutes": 164
+  },
+  {
+    "fromIcId": "tohoku_hanyu",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8630,
+    "distanceKm": 237.9,
+    "durationMinutes": 178
+  },
+  {
+    "fromIcId": "tohoku_hanyu",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8910,
+    "distanceKm": 246,
+    "durationMinutes": 180
+  },
+  {
+    "fromIcId": "tohoku_tatebayashi",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8970,
+    "distanceKm": 247.6,
+    "durationMinutes": 184
+  },
+  {
+    "fromIcId": "tohoku_tatebayashi",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8710,
+    "distanceKm": 240.4,
+    "durationMinutes": 175
+  },
+  {
+    "fromIcId": "tohoku_tatebayashi",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8450,
+    "distanceKm": 232.9,
+    "durationMinutes": 173
+  },
+  {
+    "fromIcId": "tohoku_tatebayashi",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8180,
+    "distanceKm": 225,
+    "durationMinutes": 168
+  },
+  {
+    "fromIcId": "tohoku_tatebayashi",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8860,
+    "distanceKm": 244.6,
+    "durationMinutes": 182
+  },
+  {
+    "fromIcId": "tohoku_tatebayashi",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9140,
+    "distanceKm": 252.6,
+    "durationMinutes": 185
+  },
+  {
+    "fromIcId": "tohoku_sano_fujioka",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9390,
+    "distanceKm": 259.8,
+    "durationMinutes": 195
+  },
+  {
+    "fromIcId": "tohoku_sano_fujioka",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9140,
+    "distanceKm": 252.5,
+    "durationMinutes": 186
+  },
+  {
+    "fromIcId": "tohoku_sano_fujioka",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8880,
+    "distanceKm": 245.1,
+    "durationMinutes": 184
+  },
+  {
+    "fromIcId": "tohoku_sano_fujioka",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8600,
+    "distanceKm": 237.1,
+    "durationMinutes": 179
+  },
+  {
+    "fromIcId": "tohoku_sano_fujioka",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9280,
+    "distanceKm": 256.7,
+    "durationMinutes": 193
+  },
+  {
+    "fromIcId": "tohoku_sano_fujioka",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9570,
+    "distanceKm": 264.8,
+    "durationMinutes": 196
+  },
+  {
+    "fromIcId": "tohoku_sano_sa_smart",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9410,
+    "distanceKm": 260.3,
+    "durationMinutes": 197
+  },
+  {
+    "fromIcId": "tohoku_sano_sa_smart",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9160,
+    "distanceKm": 253.1,
+    "durationMinutes": 187
+  },
+  {
+    "fromIcId": "tohoku_sano_sa_smart",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8900,
+    "distanceKm": 245.6,
+    "durationMinutes": 185
+  },
+  {
+    "fromIcId": "tohoku_sano_sa_smart",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8620,
+    "distanceKm": 237.7,
+    "durationMinutes": 181
+  },
+  {
+    "fromIcId": "tohoku_sano_sa_smart",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9310,
+    "distanceKm": 257.3,
+    "durationMinutes": 195
+  },
+  {
+    "fromIcId": "tohoku_sano_sa_smart",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9590,
+    "distanceKm": 265.3,
+    "durationMinutes": 197
+  },
+  {
+    "fromIcId": "tohoku_tochigi",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9900,
+    "distanceKm": 274.3,
+    "durationMinutes": 202
+  },
+  {
+    "fromIcId": "tohoku_tochigi",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9650,
+    "distanceKm": 267,
+    "durationMinutes": 192
+  },
+  {
+    "fromIcId": "tohoku_tochigi",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9390,
+    "distanceKm": 259.6,
+    "durationMinutes": 191
+  },
+  {
+    "fromIcId": "tohoku_tochigi",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9110,
+    "distanceKm": 251.6,
+    "durationMinutes": 186
+  },
+  {
+    "fromIcId": "tohoku_tochigi",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9790,
+    "distanceKm": 271.2,
+    "durationMinutes": 200
+  },
+  {
+    "fromIcId": "tohoku_tochigi",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 10080,
+    "distanceKm": 279.3,
+    "durationMinutes": 202
+  },
+  {
+    "fromIcId": "tohoku_utsunomiya",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7680,
+    "distanceKm": 305.2,
+    "durationMinutes": 222
+  },
+  {
+    "fromIcId": "tohoku_utsunomiya",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 10730,
+    "distanceKm": 297.9,
+    "durationMinutes": 213
+  },
+  {
+    "fromIcId": "tohoku_utsunomiya",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 10470,
+    "distanceKm": 290.5,
+    "durationMinutes": 211
+  },
+  {
+    "fromIcId": "tohoku_utsunomiya",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 10190,
+    "distanceKm": 282.5,
+    "durationMinutes": 206
+  },
+  {
+    "fromIcId": "tohoku_utsunomiya",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 10870,
+    "distanceKm": 302.1,
+    "durationMinutes": 221
+  },
+  {
+    "fromIcId": "tohoku_utsunomiya",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 11160,
+    "distanceKm": 310.2,
+    "durationMinutes": 223
+  },
+  {
+    "fromIcId": "tohoku_yaita",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 11570,
+    "distanceKm": 322.1,
+    "durationMinutes": 233
+  },
+  {
+    "fromIcId": "tohoku_yaita",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 11320,
+    "distanceKm": 314.8,
+    "durationMinutes": 224
+  },
+  {
+    "fromIcId": "tohoku_yaita",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 11060,
+    "distanceKm": 307.4,
+    "durationMinutes": 222
+  },
+  {
+    "fromIcId": "tohoku_yaita",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 10780,
+    "distanceKm": 299.5,
+    "durationMinutes": 217
+  },
+  {
+    "fromIcId": "tohoku_yaita",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 11470,
+    "distanceKm": 319.1,
+    "durationMinutes": 231
+  },
+  {
+    "fromIcId": "tohoku_yaita",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 11750,
+    "distanceKm": 327.1,
+    "durationMinutes": 234
+  },
+  {
+    "fromIcId": "tohoku_nasu",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 13290,
+    "distanceKm": 371.1,
+    "durationMinutes": 268
+  },
+  {
+    "fromIcId": "tohoku_nasu",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 13030,
+    "distanceKm": 363.8,
+    "durationMinutes": 259
+  },
+  {
+    "fromIcId": "tohoku_nasu",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 12770,
+    "distanceKm": 356.4,
+    "durationMinutes": 257
+  },
+  {
+    "fromIcId": "tohoku_nasu",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 12490,
+    "distanceKm": 348.4,
+    "durationMinutes": 252
+  },
+  {
+    "fromIcId": "tohoku_nasu",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 13180,
+    "distanceKm": 368,
+    "durationMinutes": 266
+  },
+  {
+    "fromIcId": "tohoku_nasu",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 13460,
+    "distanceKm": 376.1,
+    "durationMinutes": 269
+  },
+  {
+    "fromIcId": "tohoku_shirakawa",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 13300,
+    "distanceKm": 371.5,
+    "durationMinutes": 266
+  },
+  {
+    "fromIcId": "tohoku_shirakawa",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 13050,
+    "distanceKm": 364.2,
+    "durationMinutes": 256
+  },
+  {
+    "fromIcId": "tohoku_shirakawa",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 12790,
+    "distanceKm": 356.8,
+    "durationMinutes": 255
+  },
+  {
+    "fromIcId": "tohoku_shirakawa",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 12510,
+    "distanceKm": 348.8,
+    "durationMinutes": 250
+  },
+  {
+    "fromIcId": "tohoku_shirakawa",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 13190,
+    "distanceKm": 368.4,
+    "durationMinutes": 264
+  },
+  {
+    "fromIcId": "tohoku_shirakawa",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 13480,
+    "distanceKm": 376.5,
+    "durationMinutes": 266
+  },
+  {
+    "fromIcId": "tohoku_koriyama",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 14940,
+    "distanceKm": 418.2,
+    "durationMinutes": 297
+  },
+  {
+    "fromIcId": "tohoku_koriyama",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 14680,
+    "distanceKm": 410.9,
+    "durationMinutes": 288
+  },
+  {
+    "fromIcId": "tohoku_koriyama",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 14420,
+    "distanceKm": 403.5,
+    "durationMinutes": 286
+  },
+  {
+    "fromIcId": "tohoku_koriyama",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 14140,
+    "distanceKm": 395.5,
+    "durationMinutes": 281
+  },
+  {
+    "fromIcId": "tohoku_koriyama",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 14830,
+    "distanceKm": 415.1,
+    "durationMinutes": 296
+  },
+  {
+    "fromIcId": "tohoku_koriyama",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 15110,
+    "distanceKm": 423.2,
+    "durationMinutes": 298
+  },
+  {
+    "fromIcId": "tohoku_fukushima_nishi",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 16860,
+    "distanceKm": 473,
+    "durationMinutes": 336
+  },
+  {
+    "fromIcId": "tohoku_fukushima_nishi",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 16600,
+    "distanceKm": 465.7,
+    "durationMinutes": 326
+  },
+  {
+    "fromIcId": "tohoku_fukushima_nishi",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 16340,
+    "distanceKm": 458.2,
+    "durationMinutes": 325
+  },
+  {
+    "fromIcId": "tohoku_fukushima_nishi",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 16060,
+    "distanceKm": 450.3,
+    "durationMinutes": 320
+  },
+  {
+    "fromIcId": "tohoku_fukushima_nishi",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 16750,
+    "distanceKm": 469.9,
+    "durationMinutes": 334
+  },
+  {
+    "fromIcId": "tohoku_fukushima_nishi",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 17030,
+    "distanceKm": 477.9,
+    "durationMinutes": 336
+  },
+  {
+    "fromIcId": "tohoku_shiroishi",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 17840,
+    "distanceKm": 501.2,
+    "durationMinutes": 353
+  },
+  {
+    "fromIcId": "tohoku_shiroishi",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 17590,
+    "distanceKm": 494,
+    "durationMinutes": 344
+  },
+  {
+    "fromIcId": "tohoku_shiroishi",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 17330,
+    "distanceKm": 486.5,
+    "durationMinutes": 342
+  },
+  {
+    "fromIcId": "tohoku_shiroishi",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 17050,
+    "distanceKm": 478.6,
+    "durationMinutes": 337
+  },
+  {
+    "fromIcId": "tohoku_shiroishi",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 17740,
+    "distanceKm": 498.2,
+    "durationMinutes": 352
+  },
+  {
+    "fromIcId": "tohoku_shiroishi",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 18020,
+    "distanceKm": 506.2,
+    "durationMinutes": 354
+  },
+  {
+    "fromIcId": "tohoku_sendai_minami",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 19280,
+    "distanceKm": 542.4,
+    "durationMinutes": 385
+  },
+  {
+    "fromIcId": "tohoku_sendai_minami",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 19030,
+    "distanceKm": 535.1,
+    "durationMinutes": 375
+  },
+  {
+    "fromIcId": "tohoku_sendai_minami",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 18770,
+    "distanceKm": 527.7,
+    "durationMinutes": 373
+  },
+  {
+    "fromIcId": "tohoku_sendai_minami",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 18490,
+    "distanceKm": 519.7,
+    "durationMinutes": 369
+  },
+  {
+    "fromIcId": "tohoku_sendai_minami",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 19180,
+    "distanceKm": 539.3,
+    "durationMinutes": 383
+  },
+  {
+    "fromIcId": "tohoku_sendai_minami",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 19460,
+    "distanceKm": 547.4,
+    "durationMinutes": 385
+  },
+  {
+    "fromIcId": "tohoku_sendai_miyagi",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 19750,
+    "distanceKm": 555.6,
+    "durationMinutes": 393
+  },
+  {
+    "fromIcId": "tohoku_sendai_miyagi",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 19490,
+    "distanceKm": 548.4,
+    "durationMinutes": 383
+  },
+  {
+    "fromIcId": "tohoku_sendai_miyagi",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 19230,
+    "distanceKm": 540.9,
+    "durationMinutes": 382
+  },
+  {
+    "fromIcId": "tohoku_sendai_miyagi",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 18960,
+    "distanceKm": 533,
+    "durationMinutes": 377
+  },
+  {
+    "fromIcId": "tohoku_sendai_miyagi",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 19640,
+    "distanceKm": 552.6,
+    "durationMinutes": 391
+  },
+  {
+    "fromIcId": "tohoku_sendai_miyagi",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 19920,
+    "distanceKm": 560.6,
+    "durationMinutes": 393
+  },
+  {
+    "fromIcId": "tohoku_izumi",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 19410,
+    "distanceKm": 546,
+    "durationMinutes": 394
+  },
+  {
+    "fromIcId": "tohoku_izumi",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 19160,
+    "distanceKm": 538.8,
+    "durationMinutes": 384
+  },
+  {
+    "fromIcId": "tohoku_izumi",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 18900,
+    "distanceKm": 531.3,
+    "durationMinutes": 383
+  },
+  {
+    "fromIcId": "tohoku_izumi",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 18620,
+    "distanceKm": 523.4,
+    "durationMinutes": 378
+  },
+  {
+    "fromIcId": "tohoku_izumi",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 19310,
+    "distanceKm": 543,
+    "durationMinutes": 392
+  },
+  {
+    "fromIcId": "tohoku_izumi",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 19590,
+    "distanceKm": 551,
+    "durationMinutes": 394
+  },
+  {
+    "fromIcId": "tohoku_furukawa",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 20950,
+    "distanceKm": 590,
+    "durationMinutes": 418
+  },
+  {
+    "fromIcId": "tohoku_furukawa",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 20690,
+    "distanceKm": 582.7,
+    "durationMinutes": 409
+  },
+  {
+    "fromIcId": "tohoku_furukawa",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 20440,
+    "distanceKm": 575.3,
+    "durationMinutes": 407
+  },
+  {
+    "fromIcId": "tohoku_furukawa",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 20160,
+    "distanceKm": 567.3,
+    "durationMinutes": 402
+  },
+  {
+    "fromIcId": "tohoku_furukawa",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 20840,
+    "distanceKm": 586.9,
+    "durationMinutes": 416
+  },
+  {
+    "fromIcId": "tohoku_furukawa",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 21130,
+    "distanceKm": 595,
+    "durationMinutes": 418
+  },
+  {
+    "fromIcId": "tohoku_wakayagi_kanari",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 18420,
+    "distanceKm": 517.7,
+    "durationMinutes": 369
+  },
+  {
+    "fromIcId": "tohoku_wakayagi_kanari",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 18160,
+    "distanceKm": 510.4,
+    "durationMinutes": 359
+  },
+  {
+    "fromIcId": "tohoku_wakayagi_kanari",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 17910,
+    "distanceKm": 503,
+    "durationMinutes": 357
+  },
+  {
+    "fromIcId": "tohoku_wakayagi_kanari",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 17630,
+    "distanceKm": 495,
+    "durationMinutes": 353
+  },
+  {
+    "fromIcId": "tohoku_wakayagi_kanari",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 18310,
+    "distanceKm": 514.6,
+    "durationMinutes": 367
+  },
+  {
+    "fromIcId": "tohoku_wakayagi_kanari",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 18590,
+    "distanceKm": 522.7,
+    "durationMinutes": 369
+  },
+  {
+    "fromIcId": "tohoku_ichinoseki",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 22090,
+    "distanceKm": 622.7,
+    "durationMinutes": 437
+  },
+  {
+    "fromIcId": "tohoku_ichinoseki",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 21840,
+    "distanceKm": 615.4,
+    "durationMinutes": 427
+  },
+  {
+    "fromIcId": "tohoku_ichinoseki",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 21580,
+    "distanceKm": 608,
+    "durationMinutes": 426
+  },
+  {
+    "fromIcId": "tohoku_ichinoseki",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 21300,
+    "distanceKm": 600.1,
+    "durationMinutes": 421
+  },
+  {
+    "fromIcId": "tohoku_ichinoseki",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 21990,
+    "distanceKm": 619.7,
+    "durationMinutes": 435
+  },
+  {
+    "fromIcId": "tohoku_ichinoseki",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 22270,
+    "distanceKm": 627.7,
+    "durationMinutes": 437
+  },
+  {
+    "fromIcId": "tohoku_mizusawa",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 23200,
+    "distanceKm": 654.3,
+    "durationMinutes": 460
+  },
+  {
+    "fromIcId": "tohoku_mizusawa",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 22950,
+    "distanceKm": 647,
+    "durationMinutes": 450
+  },
+  {
+    "fromIcId": "tohoku_mizusawa",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 22690,
+    "distanceKm": 639.6,
+    "durationMinutes": 449
+  },
+  {
+    "fromIcId": "tohoku_mizusawa",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 22410,
+    "distanceKm": 631.6,
+    "durationMinutes": 444
+  },
+  {
+    "fromIcId": "tohoku_mizusawa",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 23090,
+    "distanceKm": 651.2,
+    "durationMinutes": 458
+  },
+  {
+    "fromIcId": "tohoku_mizusawa",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 23380,
+    "distanceKm": 659.3,
+    "durationMinutes": 460
+  },
+  {
+    "fromIcId": "tohoku_kitakami",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 24230,
+    "distanceKm": 683.6,
+    "durationMinutes": 479
+  },
+  {
+    "fromIcId": "tohoku_kitakami",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 23970,
+    "distanceKm": 676.4,
+    "durationMinutes": 469
+  },
+  {
+    "fromIcId": "tohoku_kitakami",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 23710,
+    "distanceKm": 668.9,
+    "durationMinutes": 468
+  },
+  {
+    "fromIcId": "tohoku_kitakami",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 23440,
+    "distanceKm": 661,
+    "durationMinutes": 463
+  },
+  {
+    "fromIcId": "tohoku_kitakami",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 24120,
+    "distanceKm": 680.6,
+    "durationMinutes": 477
+  },
+  {
+    "fromIcId": "tohoku_kitakami",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 24400,
+    "distanceKm": 688.6,
+    "durationMinutes": 479
+  },
+  {
+    "fromIcId": "tohoku_hanamaki",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 24210,
+    "distanceKm": 683.2,
+    "durationMinutes": 476
+  },
+  {
+    "fromIcId": "tohoku_hanamaki",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 23960,
+    "distanceKm": 675.9,
+    "durationMinutes": 467
+  },
+  {
+    "fromIcId": "tohoku_hanamaki",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 23700,
+    "distanceKm": 668.5,
+    "durationMinutes": 465
+  },
+  {
+    "fromIcId": "tohoku_hanamaki",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 23420,
+    "distanceKm": 660.5,
+    "durationMinutes": 460
+  },
+  {
+    "fromIcId": "tohoku_hanamaki",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 24100,
+    "distanceKm": 680.1,
+    "durationMinutes": 474
+  },
+  {
+    "fromIcId": "tohoku_hanamaki",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 24390,
+    "distanceKm": 688.2,
+    "durationMinutes": 476
+  },
+  {
+    "fromIcId": "tohoku_morioka",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 25300,
+    "distanceKm": 714.2,
+    "durationMinutes": 497
+  },
+  {
+    "fromIcId": "tohoku_morioka",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 25040,
+    "distanceKm": 706.9,
+    "durationMinutes": 487
+  },
+  {
+    "fromIcId": "tohoku_morioka",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 24780,
+    "distanceKm": 699.5,
+    "durationMinutes": 485
+  },
+  {
+    "fromIcId": "tohoku_morioka",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 24500,
+    "distanceKm": 691.5,
+    "durationMinutes": 481
+  },
+  {
+    "fromIcId": "tohoku_morioka",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 25190,
+    "distanceKm": 711.1,
+    "durationMinutes": 495
+  },
+  {
+    "fromIcId": "tohoku_morioka",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 25470,
+    "distanceKm": 719.2,
+    "durationMinutes": 497
+  },
+  {
+    "fromIcId": "tohoku_takizawa",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 26430,
+    "distanceKm": 746.5,
+    "durationMinutes": 521
+  },
+  {
+    "fromIcId": "tohoku_takizawa",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 26170,
+    "distanceKm": 739.2,
+    "durationMinutes": 511
+  },
+  {
+    "fromIcId": "tohoku_takizawa",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 25910,
+    "distanceKm": 731.8,
+    "durationMinutes": 510
+  },
+  {
+    "fromIcId": "tohoku_takizawa",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 25630,
+    "distanceKm": 723.8,
+    "durationMinutes": 505
+  },
+  {
+    "fromIcId": "tohoku_takizawa",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 26320,
+    "distanceKm": 743.4,
+    "durationMinutes": 519
+  },
+  {
+    "fromIcId": "tohoku_takizawa",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 26600,
+    "distanceKm": 751.5,
+    "durationMinutes": 521
+  },
+  {
+    "fromIcId": "tohoku_ashiro",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 27210,
+    "distanceKm": 768.8,
+    "durationMinutes": 538
+  },
+  {
+    "fromIcId": "tohoku_ashiro",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 26950,
+    "distanceKm": 761.5,
+    "durationMinutes": 528
+  },
+  {
+    "fromIcId": "tohoku_ashiro",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 26690,
+    "distanceKm": 754.1,
+    "durationMinutes": 527
+  },
+  {
+    "fromIcId": "tohoku_ashiro",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 26410,
+    "distanceKm": 746.1,
+    "durationMinutes": 522
+  },
+  {
+    "fromIcId": "tohoku_ashiro",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 27100,
+    "distanceKm": 765.7,
+    "durationMinutes": 536
+  },
+  {
+    "fromIcId": "tohoku_ashiro",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 27380,
+    "distanceKm": 773.8,
+    "durationMinutes": 538
+  },
+  {
+    "fromIcId": "tohoku_kosaka",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 28740,
+    "distanceKm": 812.7,
+    "durationMinutes": 565
+  },
+  {
+    "fromIcId": "tohoku_kosaka",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 28490,
+    "distanceKm": 805.5,
+    "durationMinutes": 556
+  },
+  {
+    "fromIcId": "tohoku_kosaka",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 28230,
+    "distanceKm": 798,
+    "durationMinutes": 554
+  },
+  {
+    "fromIcId": "tohoku_kosaka",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 27950,
+    "distanceKm": 790.1,
+    "durationMinutes": 549
+  },
+  {
+    "fromIcId": "tohoku_kosaka",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 28640,
+    "distanceKm": 809.7,
+    "durationMinutes": 563
+  },
+  {
+    "fromIcId": "tohoku_kosaka",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 28920,
+    "distanceKm": 817.7,
+    "durationMinutes": 566
+  },
+  {
+    "fromIcId": "tohoku_owani_hirosaki",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 29950,
+    "distanceKm": 847,
+    "durationMinutes": 590
+  },
+  {
+    "fromIcId": "tohoku_owani_hirosaki",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 29690,
+    "distanceKm": 839.7,
+    "durationMinutes": 581
+  },
+  {
+    "fromIcId": "tohoku_owani_hirosaki",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 29430,
+    "distanceKm": 832.3,
+    "durationMinutes": 579
+  },
+  {
+    "fromIcId": "tohoku_owani_hirosaki",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 29150,
+    "distanceKm": 824.3,
+    "durationMinutes": 574
+  },
+  {
+    "fromIcId": "tohoku_owani_hirosaki",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 29840,
+    "distanceKm": 843.9,
+    "durationMinutes": 588
+  },
+  {
+    "fromIcId": "tohoku_owani_hirosaki",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 30120,
+    "distanceKm": 851.9,
+    "durationMinutes": 591
+  },
+  {
+    "fromIcId": "tohoku_aomori",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 30680,
+    "distanceKm": 868,
+    "durationMinutes": 605
+  },
+  {
+    "fromIcId": "tohoku_aomori",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 30430,
+    "distanceKm": 860.8,
+    "durationMinutes": 595
+  },
+  {
+    "fromIcId": "tohoku_aomori",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 30170,
+    "distanceKm": 853.3,
+    "durationMinutes": 594
+  },
+  {
+    "fromIcId": "tohoku_aomori",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 29890,
+    "distanceKm": 845.4,
+    "durationMinutes": 589
+  },
+  {
+    "fromIcId": "tohoku_aomori",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 30580,
+    "distanceKm": 865,
+    "durationMinutes": 603
+  },
+  {
+    "fromIcId": "tohoku_aomori",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 30860,
+    "distanceKm": 873,
+    "durationMinutes": 605
+  },
+  {
+    "fromIcId": "kanetsu_nerima",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4300,
+    "distanceKm": 177.7,
+    "durationMinutes": 153
+  },
+  {
+    "fromIcId": "kanetsu_nerima",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6260,
+    "distanceKm": 170.4,
+    "durationMinutes": 143
+  },
+  {
+    "fromIcId": "kanetsu_nerima",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6010,
+    "distanceKm": 163,
+    "durationMinutes": 141
+  },
+  {
+    "fromIcId": "kanetsu_nerima",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5730,
+    "distanceKm": 155,
+    "durationMinutes": 137
+  },
+  {
+    "fromIcId": "kanetsu_nerima",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6410,
+    "distanceKm": 174.6,
+    "durationMinutes": 151
+  },
+  {
+    "fromIcId": "kanetsu_nerima",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6690,
+    "distanceKm": 182.6,
+    "durationMinutes": 153
+  },
+  {
+    "fromIcId": "kanetsu_tokorozawa",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7860,
+    "distanceKm": 216.1,
+    "durationMinutes": 160
+  },
+  {
+    "fromIcId": "kanetsu_tokorozawa",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7610,
+    "distanceKm": 208.8,
+    "durationMinutes": 151
+  },
+  {
+    "fromIcId": "kanetsu_tokorozawa",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7350,
+    "distanceKm": 201.4,
+    "durationMinutes": 149
+  },
+  {
+    "fromIcId": "kanetsu_tokorozawa",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7070,
+    "distanceKm": 193.4,
+    "durationMinutes": 144
+  },
+  {
+    "fromIcId": "kanetsu_tokorozawa",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7760,
+    "distanceKm": 213,
+    "durationMinutes": 158
+  },
+  {
+    "fromIcId": "kanetsu_tokorozawa",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8040,
+    "distanceKm": 221.1,
+    "durationMinutes": 160
+  },
+  {
+    "fromIcId": "kanetsu_kawagoe",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7450,
+    "distanceKm": 204.2,
+    "durationMinutes": 152
+  },
+  {
+    "fromIcId": "kanetsu_kawagoe",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7190,
+    "distanceKm": 196.9,
+    "durationMinutes": 142
+  },
+  {
+    "fromIcId": "kanetsu_kawagoe",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6930,
+    "distanceKm": 189.5,
+    "durationMinutes": 141
+  },
+  {
+    "fromIcId": "kanetsu_kawagoe",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6660,
+    "distanceKm": 181.6,
+    "durationMinutes": 136
+  },
+  {
+    "fromIcId": "kanetsu_kawagoe",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7340,
+    "distanceKm": 201.2,
+    "durationMinutes": 150
+  },
+  {
+    "fromIcId": "kanetsu_kawagoe",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7620,
+    "distanceKm": 209.2,
+    "durationMinutes": 152
+  },
+  {
+    "fromIcId": "kanetsu_tsurugashima",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7550,
+    "distanceKm": 207.2,
+    "durationMinutes": 158
+  },
+  {
+    "fromIcId": "kanetsu_tsurugashima",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7300,
+    "distanceKm": 200,
+    "durationMinutes": 148
+  },
+  {
+    "fromIcId": "kanetsu_tsurugashima",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7040,
+    "distanceKm": 192.5,
+    "durationMinutes": 146
+  },
+  {
+    "fromIcId": "kanetsu_tsurugashima",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6760,
+    "distanceKm": 184.6,
+    "durationMinutes": 142
+  },
+  {
+    "fromIcId": "kanetsu_tsurugashima",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7450,
+    "distanceKm": 204.2,
+    "durationMinutes": 156
+  },
+  {
+    "fromIcId": "kanetsu_tsurugashima",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7730,
+    "distanceKm": 212.2,
+    "durationMinutes": 158
+  },
+  {
+    "fromIcId": "kanetsu_higashi_matsuyama",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7730,
+    "distanceKm": 212.4,
+    "durationMinutes": 160
+  },
+  {
+    "fromIcId": "kanetsu_higashi_matsuyama",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7480,
+    "distanceKm": 205.1,
+    "durationMinutes": 150
+  },
+  {
+    "fromIcId": "kanetsu_higashi_matsuyama",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7220,
+    "distanceKm": 197.7,
+    "durationMinutes": 149
+  },
+  {
+    "fromIcId": "kanetsu_higashi_matsuyama",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6940,
+    "distanceKm": 189.7,
+    "durationMinutes": 144
+  },
+  {
+    "fromIcId": "kanetsu_higashi_matsuyama",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7630,
+    "distanceKm": 209.4,
+    "durationMinutes": 158
+  },
+  {
+    "fromIcId": "kanetsu_higashi_matsuyama",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7910,
+    "distanceKm": 217.4,
+    "durationMinutes": 160
+  },
+  {
+    "fromIcId": "kanetsu_hanazono",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8790,
+    "distanceKm": 242.6,
+    "durationMinutes": 181
+  },
+  {
+    "fromIcId": "kanetsu_hanazono",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8540,
+    "distanceKm": 235.3,
+    "durationMinutes": 172
+  },
+  {
+    "fromIcId": "kanetsu_hanazono",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8280,
+    "distanceKm": 227.9,
+    "durationMinutes": 170
+  },
+  {
+    "fromIcId": "kanetsu_hanazono",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8000,
+    "distanceKm": 219.9,
+    "durationMinutes": 165
+  },
+  {
+    "fromIcId": "kanetsu_hanazono",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8680,
+    "distanceKm": 239.5,
+    "durationMinutes": 179
+  },
+  {
+    "fromIcId": "kanetsu_hanazono",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8960,
+    "distanceKm": 247.5,
+    "durationMinutes": 182
+  },
+  {
+    "fromIcId": "kanetsu_honjo_kodama",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9140,
+    "distanceKm": 252.7,
+    "durationMinutes": 190
+  },
+  {
+    "fromIcId": "kanetsu_honjo_kodama",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8890,
+    "distanceKm": 245.5,
+    "durationMinutes": 180
+  },
+  {
+    "fromIcId": "kanetsu_honjo_kodama",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8630,
+    "distanceKm": 238,
+    "durationMinutes": 179
+  },
+  {
+    "fromIcId": "kanetsu_honjo_kodama",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8350,
+    "distanceKm": 230.1,
+    "durationMinutes": 174
+  },
+  {
+    "fromIcId": "kanetsu_honjo_kodama",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9040,
+    "distanceKm": 249.7,
+    "durationMinutes": 188
+  },
+  {
+    "fromIcId": "kanetsu_honjo_kodama",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9320,
+    "distanceKm": 257.7,
+    "durationMinutes": 190
+  },
+  {
+    "fromIcId": "kanetsu_takasaki",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9300,
+    "distanceKm": 257.1,
+    "durationMinutes": 187
+  },
+  {
+    "fromIcId": "kanetsu_takasaki",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9040,
+    "distanceKm": 249.8,
+    "durationMinutes": 178
+  },
+  {
+    "fromIcId": "kanetsu_takasaki",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8780,
+    "distanceKm": 242.4,
+    "durationMinutes": 176
+  },
+  {
+    "fromIcId": "kanetsu_takasaki",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8500,
+    "distanceKm": 234.4,
+    "durationMinutes": 171
+  },
+  {
+    "fromIcId": "kanetsu_takasaki",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9190,
+    "distanceKm": 254,
+    "durationMinutes": 185
+  },
+  {
+    "fromIcId": "kanetsu_takasaki",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9470,
+    "distanceKm": 262.1,
+    "durationMinutes": 187
+  },
+  {
+    "fromIcId": "kanetsu_maebashi",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9470,
+    "distanceKm": 262.1,
+    "durationMinutes": 190
+  },
+  {
+    "fromIcId": "kanetsu_maebashi",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9220,
+    "distanceKm": 254.8,
+    "durationMinutes": 181
+  },
+  {
+    "fromIcId": "kanetsu_maebashi",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8960,
+    "distanceKm": 247.4,
+    "durationMinutes": 179
+  },
+  {
+    "fromIcId": "kanetsu_maebashi",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8680,
+    "distanceKm": 239.5,
+    "durationMinutes": 174
+  },
+  {
+    "fromIcId": "kanetsu_maebashi",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9370,
+    "distanceKm": 259.1,
+    "durationMinutes": 189
+  },
+  {
+    "fromIcId": "kanetsu_maebashi",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9650,
+    "distanceKm": 267.1,
+    "durationMinutes": 191
+  },
+  {
+    "fromIcId": "kanetsu_shibukawa_ikaho",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 10470,
+    "distanceKm": 290.6,
+    "durationMinutes": 212
+  },
+  {
+    "fromIcId": "kanetsu_shibukawa_ikaho",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 10220,
+    "distanceKm": 283.4,
+    "durationMinutes": 203
+  },
+  {
+    "fromIcId": "kanetsu_shibukawa_ikaho",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9960,
+    "distanceKm": 275.9,
+    "durationMinutes": 201
+  },
+  {
+    "fromIcId": "kanetsu_shibukawa_ikaho",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9680,
+    "distanceKm": 268,
+    "durationMinutes": 196
+  },
+  {
+    "fromIcId": "kanetsu_shibukawa_ikaho",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 10370,
+    "distanceKm": 287.6,
+    "durationMinutes": 211
+  },
+  {
+    "fromIcId": "kanetsu_shibukawa_ikaho",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 10650,
+    "distanceKm": 295.6,
+    "durationMinutes": 213
+  },
+  {
+    "fromIcId": "kanetsu_tsukiyono",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 10860,
+    "distanceKm": 301.7,
+    "durationMinutes": 217
+  },
+  {
+    "fromIcId": "kanetsu_tsukiyono",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 10610,
+    "distanceKm": 294.5,
+    "durationMinutes": 207
+  },
+  {
+    "fromIcId": "kanetsu_tsukiyono",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 10350,
+    "distanceKm": 287,
+    "durationMinutes": 206
+  },
+  {
+    "fromIcId": "kanetsu_tsukiyono",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 10070,
+    "distanceKm": 279.1,
+    "durationMinutes": 201
+  },
+  {
+    "fromIcId": "kanetsu_tsukiyono",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 10750,
+    "distanceKm": 298.7,
+    "durationMinutes": 215
+  },
+  {
+    "fromIcId": "kanetsu_tsukiyono",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 11030,
+    "distanceKm": 306.7,
+    "durationMinutes": 217
+  },
+  {
+    "fromIcId": "kanetsu_yuzawa",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 12100,
+    "distanceKm": 337.2,
+    "durationMinutes": 243
+  },
+  {
+    "fromIcId": "kanetsu_yuzawa",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 11850,
+    "distanceKm": 329.9,
+    "durationMinutes": 234
+  },
+  {
+    "fromIcId": "kanetsu_yuzawa",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 11590,
+    "distanceKm": 322.5,
+    "durationMinutes": 232
+  },
+  {
+    "fromIcId": "kanetsu_yuzawa",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 11310,
+    "distanceKm": 314.5,
+    "durationMinutes": 227
+  },
+  {
+    "fromIcId": "kanetsu_yuzawa",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 12000,
+    "distanceKm": 334.2,
+    "durationMinutes": 242
+  },
+  {
+    "fromIcId": "kanetsu_yuzawa",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 12280,
+    "distanceKm": 342.2,
+    "durationMinutes": 244
+  },
+  {
+    "fromIcId": "kanetsu_ojiya",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 14300,
+    "distanceKm": 400.1,
+    "durationMinutes": 289
+  },
+  {
+    "fromIcId": "kanetsu_ojiya",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 14050,
+    "distanceKm": 392.9,
+    "durationMinutes": 280
+  },
+  {
+    "fromIcId": "kanetsu_ojiya",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 13790,
+    "distanceKm": 385.4,
+    "durationMinutes": 278
+  },
+  {
+    "fromIcId": "kanetsu_ojiya",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 13510,
+    "distanceKm": 377.5,
+    "durationMinutes": 273
+  },
+  {
+    "fromIcId": "kanetsu_ojiya",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 14200,
+    "distanceKm": 397.1,
+    "durationMinutes": 287
+  },
+  {
+    "fromIcId": "kanetsu_ojiya",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 14480,
+    "distanceKm": 405.1,
+    "durationMinutes": 289
+  },
+  {
+    "fromIcId": "kanetsu_nagaoka",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 13970,
+    "distanceKm": 390.5,
+    "durationMinutes": 286
+  },
+  {
+    "fromIcId": "kanetsu_nagaoka",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 13570,
+    "distanceKm": 379.2,
+    "durationMinutes": 277
+  },
+  {
+    "fromIcId": "kanetsu_nagaoka",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 13450,
+    "distanceKm": 375.8,
+    "durationMinutes": 275
+  },
+  {
+    "fromIcId": "kanetsu_nagaoka",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 13150,
+    "distanceKm": 367,
+    "durationMinutes": 275
+  },
+  {
+    "fromIcId": "kanetsu_nagaoka",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 13860,
+    "distanceKm": 387.4,
+    "durationMinutes": 284
+  },
+  {
+    "fromIcId": "kanetsu_nagaoka",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 14000,
+    "distanceKm": 391.5,
+    "durationMinutes": 287
+  },
+  {
+    "fromIcId": "gaikan_oizumi",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6000,
+    "distanceKm": 224.7,
+    "durationMinutes": 166
+  },
+  {
+    "fromIcId": "gaikan_oizumi",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7910,
+    "distanceKm": 217.4,
+    "durationMinutes": 157
+  },
+  {
+    "fromIcId": "gaikan_oizumi",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7650,
+    "distanceKm": 210,
+    "durationMinutes": 155
+  },
+  {
+    "fromIcId": "gaikan_oizumi",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7370,
+    "distanceKm": 202,
+    "durationMinutes": 150
+  },
+  {
+    "fromIcId": "gaikan_oizumi",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8060,
+    "distanceKm": 221.6,
+    "durationMinutes": 165
+  },
+  {
+    "fromIcId": "gaikan_oizumi",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8340,
+    "distanceKm": 229.7,
+    "durationMinutes": 167
+  },
+  {
+    "fromIcId": "gaikan_wako",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7280,
+    "distanceKm": 199.3,
+    "durationMinutes": 155
+  },
+  {
+    "fromIcId": "gaikan_wako",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7020,
+    "distanceKm": 192,
+    "durationMinutes": 146
+  },
+  {
+    "fromIcId": "gaikan_wako",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6760,
+    "distanceKm": 184.6,
+    "durationMinutes": 144
+  },
+  {
+    "fromIcId": "gaikan_wako",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6480,
+    "distanceKm": 176.7,
+    "durationMinutes": 139
+  },
+  {
+    "fromIcId": "gaikan_wako",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7170,
+    "distanceKm": 196.3,
+    "durationMinutes": 153
+  },
+  {
+    "fromIcId": "gaikan_wako",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7450,
+    "distanceKm": 204.3,
+    "durationMinutes": 155
+  },
+  {
+    "fromIcId": "gaikan_kawaguchi_nishi",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7300,
+    "distanceKm": 199.9,
+    "durationMinutes": 155
+  },
+  {
+    "fromIcId": "gaikan_kawaguchi_nishi",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7040,
+    "distanceKm": 192.6,
+    "durationMinutes": 146
+  },
+  {
+    "fromIcId": "gaikan_kawaguchi_nishi",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6780,
+    "distanceKm": 185.2,
+    "durationMinutes": 144
+  },
+  {
+    "fromIcId": "gaikan_kawaguchi_nishi",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6510,
+    "distanceKm": 177.3,
+    "durationMinutes": 140
+  },
+  {
+    "fromIcId": "gaikan_kawaguchi_nishi",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7190,
+    "distanceKm": 196.9,
+    "durationMinutes": 154
+  },
+  {
+    "fromIcId": "gaikan_kawaguchi_nishi",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7470,
+    "distanceKm": 204.9,
+    "durationMinutes": 156
+  },
+  {
+    "fromIcId": "gaikan_misato",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6370,
+    "distanceKm": 211,
+    "durationMinutes": 168
+  },
+  {
+    "fromIcId": "gaikan_misato",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7430,
+    "distanceKm": 203.7,
+    "durationMinutes": 158
+  },
+  {
+    "fromIcId": "gaikan_misato",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7170,
+    "distanceKm": 196.3,
+    "durationMinutes": 156
+  },
+  {
+    "fromIcId": "gaikan_misato",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6890,
+    "distanceKm": 188.3,
+    "durationMinutes": 152
+  },
+  {
+    "fromIcId": "gaikan_misato",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7580,
+    "distanceKm": 207.9,
+    "durationMinutes": 166
+  },
+  {
+    "fromIcId": "gaikan_misato",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7860,
+    "distanceKm": 216,
+    "durationMinutes": 168
+  },
+  {
+    "fromIcId": "gaikan_misato_minami",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6070,
+    "distanceKm": 205.7,
+    "durationMinutes": 160
+  },
+  {
+    "fromIcId": "gaikan_misato_minami",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7240,
+    "distanceKm": 198.4,
+    "durationMinutes": 151
+  },
+  {
+    "fromIcId": "gaikan_misato_minami",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6990,
+    "distanceKm": 191,
+    "durationMinutes": 149
+  },
+  {
+    "fromIcId": "gaikan_misato_minami",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6710,
+    "distanceKm": 183,
+    "durationMinutes": 144
+  },
+  {
+    "fromIcId": "gaikan_misato_minami",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7390,
+    "distanceKm": 202.7,
+    "durationMinutes": 158
+  },
+  {
+    "fromIcId": "gaikan_misato_minami",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7670,
+    "distanceKm": 210.7,
+    "durationMinutes": 161
+  },
+  {
+    "fromIcId": "gaikan_ichikawa_kita",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7330,
+    "distanceKm": 200.8,
+    "durationMinutes": 156
+  },
+  {
+    "fromIcId": "gaikan_ichikawa_kita",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7070,
+    "distanceKm": 193.5,
+    "durationMinutes": 147
+  },
+  {
+    "fromIcId": "gaikan_ichikawa_kita",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6810,
+    "distanceKm": 186.1,
+    "durationMinutes": 145
+  },
+  {
+    "fromIcId": "gaikan_ichikawa_kita",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6530,
+    "distanceKm": 178.1,
+    "durationMinutes": 140
+  },
+  {
+    "fromIcId": "gaikan_ichikawa_kita",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7220,
+    "distanceKm": 197.7,
+    "durationMinutes": 154
+  },
+  {
+    "fromIcId": "gaikan_ichikawa_kita",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7500,
+    "distanceKm": 205.8,
+    "durationMinutes": 156
+  },
+  {
+    "fromIcId": "gaikan_matsudo",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7430,
+    "distanceKm": 203.6,
+    "durationMinutes": 159
+  },
+  {
+    "fromIcId": "gaikan_matsudo",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7170,
+    "distanceKm": 196.3,
+    "durationMinutes": 149
+  },
+  {
+    "fromIcId": "gaikan_matsudo",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6910,
+    "distanceKm": 188.9,
+    "durationMinutes": 147
+  },
+  {
+    "fromIcId": "gaikan_matsudo",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6630,
+    "distanceKm": 180.9,
+    "durationMinutes": 143
+  },
+  {
+    "fromIcId": "gaikan_matsudo",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7320,
+    "distanceKm": 200.6,
+    "durationMinutes": 157
+  },
+  {
+    "fromIcId": "gaikan_matsudo",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7600,
+    "distanceKm": 208.6,
+    "durationMinutes": 159
+  },
+  {
+    "fromIcId": "chuo_takaido",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4300,
+    "distanceKm": 168.8,
+    "durationMinutes": 132
+  },
+  {
+    "fromIcId": "chuo_takaido",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5950,
+    "distanceKm": 161.5,
+    "durationMinutes": 122
+  },
+  {
+    "fromIcId": "chuo_takaido",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5690,
+    "distanceKm": 154.1,
+    "durationMinutes": 120
+  },
+  {
+    "fromIcId": "chuo_takaido",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5410,
+    "distanceKm": 146.1,
+    "durationMinutes": 116
+  },
+  {
+    "fromIcId": "chuo_takaido",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6100,
+    "distanceKm": 165.8,
+    "durationMinutes": 130
+  },
+  {
+    "fromIcId": "chuo_takaido",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6380,
+    "distanceKm": 173.8,
+    "durationMinutes": 132
+  },
+  {
+    "fromIcId": "chuo_chofu",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6810,
+    "distanceKm": 185.9,
+    "durationMinutes": 136
+  },
+  {
+    "fromIcId": "chuo_chofu",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6550,
+    "distanceKm": 178.6,
+    "durationMinutes": 126
+  },
+  {
+    "fromIcId": "chuo_chofu",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6290,
+    "distanceKm": 171.2,
+    "durationMinutes": 125
+  },
+  {
+    "fromIcId": "chuo_chofu",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6010,
+    "distanceKm": 163.2,
+    "durationMinutes": 120
+  },
+  {
+    "fromIcId": "chuo_chofu",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6700,
+    "distanceKm": 182.8,
+    "durationMinutes": 134
+  },
+  {
+    "fromIcId": "chuo_chofu",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6980,
+    "distanceKm": 190.9,
+    "durationMinutes": 136
+  },
+  {
+    "fromIcId": "chuo_kunitachi_fuchu",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6470,
+    "distanceKm": 176.2,
+    "durationMinutes": 129
+  },
+  {
+    "fromIcId": "chuo_kunitachi_fuchu",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6210,
+    "distanceKm": 168.9,
+    "durationMinutes": 119
+  },
+  {
+    "fromIcId": "chuo_kunitachi_fuchu",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5950,
+    "distanceKm": 161.5,
+    "durationMinutes": 118
+  },
+  {
+    "fromIcId": "chuo_kunitachi_fuchu",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5670,
+    "distanceKm": 153.5,
+    "durationMinutes": 113
+  },
+  {
+    "fromIcId": "chuo_kunitachi_fuchu",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6360,
+    "distanceKm": 173.1,
+    "durationMinutes": 127
+  },
+  {
+    "fromIcId": "chuo_kunitachi_fuchu",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6640,
+    "distanceKm": 181.2,
+    "durationMinutes": 129
+  },
+  {
+    "fromIcId": "chuo_hachioji",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6170,
+    "distanceKm": 167.7,
+    "durationMinutes": 122
+  },
+  {
+    "fromIcId": "chuo_hachioji",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5920,
+    "distanceKm": 160.5,
+    "durationMinutes": 113
+  },
+  {
+    "fromIcId": "chuo_hachioji",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5660,
+    "distanceKm": 153,
+    "durationMinutes": 111
+  },
+  {
+    "fromIcId": "chuo_hachioji",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5380,
+    "distanceKm": 145.1,
+    "durationMinutes": 106
+  },
+  {
+    "fromIcId": "chuo_hachioji",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6060,
+    "distanceKm": 164.7,
+    "durationMinutes": 121
+  },
+  {
+    "fromIcId": "chuo_hachioji",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6340,
+    "distanceKm": 172.7,
+    "durationMinutes": 123
+  },
+  {
+    "fromIcId": "chuo_sagamiko",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6160,
+    "distanceKm": 167.5,
+    "durationMinutes": 122
+  },
+  {
+    "fromIcId": "chuo_sagamiko",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5910,
+    "distanceKm": 160.2,
+    "durationMinutes": 113
+  },
+  {
+    "fromIcId": "chuo_sagamiko",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5650,
+    "distanceKm": 152.8,
+    "durationMinutes": 111
+  },
+  {
+    "fromIcId": "chuo_sagamiko",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5370,
+    "distanceKm": 144.8,
+    "durationMinutes": 106
+  },
+  {
+    "fromIcId": "chuo_sagamiko",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6050,
+    "distanceKm": 164.4,
+    "durationMinutes": 120
+  },
+  {
+    "fromIcId": "chuo_sagamiko",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6340,
+    "distanceKm": 172.5,
+    "durationMinutes": 123
+  },
+  {
+    "fromIcId": "chuo_uenohara",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5560,
+    "distanceKm": 150.3,
+    "durationMinutes": 115
+  },
+  {
+    "fromIcId": "chuo_uenohara",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5310,
+    "distanceKm": 143.1,
+    "durationMinutes": 106
+  },
+  {
+    "fromIcId": "chuo_uenohara",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5050,
+    "distanceKm": 135.6,
+    "durationMinutes": 104
+  },
+  {
+    "fromIcId": "chuo_uenohara",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4770,
+    "distanceKm": 127.7,
+    "durationMinutes": 99
+  },
+  {
+    "fromIcId": "chuo_uenohara",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5460,
+    "distanceKm": 147.3,
+    "durationMinutes": 113
+  },
+  {
+    "fromIcId": "chuo_uenohara",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5740,
+    "distanceKm": 155.3,
+    "durationMinutes": 115
+  },
+  {
+    "fromIcId": "chuo_otsuki",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5690,
+    "distanceKm": 154,
+    "durationMinutes": 116
+  },
+  {
+    "fromIcId": "chuo_otsuki",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5430,
+    "distanceKm": 146.7,
+    "durationMinutes": 106
+  },
+  {
+    "fromIcId": "chuo_otsuki",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5180,
+    "distanceKm": 139.3,
+    "durationMinutes": 105
+  },
+  {
+    "fromIcId": "chuo_otsuki",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4900,
+    "distanceKm": 131.3,
+    "durationMinutes": 100
+  },
+  {
+    "fromIcId": "chuo_otsuki",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5580,
+    "distanceKm": 150.9,
+    "durationMinutes": 114
+  },
+  {
+    "fromIcId": "chuo_otsuki",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5860,
+    "distanceKm": 158.9,
+    "durationMinutes": 116
+  },
+  {
+    "fromIcId": "chuo_tsuru",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4560,
+    "distanceKm": 121.7,
+    "durationMinutes": 91
+  },
+  {
+    "fromIcId": "chuo_tsuru",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4300,
+    "distanceKm": 114.4,
+    "durationMinutes": 81
+  },
+  {
+    "fromIcId": "chuo_tsuru",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4050,
+    "distanceKm": 107,
+    "durationMinutes": 79
+  },
+  {
+    "fromIcId": "chuo_tsuru",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3770,
+    "distanceKm": 99.1,
+    "durationMinutes": 75
+  },
+  {
+    "fromIcId": "chuo_tsuru",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4450,
+    "distanceKm": 118.7,
+    "durationMinutes": 89
+  },
+  {
+    "fromIcId": "chuo_tsuru",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4730,
+    "distanceKm": 126.7,
+    "durationMinutes": 91
+  },
+  {
+    "fromIcId": "chuo_kawaguchiko",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4030,
+    "distanceKm": 106.6,
+    "durationMinutes": 80
+  },
+  {
+    "fromIcId": "chuo_kawaguchiko",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3780,
+    "distanceKm": 99.4,
+    "durationMinutes": 70
+  },
+  {
+    "fromIcId": "chuo_kawaguchiko",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3520,
+    "distanceKm": 91.9,
+    "durationMinutes": 69
+  },
+  {
+    "fromIcId": "chuo_kawaguchiko",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3240,
+    "distanceKm": 84,
+    "durationMinutes": 64
+  },
+  {
+    "fromIcId": "chuo_kawaguchiko",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3930,
+    "distanceKm": 103.6,
+    "durationMinutes": 78
+  },
+  {
+    "fromIcId": "chuo_kawaguchiko",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4210,
+    "distanceKm": 111.6,
+    "durationMinutes": 80
+  },
+  {
+    "fromIcId": "chuo_katsunuma",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4310,
+    "distanceKm": 114.6,
+    "durationMinutes": 99
+  },
+  {
+    "fromIcId": "chuo_katsunuma",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3920,
+    "distanceKm": 103.4,
+    "durationMinutes": 89
+  },
+  {
+    "fromIcId": "chuo_katsunuma",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3800,
+    "distanceKm": 99.9,
+    "durationMinutes": 87
+  },
+  {
+    "fromIcId": "chuo_katsunuma",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3490,
+    "distanceKm": 91.2,
+    "durationMinutes": 87
+  },
+  {
+    "fromIcId": "chuo_katsunuma",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4210,
+    "distanceKm": 111.6,
+    "durationMinutes": 97
+  },
+  {
+    "fromIcId": "chuo_katsunuma",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4350,
+    "distanceKm": 115.6,
+    "durationMinutes": 99
+  },
+  {
+    "fromIcId": "chuo_kofu_minami",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4060,
+    "distanceKm": 107.5,
+    "durationMinutes": 96
+  },
+  {
+    "fromIcId": "chuo_kofu_minami",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3670,
+    "distanceKm": 96.3,
+    "durationMinutes": 87
+  },
+  {
+    "fromIcId": "chuo_kofu_minami",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3550,
+    "distanceKm": 92.8,
+    "durationMinutes": 85
+  },
+  {
+    "fromIcId": "chuo_kofu_minami",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3240,
+    "distanceKm": 84.1,
+    "durationMinutes": 85
+  },
+  {
+    "fromIcId": "chuo_kofu_minami",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3960,
+    "distanceKm": 104.5,
+    "durationMinutes": 94
+  },
+  {
+    "fromIcId": "chuo_kofu_minami",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4100,
+    "distanceKm": 108.5,
+    "durationMinutes": 97
+  },
+  {
+    "fromIcId": "chuo_kofu_showa",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3860,
+    "distanceKm": 101.7,
+    "durationMinutes": 82
+  },
+  {
+    "fromIcId": "chuo_kofu_showa",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3470,
+    "distanceKm": 90.5,
+    "durationMinutes": 73
+  },
+  {
+    "fromIcId": "chuo_kofu_showa",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3350,
+    "distanceKm": 87,
+    "durationMinutes": 71
+  },
+  {
+    "fromIcId": "chuo_kofu_showa",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3040,
+    "distanceKm": 78.3,
+    "durationMinutes": 71
+  },
+  {
+    "fromIcId": "chuo_kofu_showa",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3750,
+    "distanceKm": 98.7,
+    "durationMinutes": 80
+  },
+  {
+    "fromIcId": "chuo_kofu_showa",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3890,
+    "distanceKm": 102.7,
+    "durationMinutes": 82
+  },
+  {
+    "fromIcId": "chuo_nirasaki",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4350,
+    "distanceKm": 115.8,
+    "durationMinutes": 95
+  },
+  {
+    "fromIcId": "chuo_nirasaki",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3960,
+    "distanceKm": 104.5,
+    "durationMinutes": 85
+  },
+  {
+    "fromIcId": "chuo_nirasaki",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3840,
+    "distanceKm": 101.1,
+    "durationMinutes": 83
+  },
+  {
+    "fromIcId": "chuo_nirasaki",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3530,
+    "distanceKm": 92.3,
+    "durationMinutes": 84
+  },
+  {
+    "fromIcId": "chuo_nirasaki",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4240,
+    "distanceKm": 112.7,
+    "durationMinutes": 93
+  },
+  {
+    "fromIcId": "chuo_nirasaki",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4390,
+    "distanceKm": 116.8,
+    "durationMinutes": 95
+  },
+  {
+    "fromIcId": "chuo_nagasaka",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4340,
+    "distanceKm": 115.5,
+    "durationMinutes": 91
+  },
+  {
+    "fromIcId": "chuo_nagasaka",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3950,
+    "distanceKm": 104.2,
+    "durationMinutes": 82
+  },
+  {
+    "fromIcId": "chuo_nagasaka",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3830,
+    "distanceKm": 100.8,
+    "durationMinutes": 80
+  },
+  {
+    "fromIcId": "chuo_nagasaka",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3520,
+    "distanceKm": 92,
+    "durationMinutes": 80
+  },
+  {
+    "fromIcId": "chuo_nagasaka",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4230,
+    "distanceKm": 112.4,
+    "durationMinutes": 89
+  },
+  {
+    "fromIcId": "chuo_nagasaka",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4380,
+    "distanceKm": 116.5,
+    "durationMinutes": 92
+  },
+  {
+    "fromIcId": "chuo_kobuchizawa",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4630,
+    "distanceKm": 123.7,
+    "durationMinutes": 97
+  },
+  {
+    "fromIcId": "chuo_kobuchizawa",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4240,
+    "distanceKm": 112.5,
+    "durationMinutes": 87
+  },
+  {
+    "fromIcId": "chuo_kobuchizawa",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4120,
+    "distanceKm": 109,
+    "durationMinutes": 85
+  },
+  {
+    "fromIcId": "chuo_kobuchizawa",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3810,
+    "distanceKm": 100.3,
+    "durationMinutes": 85
+  },
+  {
+    "fromIcId": "chuo_kobuchizawa",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4520,
+    "distanceKm": 120.7,
+    "durationMinutes": 95
+  },
+  {
+    "fromIcId": "chuo_kobuchizawa",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4660,
+    "distanceKm": 124.7,
+    "durationMinutes": 97
+  },
+  {
+    "fromIcId": "chuo_suwa_minami",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5920,
+    "distanceKm": 160.7,
+    "durationMinutes": 126
+  },
+  {
+    "fromIcId": "chuo_suwa_minami",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5530,
+    "distanceKm": 149.4,
+    "durationMinutes": 117
+  },
+  {
+    "fromIcId": "chuo_suwa_minami",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5410,
+    "distanceKm": 146,
+    "durationMinutes": 115
+  },
+  {
+    "fromIcId": "chuo_suwa_minami",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5100,
+    "distanceKm": 137.2,
+    "durationMinutes": 115
+  },
+  {
+    "fromIcId": "chuo_suwa_minami",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5820,
+    "distanceKm": 157.6,
+    "durationMinutes": 124
+  },
+  {
+    "fromIcId": "chuo_suwa_minami",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5960,
+    "distanceKm": 161.7,
+    "durationMinutes": 126
+  },
+  {
+    "fromIcId": "chuo_suwa",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5920,
+    "distanceKm": 160.7,
+    "durationMinutes": 126
+  },
+  {
+    "fromIcId": "chuo_suwa",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5530,
+    "distanceKm": 149.5,
+    "durationMinutes": 117
+  },
+  {
+    "fromIcId": "chuo_suwa",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5410,
+    "distanceKm": 146,
+    "durationMinutes": 115
+  },
+  {
+    "fromIcId": "chuo_suwa",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5110,
+    "distanceKm": 137.3,
+    "durationMinutes": 115
+  },
+  {
+    "fromIcId": "chuo_suwa",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5820,
+    "distanceKm": 157.7,
+    "durationMinutes": 124
+  },
+  {
+    "fromIcId": "chuo_suwa",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5960,
+    "distanceKm": 161.7,
+    "durationMinutes": 126
+  },
+  {
+    "fromIcId": "chuo_shiojiri",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6190,
+    "distanceKm": 168.3,
+    "durationMinutes": 128
+  },
+  {
+    "fromIcId": "chuo_shiojiri",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5800,
+    "distanceKm": 157,
+    "durationMinutes": 119
+  },
+  {
+    "fromIcId": "chuo_shiojiri",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5680,
+    "distanceKm": 153.6,
+    "durationMinutes": 117
+  },
+  {
+    "fromIcId": "chuo_shiojiri",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5370,
+    "distanceKm": 144.8,
+    "durationMinutes": 117
+  },
+  {
+    "fromIcId": "chuo_shiojiri",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6080,
+    "distanceKm": 165.2,
+    "durationMinutes": 127
+  },
+  {
+    "fromIcId": "chuo_shiojiri",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6230,
+    "distanceKm": 169.3,
+    "durationMinutes": 129
+  },
+  {
+    "fromIcId": "chuo_matsumoto",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7040,
+    "distanceKm": 192.5,
+    "durationMinutes": 149
+  },
+  {
+    "fromIcId": "chuo_matsumoto",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6640,
+    "distanceKm": 181.2,
+    "durationMinutes": 140
+  },
+  {
+    "fromIcId": "chuo_matsumoto",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6520,
+    "distanceKm": 177.8,
+    "durationMinutes": 138
+  },
+  {
+    "fromIcId": "chuo_matsumoto",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6220,
+    "distanceKm": 169,
+    "durationMinutes": 138
+  },
+  {
+    "fromIcId": "chuo_matsumoto",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6930,
+    "distanceKm": 189.5,
+    "durationMinutes": 147
+  },
+  {
+    "fromIcId": "chuo_matsumoto",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7070,
+    "distanceKm": 193.5,
+    "durationMinutes": 150
+  },
+  {
+    "fromIcId": "kenodo_akiruno",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6360,
+    "distanceKm": 173,
+    "durationMinutes": 130
+  },
+  {
+    "fromIcId": "kenodo_akiruno",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6100,
+    "distanceKm": 165.7,
+    "durationMinutes": 121
+  },
+  {
+    "fromIcId": "kenodo_akiruno",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5840,
+    "distanceKm": 158.3,
+    "durationMinutes": 119
+  },
+  {
+    "fromIcId": "kenodo_akiruno",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5560,
+    "distanceKm": 150.4,
+    "durationMinutes": 114
+  },
+  {
+    "fromIcId": "kenodo_akiruno",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6250,
+    "distanceKm": 170,
+    "durationMinutes": 128
+  },
+  {
+    "fromIcId": "kenodo_akiruno",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6530,
+    "distanceKm": 178,
+    "durationMinutes": 130
+  },
+  {
+    "fromIcId": "kenodo_hanno",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7000,
+    "distanceKm": 191.4,
+    "durationMinutes": 146
+  },
+  {
+    "fromIcId": "kenodo_hanno",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6740,
+    "distanceKm": 184.1,
+    "durationMinutes": 137
+  },
+  {
+    "fromIcId": "kenodo_hanno",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6480,
+    "distanceKm": 176.7,
+    "durationMinutes": 135
+  },
+  {
+    "fromIcId": "kenodo_hanno",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6200,
+    "distanceKm": 168.7,
+    "durationMinutes": 130
+  },
+  {
+    "fromIcId": "kenodo_hanno",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6890,
+    "distanceKm": 188.3,
+    "durationMinutes": 145
+  },
+  {
+    "fromIcId": "kenodo_hanno",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7170,
+    "distanceKm": 196.4,
+    "durationMinutes": 147
+  },
+  {
+    "fromIcId": "kenodo_iruma",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6700,
+    "distanceKm": 182.8,
+    "durationMinutes": 136
+  },
+  {
+    "fromIcId": "kenodo_iruma",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6440,
+    "distanceKm": 175.5,
+    "durationMinutes": 126
+  },
+  {
+    "fromIcId": "kenodo_iruma",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6180,
+    "distanceKm": 168,
+    "durationMinutes": 124
+  },
+  {
+    "fromIcId": "kenodo_iruma",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5900,
+    "distanceKm": 160.1,
+    "durationMinutes": 120
+  },
+  {
+    "fromIcId": "kenodo_iruma",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6590,
+    "distanceKm": 179.7,
+    "durationMinutes": 134
+  },
+  {
+    "fromIcId": "kenodo_iruma",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6870,
+    "distanceKm": 187.7,
+    "durationMinutes": 136
+  },
+  {
+    "fromIcId": "kenodo_kawashima",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7490,
+    "distanceKm": 205.3,
+    "durationMinutes": 153
+  },
+  {
+    "fromIcId": "kenodo_kawashima",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7230,
+    "distanceKm": 198.1,
+    "durationMinutes": 143
+  },
+  {
+    "fromIcId": "kenodo_kawashima",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6970,
+    "distanceKm": 190.6,
+    "durationMinutes": 141
+  },
+  {
+    "fromIcId": "kenodo_kawashima",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6690,
+    "distanceKm": 182.7,
+    "durationMinutes": 137
+  },
+  {
+    "fromIcId": "kenodo_kawashima",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7380,
+    "distanceKm": 202.3,
+    "durationMinutes": 151
+  },
+  {
+    "fromIcId": "kenodo_kawashima",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7660,
+    "distanceKm": 210.3,
+    "durationMinutes": 153
+  },
+  {
+    "fromIcId": "kenodo_okegawa_kitamoto",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7690,
+    "distanceKm": 211.1,
+    "durationMinutes": 157
+  },
+  {
+    "fromIcId": "kenodo_okegawa_kitamoto",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7430,
+    "distanceKm": 203.8,
+    "durationMinutes": 148
+  },
+  {
+    "fromIcId": "kenodo_okegawa_kitamoto",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7170,
+    "distanceKm": 196.4,
+    "durationMinutes": 146
+  },
+  {
+    "fromIcId": "kenodo_okegawa_kitamoto",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6890,
+    "distanceKm": 188.4,
+    "durationMinutes": 141
+  },
+  {
+    "fromIcId": "kenodo_okegawa_kitamoto",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7580,
+    "distanceKm": 208,
+    "durationMinutes": 155
+  },
+  {
+    "fromIcId": "kenodo_okegawa_kitamoto",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7860,
+    "distanceKm": 216.1,
+    "durationMinutes": 157
+  },
+  {
+    "fromIcId": "hokuriku_maibara",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8680,
+    "distanceKm": 239.5,
+    "durationMinutes": 171
+  },
+  {
+    "fromIcId": "hokuriku_maibara",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8700,
+    "distanceKm": 240,
+    "durationMinutes": 163
+  },
+  {
+    "fromIcId": "hokuriku_maibara",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9210,
+    "distanceKm": 254.6,
+    "durationMinutes": 172
+  },
+  {
+    "fromIcId": "hokuriku_maibara",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9450,
+    "distanceKm": 261.4,
+    "durationMinutes": 179
+  },
+  {
+    "fromIcId": "hokuriku_maibara",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8810,
+    "distanceKm": 243,
+    "durationMinutes": 174
+  },
+  {
+    "fromIcId": "hokuriku_maibara",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8410,
+    "distanceKm": 231.7,
+    "durationMinutes": 162
+  },
+  {
+    "fromIcId": "hokuriku_nagahama",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9000,
+    "distanceKm": 248.6,
+    "durationMinutes": 177
+  },
+  {
+    "fromIcId": "hokuriku_nagahama",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9020,
+    "distanceKm": 249,
+    "durationMinutes": 169
+  },
+  {
+    "fromIcId": "hokuriku_nagahama",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9530,
+    "distanceKm": 263.6,
+    "durationMinutes": 178
+  },
+  {
+    "fromIcId": "hokuriku_nagahama",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9770,
+    "distanceKm": 270.5,
+    "durationMinutes": 185
+  },
+  {
+    "fromIcId": "hokuriku_nagahama",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9120,
+    "distanceKm": 252,
+    "durationMinutes": 180
+  },
+  {
+    "fromIcId": "hokuriku_nagahama",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8720,
+    "distanceKm": 240.7,
+    "durationMinutes": 168
+  },
+  {
+    "fromIcId": "hokuriku_kinomoto",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9480,
+    "distanceKm": 262.3,
+    "durationMinutes": 187
+  },
+  {
+    "fromIcId": "hokuriku_kinomoto",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9500,
+    "distanceKm": 262.8,
+    "durationMinutes": 178
+  },
+  {
+    "fromIcId": "hokuriku_kinomoto",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 10010,
+    "distanceKm": 277.4,
+    "durationMinutes": 188
+  },
+  {
+    "fromIcId": "hokuriku_kinomoto",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 10250,
+    "distanceKm": 284.3,
+    "durationMinutes": 195
+  },
+  {
+    "fromIcId": "hokuriku_kinomoto",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9600,
+    "distanceKm": 265.8,
+    "durationMinutes": 190
+  },
+  {
+    "fromIcId": "hokuriku_kinomoto",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9210,
+    "distanceKm": 254.5,
+    "durationMinutes": 177
+  },
+  {
+    "fromIcId": "hokuriku_tsuruga",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 10290,
+    "distanceKm": 285.5,
+    "durationMinutes": 203
+  },
+  {
+    "fromIcId": "hokuriku_tsuruga",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 10310,
+    "distanceKm": 286,
+    "durationMinutes": 195
+  },
+  {
+    "fromIcId": "hokuriku_tsuruga",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 10820,
+    "distanceKm": 300.6,
+    "durationMinutes": 204
+  },
+  {
+    "fromIcId": "hokuriku_tsuruga",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 11060,
+    "distanceKm": 307.5,
+    "durationMinutes": 211
+  },
+  {
+    "fromIcId": "hokuriku_tsuruga",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 10420,
+    "distanceKm": 289,
+    "durationMinutes": 206
+  },
+  {
+    "fromIcId": "hokuriku_tsuruga",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 10020,
+    "distanceKm": 277.7,
+    "durationMinutes": 194
+  },
+  {
+    "fromIcId": "hokuriku_fukui",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 12070,
+    "distanceKm": 336.3,
+    "durationMinutes": 241
+  },
+  {
+    "fromIcId": "hokuriku_fukui",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 12090,
+    "distanceKm": 336.8,
+    "durationMinutes": 232
+  },
+  {
+    "fromIcId": "hokuriku_fukui",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 12600,
+    "distanceKm": 351.4,
+    "durationMinutes": 242
+  },
+  {
+    "fromIcId": "hokuriku_fukui",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 12840,
+    "distanceKm": 358.2,
+    "durationMinutes": 249
+  },
+  {
+    "fromIcId": "hokuriku_fukui",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 12190,
+    "distanceKm": 339.8,
+    "durationMinutes": 244
+  },
+  {
+    "fromIcId": "hokuriku_fukui",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 11800,
+    "distanceKm": 328.5,
+    "durationMinutes": 231
+  },
+  {
+    "fromIcId": "hokuriku_kaga",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 14100,
+    "distanceKm": 394.4,
+    "durationMinutes": 284
+  },
+  {
+    "fromIcId": "hokuriku_kaga",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 14120,
+    "distanceKm": 394.9,
+    "durationMinutes": 276
+  },
+  {
+    "fromIcId": "hokuriku_kaga",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 14630,
+    "distanceKm": 409.5,
+    "durationMinutes": 285
+  },
+  {
+    "fromIcId": "hokuriku_kaga",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 14870,
+    "distanceKm": 416.4,
+    "durationMinutes": 292
+  },
+  {
+    "fromIcId": "hokuriku_kaga",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 14230,
+    "distanceKm": 397.9,
+    "durationMinutes": 287
+  },
+  {
+    "fromIcId": "hokuriku_kaga",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 13830,
+    "distanceKm": 386.6,
+    "durationMinutes": 275
+  },
+  {
+    "fromIcId": "hokuriku_komatsu",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 13920,
+    "distanceKm": 389.1,
+    "durationMinutes": 278
+  },
+  {
+    "fromIcId": "hokuriku_komatsu",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 13930,
+    "distanceKm": 389.5,
+    "durationMinutes": 270
+  },
+  {
+    "fromIcId": "hokuriku_komatsu",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 14440,
+    "distanceKm": 404.1,
+    "durationMinutes": 280
+  },
+  {
+    "fromIcId": "hokuriku_komatsu",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 14690,
+    "distanceKm": 411,
+    "durationMinutes": 286
+  },
+  {
+    "fromIcId": "hokuriku_komatsu",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 14040,
+    "distanceKm": 392.5,
+    "durationMinutes": 282
+  },
+  {
+    "fromIcId": "hokuriku_komatsu",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 13640,
+    "distanceKm": 381.2,
+    "durationMinutes": 269
+  },
+  {
+    "fromIcId": "hokuriku_kanazawa_nishi",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 14670,
+    "distanceKm": 410.6,
+    "durationMinutes": 292
+  },
+  {
+    "fromIcId": "hokuriku_kanazawa_nishi",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 14690,
+    "distanceKm": 411.1,
+    "durationMinutes": 284
+  },
+  {
+    "fromIcId": "hokuriku_kanazawa_nishi",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 15200,
+    "distanceKm": 425.7,
+    "durationMinutes": 293
+  },
+  {
+    "fromIcId": "hokuriku_kanazawa_nishi",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 15440,
+    "distanceKm": 432.6,
+    "durationMinutes": 300
+  },
+  {
+    "fromIcId": "hokuriku_kanazawa_nishi",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 14790,
+    "distanceKm": 414.1,
+    "durationMinutes": 295
+  },
+  {
+    "fromIcId": "hokuriku_kanazawa_nishi",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 14400,
+    "distanceKm": 402.8,
+    "durationMinutes": 283
+  },
+  {
+    "fromIcId": "hokuriku_kanazawa_higashi",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 13790,
+    "distanceKm": 385.4,
+    "durationMinutes": 295
+  },
+  {
+    "fromIcId": "hokuriku_kanazawa_higashi",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 13810,
+    "distanceKm": 385.9,
+    "durationMinutes": 287
+  },
+  {
+    "fromIcId": "hokuriku_kanazawa_higashi",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 14320,
+    "distanceKm": 400.5,
+    "durationMinutes": 297
+  },
+  {
+    "fromIcId": "hokuriku_kanazawa_higashi",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 14560,
+    "distanceKm": 407.3,
+    "durationMinutes": 303
+  },
+  {
+    "fromIcId": "hokuriku_kanazawa_higashi",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 13910,
+    "distanceKm": 388.9,
+    "durationMinutes": 299
+  },
+  {
+    "fromIcId": "hokuriku_kanazawa_higashi",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 13520,
+    "distanceKm": 377.6,
+    "durationMinutes": 286
+  },
+  {
+    "fromIcId": "hokuriku_kanazawa_morimoto",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 15090,
+    "distanceKm": 422.5,
+    "durationMinutes": 301
+  },
+  {
+    "fromIcId": "hokuriku_kanazawa_morimoto",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 15100,
+    "distanceKm": 422.9,
+    "durationMinutes": 292
+  },
+  {
+    "fromIcId": "hokuriku_kanazawa_morimoto",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 15610,
+    "distanceKm": 437.5,
+    "durationMinutes": 302
+  },
+  {
+    "fromIcId": "hokuriku_kanazawa_morimoto",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 15850,
+    "distanceKm": 444.4,
+    "durationMinutes": 309
+  },
+  {
+    "fromIcId": "hokuriku_kanazawa_morimoto",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 15210,
+    "distanceKm": 426,
+    "durationMinutes": 304
+  },
+  {
+    "fromIcId": "hokuriku_kanazawa_morimoto",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 14810,
+    "distanceKm": 414.6,
+    "durationMinutes": 291
+  },
+  {
+    "fromIcId": "hokuriku_toyama",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 14040,
+    "distanceKm": 392.7,
+    "durationMinutes": 300
+  },
+  {
+    "fromIcId": "hokuriku_toyama",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 14060,
+    "distanceKm": 393.2,
+    "durationMinutes": 291
+  },
+  {
+    "fromIcId": "hokuriku_toyama",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 10570,
+    "distanceKm": 293.3,
+    "durationMinutes": 294
+  },
+  {
+    "fromIcId": "hokuriku_toyama",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 10260,
+    "distanceKm": 284.5,
+    "durationMinutes": 294
+  },
+  {
+    "fromIcId": "hokuriku_toyama",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 10970,
+    "distanceKm": 304.9,
+    "durationMinutes": 303
+  },
+  {
+    "fromIcId": "hokuriku_toyama",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 13770,
+    "distanceKm": 384.9,
+    "durationMinutes": 290
+  },
+  {
+    "fromIcId": "hokuriku_namerikawa",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 12370,
+    "distanceKm": 344.9,
+    "durationMinutes": 313
+  },
+  {
+    "fromIcId": "hokuriku_namerikawa",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 11980,
+    "distanceKm": 333.7,
+    "durationMinutes": 304
+  },
+  {
+    "fromIcId": "hokuriku_namerikawa",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 11860,
+    "distanceKm": 330.2,
+    "durationMinutes": 302
+  },
+  {
+    "fromIcId": "hokuriku_namerikawa",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 11550,
+    "distanceKm": 321.5,
+    "durationMinutes": 302
+  },
+  {
+    "fromIcId": "hokuriku_namerikawa",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 12270,
+    "distanceKm": 341.9,
+    "durationMinutes": 311
+  },
+  {
+    "fromIcId": "hokuriku_namerikawa",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 14510,
+    "distanceKm": 405.9,
+    "durationMinutes": 305
+  },
+  {
+    "fromIcId": "hokuriku_uozu",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 15080,
+    "distanceKm": 422.4,
+    "durationMinutes": 320
+  },
+  {
+    "fromIcId": "hokuriku_uozu",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 12340,
+    "distanceKm": 343.9,
+    "durationMinutes": 312
+  },
+  {
+    "fromIcId": "hokuriku_uozu",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 12210,
+    "distanceKm": 340.4,
+    "durationMinutes": 310
+  },
+  {
+    "fromIcId": "hokuriku_uozu",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 11910,
+    "distanceKm": 331.7,
+    "durationMinutes": 310
+  },
+  {
+    "fromIcId": "hokuriku_uozu",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 12620,
+    "distanceKm": 352.1,
+    "durationMinutes": 319
+  },
+  {
+    "fromIcId": "hokuriku_uozu",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 14810,
+    "distanceKm": 414.6,
+    "durationMinutes": 311
+  },
+  {
+    "fromIcId": "hokuriku_kurobe",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5760,
+    "distanceKm": 326,
+    "durationMinutes": 300
+  },
+  {
+    "fromIcId": "hokuriku_kurobe",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 11320,
+    "distanceKm": 314.8,
+    "durationMinutes": 291
+  },
+  {
+    "fromIcId": "hokuriku_kurobe",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 11200,
+    "distanceKm": 311.3,
+    "durationMinutes": 289
+  },
+  {
+    "fromIcId": "hokuriku_kurobe",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 10890,
+    "distanceKm": 302.6,
+    "durationMinutes": 289
+  },
+  {
+    "fromIcId": "hokuriku_kurobe",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 11610,
+    "distanceKm": 323,
+    "durationMinutes": 298
+  },
+  {
+    "fromIcId": "hokuriku_kurobe",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 11750,
+    "distanceKm": 327,
+    "durationMinutes": 301
+  },
+  {
+    "fromIcId": "hokuriku_itoigawa",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 10370,
+    "distanceKm": 287.7,
+    "durationMinutes": 269
+  },
+  {
+    "fromIcId": "hokuriku_itoigawa",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9980,
+    "distanceKm": 276.5,
+    "durationMinutes": 260
+  },
+  {
+    "fromIcId": "hokuriku_itoigawa",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9860,
+    "distanceKm": 273,
+    "durationMinutes": 258
+  },
+  {
+    "fromIcId": "hokuriku_itoigawa",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9550,
+    "distanceKm": 264.3,
+    "durationMinutes": 258
+  },
+  {
+    "fromIcId": "hokuriku_itoigawa",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 10260,
+    "distanceKm": 284.7,
+    "durationMinutes": 267
+  },
+  {
+    "fromIcId": "hokuriku_itoigawa",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 10400,
+    "distanceKm": 288.7,
+    "durationMinutes": 269
+  },
+  {
+    "fromIcId": "hokuriku_joetsu",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 11740,
+    "distanceKm": 326.9,
+    "durationMinutes": 244
+  },
+  {
+    "fromIcId": "hokuriku_joetsu",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 11350,
+    "distanceKm": 315.7,
+    "durationMinutes": 235
+  },
+  {
+    "fromIcId": "hokuriku_joetsu",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 11230,
+    "distanceKm": 312.2,
+    "durationMinutes": 233
+  },
+  {
+    "fromIcId": "hokuriku_joetsu",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 10920,
+    "distanceKm": 303.5,
+    "durationMinutes": 233
+  },
+  {
+    "fromIcId": "hokuriku_joetsu",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 11640,
+    "distanceKm": 323.9,
+    "durationMinutes": 243
+  },
+  {
+    "fromIcId": "hokuriku_joetsu",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 11780,
+    "distanceKm": 327.9,
+    "durationMinutes": 245
+  },
+  {
+    "fromIcId": "hokuriku_nagaoka_jct",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 14060,
+    "distanceKm": 393,
+    "durationMinutes": 290
+  },
+  {
+    "fromIcId": "hokuriku_nagaoka_jct",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 13660,
+    "distanceKm": 381.8,
+    "durationMinutes": 280
+  },
+  {
+    "fromIcId": "hokuriku_nagaoka_jct",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 13540,
+    "distanceKm": 378.3,
+    "durationMinutes": 278
+  },
+  {
+    "fromIcId": "hokuriku_nagaoka_jct",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 13240,
+    "distanceKm": 369.6,
+    "durationMinutes": 279
+  },
+  {
+    "fromIcId": "hokuriku_nagaoka_jct",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 13950,
+    "distanceKm": 390,
+    "durationMinutes": 288
+  },
+  {
+    "fromIcId": "hokuriku_nagaoka_jct",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 14090,
+    "distanceKm": 394,
+    "durationMinutes": 290
+  },
+  {
+    "fromIcId": "hokuriku_sanjo_tsubame",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 14860,
+    "distanceKm": 416.1,
+    "durationMinutes": 306
+  },
+  {
+    "fromIcId": "hokuriku_sanjo_tsubame",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 14470,
+    "distanceKm": 404.9,
+    "durationMinutes": 297
+  },
+  {
+    "fromIcId": "hokuriku_sanjo_tsubame",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 14350,
+    "distanceKm": 401.4,
+    "durationMinutes": 295
+  },
+  {
+    "fromIcId": "hokuriku_sanjo_tsubame",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 14040,
+    "distanceKm": 392.7,
+    "durationMinutes": 295
+  },
+  {
+    "fromIcId": "hokuriku_sanjo_tsubame",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 14760,
+    "distanceKm": 413.1,
+    "durationMinutes": 304
+  },
+  {
+    "fromIcId": "hokuriku_sanjo_tsubame",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 14900,
+    "distanceKm": 417.1,
+    "durationMinutes": 306
+  },
+  {
+    "fromIcId": "hokuriku_niigata_nishi",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9390,
+    "distanceKm": 440.5,
+    "durationMinutes": 321
+  },
+  {
+    "fromIcId": "hokuriku_niigata_nishi",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 15320,
+    "distanceKm": 429.2,
+    "durationMinutes": 311
+  },
+  {
+    "fromIcId": "hokuriku_niigata_nishi",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 15200,
+    "distanceKm": 425.8,
+    "durationMinutes": 309
+  },
+  {
+    "fromIcId": "hokuriku_niigata_nishi",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 14900,
+    "distanceKm": 417,
+    "durationMinutes": 310
+  },
+  {
+    "fromIcId": "hokuriku_niigata_nishi",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 15610,
+    "distanceKm": 437.4,
+    "durationMinutes": 319
+  },
+  {
+    "fromIcId": "hokuriku_niigata_nishi",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 15750,
+    "distanceKm": 441.5,
+    "durationMinutes": 321
+  },
+  {
+    "fromIcId": "hokuriku_niigata",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 15430,
+    "distanceKm": 432.3,
+    "durationMinutes": 315
+  },
+  {
+    "fromIcId": "hokuriku_niigata",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 15040,
+    "distanceKm": 421,
+    "durationMinutes": 305
+  },
+  {
+    "fromIcId": "hokuriku_niigata",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 14920,
+    "distanceKm": 417.6,
+    "durationMinutes": 303
+  },
+  {
+    "fromIcId": "hokuriku_niigata",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 14610,
+    "distanceKm": 408.8,
+    "durationMinutes": 303
+  },
+  {
+    "fromIcId": "hokuriku_niigata",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 15320,
+    "distanceKm": 429.2,
+    "durationMinutes": 313
+  },
+  {
+    "fromIcId": "hokuriku_niigata",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 15470,
+    "distanceKm": 433.3,
+    "durationMinutes": 315
+  },
+  {
+    "fromIcId": "joban_nagareyama",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7560,
+    "distanceKm": 207.5,
+    "durationMinutes": 161
+  },
+  {
+    "fromIcId": "joban_nagareyama",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7310,
+    "distanceKm": 200.2,
+    "durationMinutes": 152
+  },
+  {
+    "fromIcId": "joban_nagareyama",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7050,
+    "distanceKm": 192.8,
+    "durationMinutes": 150
+  },
+  {
+    "fromIcId": "joban_nagareyama",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6770,
+    "distanceKm": 184.8,
+    "durationMinutes": 145
+  },
+  {
+    "fromIcId": "joban_nagareyama",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7450,
+    "distanceKm": 204.4,
+    "durationMinutes": 159
+  },
+  {
+    "fromIcId": "joban_nagareyama",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7740,
+    "distanceKm": 212.5,
+    "durationMinutes": 162
+  },
+  {
+    "fromIcId": "joban_kashiwa",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7820,
+    "distanceKm": 214.9,
+    "durationMinutes": 171
+  },
+  {
+    "fromIcId": "joban_kashiwa",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7570,
+    "distanceKm": 207.6,
+    "durationMinutes": 161
+  },
+  {
+    "fromIcId": "joban_kashiwa",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7310,
+    "distanceKm": 200.2,
+    "durationMinutes": 159
+  },
+  {
+    "fromIcId": "joban_kashiwa",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7030,
+    "distanceKm": 192.2,
+    "durationMinutes": 155
+  },
+  {
+    "fromIcId": "joban_kashiwa",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7710,
+    "distanceKm": 211.8,
+    "durationMinutes": 169
+  },
+  {
+    "fromIcId": "joban_kashiwa",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8000,
+    "distanceKm": 219.9,
+    "durationMinutes": 171
+  },
+  {
+    "fromIcId": "joban_tsuchiura_kita",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9050,
+    "distanceKm": 249.9,
+    "durationMinutes": 192
+  },
+  {
+    "fromIcId": "joban_tsuchiura_kita",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8790,
+    "distanceKm": 242.6,
+    "durationMinutes": 183
+  },
+  {
+    "fromIcId": "joban_tsuchiura_kita",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8530,
+    "distanceKm": 235.2,
+    "durationMinutes": 181
+  },
+  {
+    "fromIcId": "joban_tsuchiura_kita",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8260,
+    "distanceKm": 227.3,
+    "durationMinutes": 176
+  },
+  {
+    "fromIcId": "joban_tsuchiura_kita",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8940,
+    "distanceKm": 246.9,
+    "durationMinutes": 191
+  },
+  {
+    "fromIcId": "joban_tsuchiura_kita",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9220,
+    "distanceKm": 254.9,
+    "durationMinutes": 193
+  },
+  {
+    "fromIcId": "joban_mito",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 10670,
+    "distanceKm": 296.2,
+    "durationMinutes": 222
+  },
+  {
+    "fromIcId": "joban_mito",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 10410,
+    "distanceKm": 288.9,
+    "durationMinutes": 213
+  },
+  {
+    "fromIcId": "joban_mito",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 10150,
+    "distanceKm": 281.5,
+    "durationMinutes": 211
+  },
+  {
+    "fromIcId": "joban_mito",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9870,
+    "distanceKm": 273.5,
+    "durationMinutes": 206
+  },
+  {
+    "fromIcId": "joban_mito",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 10560,
+    "distanceKm": 293.1,
+    "durationMinutes": 220
+  },
+  {
+    "fromIcId": "joban_mito",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 10840,
+    "distanceKm": 301.2,
+    "durationMinutes": 222
+  },
+  {
+    "fromIcId": "joban_hitachi_minami_ota",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9250,
+    "distanceKm": 333.4,
+    "durationMinutes": 251
+  },
+  {
+    "fromIcId": "joban_hitachi_minami_ota",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 11710,
+    "distanceKm": 326.1,
+    "durationMinutes": 242
+  },
+  {
+    "fromIcId": "joban_hitachi_minami_ota",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 11450,
+    "distanceKm": 318.7,
+    "durationMinutes": 240
+  },
+  {
+    "fromIcId": "joban_hitachi_minami_ota",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 11170,
+    "distanceKm": 310.7,
+    "durationMinutes": 235
+  },
+  {
+    "fromIcId": "joban_hitachi_minami_ota",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 11860,
+    "distanceKm": 330.3,
+    "durationMinutes": 249
+  },
+  {
+    "fromIcId": "joban_hitachi_minami_ota",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 12140,
+    "distanceKm": 338.4,
+    "durationMinutes": 251
+  },
+  {
+    "fromIcId": "joban_iwaki_chuo",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 10320,
+    "distanceKm": 377.7,
+    "durationMinutes": 278
+  },
+  {
+    "fromIcId": "joban_iwaki_chuo",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 13260,
+    "distanceKm": 370.4,
+    "durationMinutes": 268
+  },
+  {
+    "fromIcId": "joban_iwaki_chuo",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 13010,
+    "distanceKm": 363,
+    "durationMinutes": 267
+  },
+  {
+    "fromIcId": "joban_iwaki_chuo",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 12730,
+    "distanceKm": 355,
+    "durationMinutes": 262
+  },
+  {
+    "fromIcId": "joban_iwaki_chuo",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 13410,
+    "distanceKm": 374.6,
+    "durationMinutes": 276
+  },
+  {
+    "fromIcId": "joban_iwaki_chuo",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 13690,
+    "distanceKm": 382.7,
+    "durationMinutes": 278
+  },
+  {
+    "fromIcId": "joban_soma",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 17290,
+    "distanceKm": 485.4,
+    "durationMinutes": 353
+  },
+  {
+    "fromIcId": "joban_soma",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 17040,
+    "distanceKm": 478.2,
+    "durationMinutes": 344
+  },
+  {
+    "fromIcId": "joban_soma",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 16770,
+    "distanceKm": 470.7,
+    "durationMinutes": 342
+  },
+  {
+    "fromIcId": "joban_soma",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 16500,
+    "distanceKm": 462.8,
+    "durationMinutes": 337
+  },
+  {
+    "fromIcId": "joban_soma",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 17180,
+    "distanceKm": 482.4,
+    "durationMinutes": 351
+  },
+  {
+    "fromIcId": "joban_soma",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 17460,
+    "distanceKm": 490.4,
+    "durationMinutes": 354
+  },
+  {
+    "fromIcId": "joban_watari",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 18080,
+    "distanceKm": 508,
+    "durationMinutes": 369
+  },
+  {
+    "fromIcId": "joban_watari",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 17820,
+    "distanceKm": 500.7,
+    "durationMinutes": 359
+  },
+  {
+    "fromIcId": "joban_watari",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 17570,
+    "distanceKm": 493.3,
+    "durationMinutes": 358
+  },
+  {
+    "fromIcId": "joban_watari",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 17290,
+    "distanceKm": 485.3,
+    "durationMinutes": 353
+  },
+  {
+    "fromIcId": "joban_watari",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 17970,
+    "distanceKm": 504.9,
+    "durationMinutes": 367
+  },
+  {
+    "fromIcId": "joban_watari",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 18260,
+    "distanceKm": 513,
+    "durationMinutes": 369
+  },
+  {
+    "fromIcId": "joban_sendai_higashi",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 18560,
+    "distanceKm": 521.8,
+    "durationMinutes": 376
+  },
+  {
+    "fromIcId": "joban_sendai_higashi",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 18310,
+    "distanceKm": 514.5,
+    "durationMinutes": 366
+  },
+  {
+    "fromIcId": "joban_sendai_higashi",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 18050,
+    "distanceKm": 507.1,
+    "durationMinutes": 365
+  },
+  {
+    "fromIcId": "joban_sendai_higashi",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 17770,
+    "distanceKm": 499.2,
+    "durationMinutes": 360
+  },
+  {
+    "fromIcId": "joban_sendai_higashi",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 18460,
+    "distanceKm": 518.8,
+    "durationMinutes": 374
+  },
+  {
+    "fromIcId": "joban_sendai_higashi",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 18740,
+    "distanceKm": 526.8,
+    "durationMinutes": 376
+  },
+  {
+    "fromIcId": "higashikanto_ichikawa",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5710,
+    "distanceKm": 200.1,
+    "durationMinutes": 150
+  },
+  {
+    "fromIcId": "higashikanto_ichikawa",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7050,
+    "distanceKm": 192.8,
+    "durationMinutes": 141
+  },
+  {
+    "fromIcId": "higashikanto_ichikawa",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6790,
+    "distanceKm": 185.4,
+    "durationMinutes": 139
+  },
+  {
+    "fromIcId": "higashikanto_ichikawa",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6510,
+    "distanceKm": 177.5,
+    "durationMinutes": 134
+  },
+  {
+    "fromIcId": "higashikanto_ichikawa",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7200,
+    "distanceKm": 197.1,
+    "durationMinutes": 148
+  },
+  {
+    "fromIcId": "higashikanto_ichikawa",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7480,
+    "distanceKm": 205.1,
+    "durationMinutes": 150
+  },
+  {
+    "fromIcId": "higashikanto_chiba_kita",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6490,
+    "distanceKm": 219.1,
+    "durationMinutes": 165
+  },
+  {
+    "fromIcId": "higashikanto_chiba_kita",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7710,
+    "distanceKm": 211.8,
+    "durationMinutes": 156
+  },
+  {
+    "fromIcId": "higashikanto_chiba_kita",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7450,
+    "distanceKm": 204.4,
+    "durationMinutes": 154
+  },
+  {
+    "fromIcId": "higashikanto_chiba_kita",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7170,
+    "distanceKm": 196.4,
+    "durationMinutes": 149
+  },
+  {
+    "fromIcId": "higashikanto_chiba_kita",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7860,
+    "distanceKm": 216,
+    "durationMinutes": 163
+  },
+  {
+    "fromIcId": "higashikanto_chiba_kita",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8140,
+    "distanceKm": 224.1,
+    "durationMinutes": 166
+  },
+  {
+    "fromIcId": "higashikanto_yotsukaido",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8140,
+    "distanceKm": 224,
+    "durationMinutes": 167
+  },
+  {
+    "fromIcId": "higashikanto_yotsukaido",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7880,
+    "distanceKm": 216.7,
+    "durationMinutes": 158
+  },
+  {
+    "fromIcId": "higashikanto_yotsukaido",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7630,
+    "distanceKm": 209.3,
+    "durationMinutes": 156
+  },
+  {
+    "fromIcId": "higashikanto_yotsukaido",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7350,
+    "distanceKm": 201.3,
+    "durationMinutes": 151
+  },
+  {
+    "fromIcId": "higashikanto_yotsukaido",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8030,
+    "distanceKm": 220.9,
+    "durationMinutes": 166
+  },
+  {
+    "fromIcId": "higashikanto_yotsukaido",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8310,
+    "distanceKm": 228.9,
+    "durationMinutes": 168
+  },
+  {
+    "fromIcId": "higashikanto_narita",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9050,
+    "distanceKm": 250.1,
+    "durationMinutes": 185
+  },
+  {
+    "fromIcId": "higashikanto_narita",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8800,
+    "distanceKm": 242.8,
+    "durationMinutes": 175
+  },
+  {
+    "fromIcId": "higashikanto_narita",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8540,
+    "distanceKm": 235.4,
+    "durationMinutes": 173
+  },
+  {
+    "fromIcId": "higashikanto_narita",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8260,
+    "distanceKm": 227.5,
+    "durationMinutes": 169
+  },
+  {
+    "fromIcId": "higashikanto_narita",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 8950,
+    "distanceKm": 247.1,
+    "durationMinutes": 183
+  },
+  {
+    "fromIcId": "higashikanto_narita",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 9230,
+    "distanceKm": 255.1,
+    "durationMinutes": 185
+  },
+  {
+    "fromIcId": "shuto_shiodome",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4910,
+    "distanceKm": 179.8,
+    "durationMinutes": 137
+  },
+  {
+    "fromIcId": "shuto_shiodome",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6340,
+    "distanceKm": 172.5,
+    "durationMinutes": 128
+  },
+  {
+    "fromIcId": "shuto_shiodome",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6080,
+    "distanceKm": 165.1,
+    "durationMinutes": 126
+  },
+  {
+    "fromIcId": "shuto_shiodome",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5800,
+    "distanceKm": 157.1,
+    "durationMinutes": 121
+  },
+  {
+    "fromIcId": "shuto_shiodome",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6480,
+    "distanceKm": 176.7,
+    "durationMinutes": 135
+  },
+  {
+    "fromIcId": "shuto_shiodome",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6770,
+    "distanceKm": 184.8,
+    "durationMinutes": 138
+  },
+  {
+    "fromIcId": "shuto_shiba",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4910,
+    "distanceKm": 176.7,
+    "durationMinutes": 134
+  },
+  {
+    "fromIcId": "shuto_shiba",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6230,
+    "distanceKm": 169.4,
+    "durationMinutes": 125
+  },
+  {
+    "fromIcId": "shuto_shiba",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5970,
+    "distanceKm": 162,
+    "durationMinutes": 123
+  },
+  {
+    "fromIcId": "shuto_shiba",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5690,
+    "distanceKm": 154,
+    "durationMinutes": 118
+  },
+  {
+    "fromIcId": "shuto_shiba",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6380,
+    "distanceKm": 173.6,
+    "durationMinutes": 133
+  },
+  {
+    "fromIcId": "shuto_shiba",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6660,
+    "distanceKm": 181.7,
+    "durationMinutes": 135
+  },
+  {
+    "fromIcId": "shuto_kasumigaseki",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4910,
+    "distanceKm": 175.9,
+    "durationMinutes": 132
+  },
+  {
+    "fromIcId": "shuto_kasumigaseki",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6200,
+    "distanceKm": 168.6,
+    "durationMinutes": 122
+  },
+  {
+    "fromIcId": "shuto_kasumigaseki",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5940,
+    "distanceKm": 161.2,
+    "durationMinutes": 121
+  },
+  {
+    "fromIcId": "shuto_kasumigaseki",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5660,
+    "distanceKm": 153.2,
+    "durationMinutes": 116
+  },
+  {
+    "fromIcId": "shuto_kasumigaseki",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6350,
+    "distanceKm": 172.8,
+    "durationMinutes": 130
+  },
+  {
+    "fromIcId": "shuto_kasumigaseki",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6630,
+    "distanceKm": 180.9,
+    "durationMinutes": 132
+  },
+  {
+    "fromIcId": "shuto_shibuya",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4670,
+    "distanceKm": 171.4,
+    "durationMinutes": 130
+  },
+  {
+    "fromIcId": "shuto_shibuya",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6040,
+    "distanceKm": 164.1,
+    "durationMinutes": 121
+  },
+  {
+    "fromIcId": "shuto_shibuya",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5780,
+    "distanceKm": 156.7,
+    "durationMinutes": 119
+  },
+  {
+    "fromIcId": "shuto_shibuya",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5500,
+    "distanceKm": 148.7,
+    "durationMinutes": 114
+  },
+  {
+    "fromIcId": "shuto_shibuya",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6190,
+    "distanceKm": 168.3,
+    "durationMinutes": 128
+  },
+  {
+    "fromIcId": "shuto_shibuya",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6470,
+    "distanceKm": 176.4,
+    "durationMinutes": 131
+  },
+  {
+    "fromIcId": "shuto_sangenjaya",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4670,
+    "distanceKm": 171.5,
+    "durationMinutes": 130
+  },
+  {
+    "fromIcId": "shuto_sangenjaya",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6050,
+    "distanceKm": 164.3,
+    "durationMinutes": 121
+  },
+  {
+    "fromIcId": "shuto_sangenjaya",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5790,
+    "distanceKm": 156.8,
+    "durationMinutes": 119
+  },
+  {
+    "fromIcId": "shuto_sangenjaya",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5510,
+    "distanceKm": 148.9,
+    "durationMinutes": 114
+  },
+  {
+    "fromIcId": "shuto_sangenjaya",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6200,
+    "distanceKm": 168.5,
+    "durationMinutes": 128
+  },
+  {
+    "fromIcId": "shuto_sangenjaya",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6480,
+    "distanceKm": 176.5,
+    "durationMinutes": 130
+  },
+  {
+    "fromIcId": "shuto_yoga",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4300,
+    "distanceKm": 163.9,
+    "durationMinutes": 123
+  },
+  {
+    "fromIcId": "shuto_yoga",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5780,
+    "distanceKm": 156.7,
+    "durationMinutes": 114
+  },
+  {
+    "fromIcId": "shuto_yoga",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5520,
+    "distanceKm": 149.2,
+    "durationMinutes": 112
+  },
+  {
+    "fromIcId": "shuto_yoga",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5250,
+    "distanceKm": 141.3,
+    "durationMinutes": 107
+  },
+  {
+    "fromIcId": "shuto_yoga",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5930,
+    "distanceKm": 160.9,
+    "durationMinutes": 122
+  },
+  {
+    "fromIcId": "shuto_yoga",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6210,
+    "distanceKm": 168.9,
+    "durationMinutes": 124
+  },
+  {
+    "fromIcId": "shuto_hatsutagaoka",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4780,
+    "distanceKm": 175.1,
+    "durationMinutes": 134
+  },
+  {
+    "fromIcId": "shuto_hatsutagaoka",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6170,
+    "distanceKm": 167.8,
+    "durationMinutes": 125
+  },
+  {
+    "fromIcId": "shuto_hatsutagaoka",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5910,
+    "distanceKm": 160.4,
+    "durationMinutes": 123
+  },
+  {
+    "fromIcId": "shuto_hatsutagaoka",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5640,
+    "distanceKm": 152.5,
+    "durationMinutes": 119
+  },
+  {
+    "fromIcId": "shuto_hatsutagaoka",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6320,
+    "distanceKm": 172.1,
+    "durationMinutes": 133
+  },
+  {
+    "fromIcId": "shuto_hatsutagaoka",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6600,
+    "distanceKm": 180.1,
+    "durationMinutes": 135
+  },
+  {
+    "fromIcId": "shuto_eifuku",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4300,
+    "distanceKm": 171.8,
+    "durationMinutes": 136
+  },
+  {
+    "fromIcId": "shuto_eifuku",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6060,
+    "distanceKm": 164.6,
+    "durationMinutes": 127
+  },
+  {
+    "fromIcId": "shuto_eifuku",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5800,
+    "distanceKm": 157.1,
+    "durationMinutes": 125
+  },
+  {
+    "fromIcId": "shuto_eifuku",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5520,
+    "distanceKm": 149.2,
+    "durationMinutes": 121
+  },
+  {
+    "fromIcId": "shuto_eifuku",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6210,
+    "distanceKm": 168.8,
+    "durationMinutes": 135
+  },
+  {
+    "fromIcId": "shuto_eifuku",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6490,
+    "distanceKm": 176.8,
+    "durationMinutes": 137
+  },
+  {
+    "fromIcId": "shuto_ikebukuro",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5000,
+    "distanceKm": 181.2,
+    "durationMinutes": 143
+  },
+  {
+    "fromIcId": "shuto_ikebukuro",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6390,
+    "distanceKm": 173.9,
+    "durationMinutes": 134
+  },
+  {
+    "fromIcId": "shuto_ikebukuro",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6130,
+    "distanceKm": 166.5,
+    "durationMinutes": 132
+  },
+  {
+    "fromIcId": "shuto_ikebukuro",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5850,
+    "distanceKm": 158.6,
+    "durationMinutes": 127
+  },
+  {
+    "fromIcId": "shuto_ikebukuro",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6540,
+    "distanceKm": 178.2,
+    "durationMinutes": 142
+  },
+  {
+    "fromIcId": "shuto_ikebukuro",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6820,
+    "distanceKm": 186.2,
+    "durationMinutes": 144
+  },
+  {
+    "fromIcId": "shuto_oi",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6640,
+    "distanceKm": 181,
+    "durationMinutes": 138
+  },
+  {
+    "fromIcId": "shuto_oi",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6380,
+    "distanceKm": 173.8,
+    "durationMinutes": 128
+  },
+  {
+    "fromIcId": "shuto_oi",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6120,
+    "distanceKm": 166.3,
+    "durationMinutes": 127
+  },
+  {
+    "fromIcId": "shuto_oi",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5840,
+    "distanceKm": 158.4,
+    "durationMinutes": 122
+  },
+  {
+    "fromIcId": "shuto_oi",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6530,
+    "distanceKm": 178,
+    "durationMinutes": 136
+  },
+  {
+    "fromIcId": "shuto_oi",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6810,
+    "distanceKm": 186,
+    "durationMinutes": 138
+  },
+  {
+    "fromIcId": "shuto_hakozaki",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6940,
+    "distanceKm": 189.8,
+    "durationMinutes": 143
+  },
+  {
+    "fromIcId": "shuto_hakozaki",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6690,
+    "distanceKm": 182.5,
+    "durationMinutes": 133
+  },
+  {
+    "fromIcId": "shuto_hakozaki",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6430,
+    "distanceKm": 175.1,
+    "durationMinutes": 131
+  },
+  {
+    "fromIcId": "shuto_hakozaki",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6150,
+    "distanceKm": 167.2,
+    "durationMinutes": 127
+  },
+  {
+    "fromIcId": "shuto_hakozaki",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6840,
+    "distanceKm": 186.8,
+    "durationMinutes": 141
+  },
+  {
+    "fromIcId": "shuto_hakozaki",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7120,
+    "distanceKm": 194.8,
+    "durationMinutes": 143
+  },
+  {
+    "fromIcId": "shuto_mukojima",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5300,
+    "distanceKm": 188,
+    "durationMinutes": 147
+  },
+  {
+    "fromIcId": "shuto_mukojima",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6620,
+    "distanceKm": 180.7,
+    "durationMinutes": 137
+  },
+  {
+    "fromIcId": "shuto_mukojima",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6370,
+    "distanceKm": 173.3,
+    "durationMinutes": 135
+  },
+  {
+    "fromIcId": "shuto_mukojima",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6090,
+    "distanceKm": 165.3,
+    "durationMinutes": 131
+  },
+  {
+    "fromIcId": "shuto_mukojima",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6770,
+    "distanceKm": 184.9,
+    "durationMinutes": 145
+  },
+  {
+    "fromIcId": "shuto_mukojima",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7060,
+    "distanceKm": 193,
+    "durationMinutes": 147
+  },
+  {
+    "fromIcId": "shuto_haneda",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6420,
+    "distanceKm": 174.8,
+    "durationMinutes": 134
+  },
+  {
+    "fromIcId": "shuto_haneda",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6170,
+    "distanceKm": 167.6,
+    "durationMinutes": 125
+  },
+  {
+    "fromIcId": "shuto_haneda",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5900,
+    "distanceKm": 160.1,
+    "durationMinutes": 123
+  },
+  {
+    "fromIcId": "shuto_haneda",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5630,
+    "distanceKm": 152.2,
+    "durationMinutes": 118
+  },
+  {
+    "fromIcId": "shuto_haneda",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6310,
+    "distanceKm": 171.8,
+    "durationMinutes": 133
+  },
+  {
+    "fromIcId": "shuto_haneda",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6590,
+    "distanceKm": 179.8,
+    "durationMinutes": 135
+  },
+  {
+    "fromIcId": "shuto_kasai",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5390,
+    "distanceKm": 192.8,
+    "durationMinutes": 153
+  },
+  {
+    "fromIcId": "shuto_kasai",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6800,
+    "distanceKm": 185.6,
+    "durationMinutes": 144
+  },
+  {
+    "fromIcId": "shuto_kasai",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6530,
+    "distanceKm": 178.1,
+    "durationMinutes": 142
+  },
+  {
+    "fromIcId": "shuto_kasai",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6260,
+    "distanceKm": 170.2,
+    "durationMinutes": 137
+  },
+  {
+    "fromIcId": "shuto_kasai",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6940,
+    "distanceKm": 189.8,
+    "durationMinutes": 152
+  },
+  {
+    "fromIcId": "shuto_kasai",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 7220,
+    "distanceKm": 197.8,
+    "durationMinutes": 154
+  },
+  {
+    "fromIcId": "shuto_ariake",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5090,
+    "distanceKm": 183.3,
+    "durationMinutes": 140
+  },
+  {
+    "fromIcId": "shuto_ariake",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6460,
+    "distanceKm": 176,
+    "durationMinutes": 131
+  },
+  {
+    "fromIcId": "shuto_ariake",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6200,
+    "distanceKm": 168.6,
+    "durationMinutes": 129
+  },
+  {
+    "fromIcId": "shuto_ariake",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5920,
+    "distanceKm": 160.6,
+    "durationMinutes": 124
+  },
+  {
+    "fromIcId": "shuto_ariake",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6610,
+    "distanceKm": 180.2,
+    "durationMinutes": 138
+  },
+  {
+    "fromIcId": "shuto_ariake",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6890,
+    "distanceKm": 188.3,
+    "durationMinutes": 141
+  },
+  {
+    "fromIcId": "shuto_ikegami",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6130,
+    "distanceKm": 166.6,
+    "durationMinutes": 124
+  },
+  {
+    "fromIcId": "shuto_ikegami",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5880,
+    "distanceKm": 159.3,
+    "durationMinutes": 115
+  },
+  {
+    "fromIcId": "shuto_ikegami",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5620,
+    "distanceKm": 151.9,
+    "durationMinutes": 113
+  },
+  {
+    "fromIcId": "shuto_ikegami",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5340,
+    "distanceKm": 144,
+    "durationMinutes": 109
+  },
+  {
+    "fromIcId": "shuto_ikegami",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6030,
+    "distanceKm": 163.6,
+    "durationMinutes": 123
+  },
+  {
+    "fromIcId": "shuto_ikegami",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6310,
+    "distanceKm": 171.6,
+    "durationMinutes": 125
+  },
+  {
+    "fromIcId": "shuto_yokohama_ekimae",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6080,
+    "distanceKm": 165,
+    "durationMinutes": 123
+  },
+  {
+    "fromIcId": "shuto_yokohama_ekimae",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5820,
+    "distanceKm": 157.7,
+    "durationMinutes": 114
+  },
+  {
+    "fromIcId": "shuto_yokohama_ekimae",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5560,
+    "distanceKm": 150.3,
+    "durationMinutes": 112
+  },
+  {
+    "fromIcId": "shuto_yokohama_ekimae",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5280,
+    "distanceKm": 142.4,
+    "durationMinutes": 107
+  },
+  {
+    "fromIcId": "shuto_yokohama_ekimae",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5970,
+    "distanceKm": 162,
+    "durationMinutes": 121
+  },
+  {
+    "fromIcId": "shuto_yokohama_ekimae",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6250,
+    "distanceKm": 170,
+    "durationMinutes": 123
+  },
+  {
+    "fromIcId": "shuto_hodogaya",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6050,
+    "distanceKm": 164.4,
+    "durationMinutes": 124
+  },
+  {
+    "fromIcId": "shuto_hodogaya",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5800,
+    "distanceKm": 157.1,
+    "durationMinutes": 115
+  },
+  {
+    "fromIcId": "shuto_hodogaya",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5540,
+    "distanceKm": 149.7,
+    "durationMinutes": 113
+  },
+  {
+    "fromIcId": "shuto_hodogaya",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5260,
+    "distanceKm": 141.7,
+    "durationMinutes": 108
+  },
+  {
+    "fromIcId": "shuto_hodogaya",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5950,
+    "distanceKm": 161.3,
+    "durationMinutes": 122
+  },
+  {
+    "fromIcId": "shuto_hodogaya",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 6230,
+    "distanceKm": 169.4,
+    "durationMinutes": 124
+  },
+  {
+    "fromIcId": "shuto_shin_yokohama",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4390,
+    "distanceKm": 159,
+    "durationMinutes": 121
+  },
+  {
+    "fromIcId": "shuto_shin_yokohama",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 430,
+    "distanceKm": 151.7,
+    "durationMinutes": 111
+  },
+  {
+    "fromIcId": "shuto_shin_yokohama",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 430,
+    "distanceKm": 144.3,
+    "durationMinutes": 110
+  },
+  {
+    "fromIcId": "shuto_shin_yokohama",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5070,
+    "distanceKm": 136.3,
+    "durationMinutes": 105
+  },
+  {
+    "fromIcId": "shuto_shin_yokohama",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5760,
+    "distanceKm": 155.9,
+    "durationMinutes": 119
+  },
+  {
+    "fromIcId": "shuto_shin_yokohama",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 430,
+    "distanceKm": 164,
+    "durationMinutes": 121
+  },
+  {
+    "fromIcId": "odawara_atsugi_atsugi",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4910,
+    "distanceKm": 131.8,
+    "durationMinutes": 95
+  },
+  {
+    "fromIcId": "odawara_atsugi_atsugi",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4660,
+    "distanceKm": 124.5,
+    "durationMinutes": 85
+  },
+  {
+    "fromIcId": "odawara_atsugi_atsugi",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4400,
+    "distanceKm": 117.1,
+    "durationMinutes": 84
+  },
+  {
+    "fromIcId": "odawara_atsugi_atsugi",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4120,
+    "distanceKm": 109.1,
+    "durationMinutes": 79
+  },
+  {
+    "fromIcId": "odawara_atsugi_atsugi",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4800,
+    "distanceKm": 128.7,
+    "durationMinutes": 93
+  },
+  {
+    "fromIcId": "odawara_atsugi_atsugi",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5090,
+    "distanceKm": 136.8,
+    "durationMinutes": 95
+  },
+  {
+    "fromIcId": "odawara_atsugi_isehara",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3410,
+    "distanceKm": 133,
+    "durationMinutes": 100
+  },
+  {
+    "fromIcId": "odawara_atsugi_isehara",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4700,
+    "distanceKm": 125.8,
+    "durationMinutes": 91
+  },
+  {
+    "fromIcId": "odawara_atsugi_isehara",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4440,
+    "distanceKm": 118.3,
+    "durationMinutes": 89
+  },
+  {
+    "fromIcId": "odawara_atsugi_isehara",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4160,
+    "distanceKm": 110.4,
+    "durationMinutes": 84
+  },
+  {
+    "fromIcId": "odawara_atsugi_isehara",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4850,
+    "distanceKm": 130,
+    "durationMinutes": 98
+  },
+  {
+    "fromIcId": "odawara_atsugi_isehara",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 5130,
+    "distanceKm": 138,
+    "durationMinutes": 100
+  },
+  {
+    "fromIcId": "odawara_atsugi_hiratsuka",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3110,
+    "distanceKm": 122,
+    "durationMinutes": 100
+  },
+  {
+    "fromIcId": "odawara_atsugi_hiratsuka",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4310,
+    "distanceKm": 114.7,
+    "durationMinutes": 91
+  },
+  {
+    "fromIcId": "odawara_atsugi_hiratsuka",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4060,
+    "distanceKm": 107.3,
+    "durationMinutes": 89
+  },
+  {
+    "fromIcId": "odawara_atsugi_hiratsuka",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3780,
+    "distanceKm": 99.3,
+    "durationMinutes": 84
+  },
+  {
+    "fromIcId": "odawara_atsugi_hiratsuka",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4470,
+    "distanceKm": 119,
+    "durationMinutes": 98
+  },
+  {
+    "fromIcId": "odawara_atsugi_hiratsuka",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4750,
+    "distanceKm": 127,
+    "durationMinutes": 100
+  },
+  {
+    "fromIcId": "odawara_atsugi_odawara_higashi",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 2950,
+    "distanceKm": 112.5,
+    "durationMinutes": 91
+  },
+  {
+    "fromIcId": "odawara_atsugi_odawara_higashi",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3980,
+    "distanceKm": 105.2,
+    "durationMinutes": 81
+  },
+  {
+    "fromIcId": "odawara_atsugi_odawara_higashi",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3720,
+    "distanceKm": 97.8,
+    "durationMinutes": 79
+  },
+  {
+    "fromIcId": "odawara_atsugi_odawara_higashi",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3440,
+    "distanceKm": 89.8,
+    "durationMinutes": 75
+  },
+  {
+    "fromIcId": "odawara_atsugi_odawara_higashi",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4130,
+    "distanceKm": 109.4,
+    "durationMinutes": 89
+  },
+  {
+    "fromIcId": "odawara_atsugi_odawara_higashi",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4410,
+    "distanceKm": 117.5,
+    "durationMinutes": 91
+  },
+  {
+    "fromIcId": "odawara_atsugi_odawara",
+    "toIcId": "tomei_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 1750,
+    "distanceKm": 102.7,
+    "durationMinutes": 97
+  },
+  {
+    "fromIcId": "odawara_atsugi_odawara",
+    "toIcId": "shin_tomei_shin_shizuoka",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3650,
+    "distanceKm": 95.6,
+    "durationMinutes": 88
+  },
+  {
+    "fromIcId": "odawara_atsugi_odawara",
+    "toIcId": "tomei_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3380,
+    "distanceKm": 88,
+    "durationMinutes": 86
+  },
+  {
+    "fromIcId": "odawara_atsugi_odawara",
+    "toIcId": "shin_tomei_shin_shimizu",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3110,
+    "distanceKm": 80.3,
+    "durationMinutes": 81
+  },
+  {
+    "fromIcId": "odawara_atsugi_odawara",
+    "toIcId": "tomei_nihondaira_kunozan_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 3790,
+    "distanceKm": 99.7,
+    "durationMinutes": 95
+  },
+  {
+    "fromIcId": "odawara_atsugi_odawara",
+    "toIcId": "shin_tomei_shizuoka_sa_smart",
+    "vehicleType": "standard",
+    "useEtc": true,
+    "fareYen": 4080,
+    "distanceKm": 107.9,
+    "durationMinutes": 97
+  }
+]
