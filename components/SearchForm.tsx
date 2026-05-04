@@ -20,7 +20,7 @@ const DEFAULT_ORIGIN = {
 const HIGHWAY_BUTTONS = [
   { roadId: 'tohoku',    label: '東北道', defaultExitIcId: 'tohoku_izumi' },
   { roadId: 'hokuriku',  label: '北陸道', defaultExitIcId: 'hokuriku_sanjo_tsubame' },
-  { roadId: 'shin_tomei', label: '東名',  defaultExitIcId: 'shin_tomei_nagaizumi_numazu' },
+  { roadId: 'tomei',      label: '東名',  defaultExitIcId: 'tomei_numazu' },
 ] as const;
 
 const DEFAULT_ROAD_ID = 'tohoku';
