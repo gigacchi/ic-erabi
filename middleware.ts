@@ -13,8 +13,10 @@ export function middleware(request: NextRequest) {
 
   // クッキーが正しければ通過
   const token = request.cookies.get(COOKIE)?.value;
-  const expected = process.env.ACCESS_PASSWORD;
-  if (!expected || token === expected) {
+  const expected = (process.env.ACCESS_PASSWORD ?? '').trim();
+  if (!expected) return NextResponse.next();
+  const expectedToken = btoa(expected);
+  if (token === expectedToken) {
     return NextResponse.next();
   }
 
