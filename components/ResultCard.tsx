@@ -3,6 +3,22 @@
 import { useState, useEffect, useRef } from 'react';
 import type { IcCandidateResult } from '@/types';
 
+const ROAD_SHORT: Record<string, string> = {
+  '東名高速道路':          '東名',
+  '新東名高速道路':         '新東名',
+  '東北自動車道':          '東北道',
+  '関越自動車道':          '関越道',
+  '東京外環自動車道':       '外環',
+  '中央自動車道':          '中央道',
+  '首都圏中央連絡自動車道':  '圏央道',
+  '北陸自動車道':          '北陸道',
+  '常磐自動車道':          '常磐道',
+  '東関東自動車道':         '東関道',
+  '首都高速道路':          '首都高',
+  '小田原厚木道路':         '小田厚',
+};
+const shortRoad = (name: string) => ROAD_SHORT[name] ?? name;
+
 // デザイン準拠: 前の値から新しい値へアニメーション
 function useCountUp(target: number, duration = 600): number {
   const [v, setV] = useState(target);
@@ -173,14 +189,17 @@ export default function ResultCard({
           }}>OUT</span>
         </div>
         {/* 路線変更 or 経由IC */}
-        {result.roadChangeLine ? (
+        {result.entranceRoadName !== result.destinationRoadName ? (
+          // 路線が変わる場合：乗り継ぎポイントを明示
           <div style={{ marginTop: 5, fontSize: 10, color: '#3a352a', fontWeight: 600 }}>
-            {result.roadChangeLine}
+            {result.roadChangeLine ||
+              `${shortRoad(result.entranceRoadName)}：${result.entranceIcName} → ${shortRoad(result.destinationRoadName)}`}
           </div>
-        ) : result.waypointIcNames.length > 0 ? (
+        ) : (result.waypointIcNames ?? []).length > 0 ? (
+          // 同一路線：経由ICを表示
           <div style={{ marginTop: 5, fontSize: 10, color: '#6f6a5a', display: 'flex', alignItems: 'center', gap: 3, flexWrap: 'wrap' }}>
             <span style={{ color: '#bcb6a3', flexShrink: 0 }}>経由</span>
-            {result.waypointIcNames.map((name, i) => (
+            {(result.waypointIcNames ?? []).map((name, i) => (
               <span key={i} style={{ display: 'flex', alignItems: 'center', gap: 3 }}>
                 {i > 0 && <span style={{ color: '#bcb6a3' }}>›</span>}
                 <span>{name}</span>
