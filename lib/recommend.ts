@@ -1,9 +1,22 @@
 import type { IcCandidateResult, SearchCondition, CandidateLabel, Interchange } from '@/types';
-import { findInterchangeById, getAllInterchanges, getWaypointIcNames } from './ic';
+import { findInterchangeById, getAllInterchanges, getWaypointIcNames, findNearestIcOnRoad, getRoadShortName } from './ic';
 import { getHighwayFare, getHighwayRouteSteps } from './fareProvider';
 import { getLocalRoadRoute } from './routeProvider';
 import { calculateScore } from './score';
 import { calculateDistanceKm } from './geo';
+
+/** 異なる路線の場合のみ「外環：大泉IC → 東北道：川口IC」形式の文字列を返す */
+function buildRoadChangeLine(
+  fromId: string,
+  fromRoadName: string,
+  fromIcName: string,
+  toRoadId: string,
+  toRoadName: string
+): string {
+  const junctionIc = findNearestIcOnRoad(fromId, toRoadId);
+  if (!junctionIc) return ''; // 同一路線
+  return `${getRoadShortName(fromRoadName)}：${fromIcName} → ${getRoadShortName(toRoadName)}：${junctionIc.name}`;
+}
 
 export async function computeIcRoute(
   condition: SearchCondition
@@ -62,6 +75,7 @@ export async function computeIcRoute(
     labels: [],
     reason,
     waypointIcNames: getWaypointIcNames(entrance.id, destination.id),
+    roadChangeLine: buildRoadChangeLine(entrance.id, entrance.roadName, entrance.name, destination.roadId, destination.roadName),
     highwaySteps,
   };
 }
@@ -108,6 +122,7 @@ async function tryAddAlternative(
       labels: [],
       reason: '一般道は推定値です',
       waypointIcNames: getWaypointIcNames(ic.id, destination.id),
+      roadChangeLine: buildRoadChangeLine(ic.id, ic.roadName, ic.name, destination.roadId, destination.roadName),
       highwaySteps: [],
     };
   } catch {

@@ -172,8 +172,12 @@ export default function ResultCard({
             fontSize: 8, fontWeight: 700, padding: '1px 4px', borderRadius: 3,
           }}>OUT</span>
         </div>
-        {/* 経由IC */}
-        {result.waypointIcNames.length > 0 && (
+        {/* 路線変更 or 経由IC */}
+        {result.roadChangeLine ? (
+          <div style={{ marginTop: 5, fontSize: 10, color: '#3a352a', fontWeight: 600 }}>
+            {result.roadChangeLine}
+          </div>
+        ) : result.waypointIcNames.length > 0 ? (
           <div style={{ marginTop: 5, fontSize: 10, color: '#6f6a5a', display: 'flex', alignItems: 'center', gap: 3, flexWrap: 'wrap' }}>
             <span style={{ color: '#bcb6a3', flexShrink: 0 }}>経由</span>
             {result.waypointIcNames.map((name, i) => (
@@ -183,7 +187,7 @@ export default function ResultCard({
               </span>
             ))}
           </div>
-        )}
+        ) : null}
       </div>
 
       {/* 数値グリッド（セル間 1px 区切り） */}

@@ -75,6 +75,7 @@ export type IcCandidateResult = {
   labels: CandidateLabel[];
   reason: string;
   waypointIcNames: string[];
+  roadChangeLine: string;
   highwaySteps?: { instruction: string; distanceKm: number }[];
 };
 
