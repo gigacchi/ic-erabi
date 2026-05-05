@@ -111,9 +111,9 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
     setExitSearch('');
   };
 
-  // 出口IC検索: 現在の路線内でフィルタ
+  // 出口IC検索: 全路線を横断検索（選択時に路線も切り替わる）
   const exitSearchResults = exitSearch.trim()
-    ? exitIcs.filter((ic) => ic.name.includes(exitSearch.trim()))
+    ? allExitIcs.filter((ic) => ic.name.includes(exitSearch.trim())).slice(0, 10)
     : [];
 
   const handleGetLocation = () => {
@@ -268,7 +268,7 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
               <button
                 key={ic.id}
                 type="button"
-                onClick={() => { setExitIcId(ic.id); setExitSearch(''); }}
+                onClick={() => { setExitIcId(ic.id); setSelectedRoadId(ic.roadId); setExitSearch(''); }}
                 style={{
                   display: 'block', width: '100%',
                   padding: '9px 12px', textAlign: 'left',
