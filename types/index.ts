@@ -74,6 +74,7 @@ export type IcCandidateResult = {
   score: number;
   labels: CandidateLabel[];
   reason: string;
+  waypointIcNames: string[];
   highwaySteps?: { instruction: string; distanceKm: number }[];
 };
 

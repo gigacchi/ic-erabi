@@ -144,6 +144,48 @@ export default function ResultCard({
         </div>
       </div>
 
+      {/* ルートタイムライン */}
+      <div style={{
+        marginBottom: 10,
+        padding: '8px 10px',
+        background: '#f7f5ed',
+        borderRadius: 8,
+      }}>
+        {/* 時間内訳 */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: 5, flexWrap: 'wrap', fontSize: 10 }}>
+          <span style={{ color: '#6f6a5a' }}>一般道</span>
+          <span style={{ fontWeight: 700, color: '#1a1810', fontVariantNumeric: 'tabular-nums' }}>
+            {result.localRoadDurationMinutes}分
+          </span>
+          <span style={{ color: '#bcb6a3' }}>→</span>
+          <span style={{
+            background: '#1c8a3a', color: '#fff',
+            fontSize: 8, fontWeight: 700, padding: '1px 4px', borderRadius: 3,
+          }}>IN</span>
+          <span style={{ color: '#6f6a5a' }}>高速</span>
+          <span style={{ fontWeight: 700, color: '#1a1810', fontVariantNumeric: 'tabular-nums' }}>
+            {result.highwayDurationMinutes}分
+          </span>
+          <span style={{ color: '#bcb6a3' }}>→</span>
+          <span style={{
+            background: '#c83232', color: '#fff',
+            fontSize: 8, fontWeight: 700, padding: '1px 4px', borderRadius: 3,
+          }}>OUT</span>
+        </div>
+        {/* 経由IC */}
+        {result.waypointIcNames.length > 0 && (
+          <div style={{ marginTop: 5, fontSize: 10, color: '#6f6a5a', display: 'flex', alignItems: 'center', gap: 3, flexWrap: 'wrap' }}>
+            <span style={{ color: '#bcb6a3', flexShrink: 0 }}>経由</span>
+            {result.waypointIcNames.map((name, i) => (
+              <span key={i} style={{ display: 'flex', alignItems: 'center', gap: 3 }}>
+                {i > 0 && <span style={{ color: '#bcb6a3' }}>›</span>}
+                <span>{name}</span>
+              </span>
+            ))}
+          </div>
+        )}
+      </div>
+
       {/* 数値グリッド（セル間 1px 区切り） */}
       <div style={{
         display: 'grid',

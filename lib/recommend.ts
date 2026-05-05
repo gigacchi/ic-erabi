@@ -1,5 +1,5 @@
 import type { IcCandidateResult, SearchCondition, CandidateLabel, Interchange } from '@/types';
-import { findInterchangeById, getAllInterchanges } from './ic';
+import { findInterchangeById, getAllInterchanges, getWaypointIcNames } from './ic';
 import { getHighwayFare, getHighwayRouteSteps } from './fareProvider';
 import { getLocalRoadRoute } from './routeProvider';
 import { calculateScore } from './score';
@@ -61,6 +61,7 @@ export async function computeIcRoute(
     score,
     labels: [],
     reason,
+    waypointIcNames: getWaypointIcNames(entrance.id, destination.id),
     highwaySteps,
   };
 }
@@ -106,6 +107,7 @@ async function tryAddAlternative(
       score,
       labels: [],
       reason: '一般道は推定値です',
+      waypointIcNames: getWaypointIcNames(ic.id, destination.id),
       highwaySteps: [],
     };
   } catch {
