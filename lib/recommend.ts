@@ -169,6 +169,9 @@ export async function computeMultipleRoutes(
     r.labels = labels;
   });
 
-  // Sort by score, return top 3
-  return results.sort((a, b) => a.score - b.score).slice(0, 3);
+  // results[0] はユーザーが選んだICのルート → 常に先頭固定
+  // 代替候補のみスコア順にソート
+  const [userRoute, ...alts] = results;
+  alts.sort((a, b) => a.score - b.score);
+  return [userRoute, ...alts].slice(0, 3);
 }
