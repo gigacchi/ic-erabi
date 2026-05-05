@@ -19,7 +19,7 @@ const DEFAULT_ORIGIN = {
 // 固定の高速ボタン（3路線のみ）
 const HIGHWAY_BUTTONS = [
   { roadId: 'tohoku',    label: '東北道', defaultExitIcId: 'tohoku_izumi' },
-  { roadId: 'yamagata',  label: '山形道', defaultExitIcId: 'yamagata_yamagata_kita' },
+  { roadId: 'yamagata',  label: '山形道', defaultExitIcId: 'yamagata_yamagata_zao' },
   { roadId: 'hokuriku',  label: '北陸道', defaultExitIcId: 'hokuriku_sanjo_tsubame' },
   { roadId: 'tomei',     label: '東名',   defaultExitIcId: 'tomei_numazu' },
 ] as const;
@@ -81,6 +81,7 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
   // 乗るIC・降りるICともにIDで管理（インデックスはリストから逆引き）
   const [entranceIcId, setEntranceIcId] = useState<string>(DEFAULT_ENTRANCE_IC_ID);
   const [exitIcId, setExitIcId] = useState<string>(DEFAULT_EXIT_IC_ID);
+  const [exitSearch, setExitSearch] = useState('');
 
   const applyNewOrigin = useCallback(async (lat: number, lng: number, label: string) => {
     setOrigin({ lat, lng, label, address: '' });
@@ -107,7 +108,13 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
   const handleHighwaySelect = (roadId: string, defaultExitIcId: string) => {
     setSelectedRoadId(roadId);
     setExitIcId(defaultExitIcId);
+    setExitSearch('');
   };
+
+  // 出口IC検索: 現在の路線内でフィルタ
+  const exitSearchResults = exitSearch.trim()
+    ? exitIcs.filter((ic) => ic.name.includes(exitSearch.trim()))
+    : [];
 
   const handleGetLocation = () => {
     if (!navigator.geolocation) {
@@ -234,6 +241,50 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
           hasNext={exitIdx < exitIcs.length - 1}
         />
       )}
+
+      {/* 出口IC手動入力 */}
+      <div style={{ position: 'relative' }}>
+        <input
+          type="text"
+          value={exitSearch}
+          onChange={(e) => setExitSearch(e.target.value)}
+          placeholder="出口ICを検索…"
+          style={{
+            width: '100%', boxSizing: 'border-box',
+            padding: '8px 12px', fontSize: 12,
+            border: '1px solid #d8d3c4', borderRadius: 8,
+            background: '#fff', color: '#1a1810',
+            fontFamily: 'inherit', outline: 'none',
+          }}
+        />
+        {exitSearchResults.length > 0 && (
+          <div style={{
+            position: 'absolute', top: '100%', left: 0, right: 0, zIndex: 10,
+            background: '#fff', border: '1px solid #d8d3c4', borderRadius: 8,
+            marginTop: 2, boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+            maxHeight: 180, overflowY: 'auto',
+          }}>
+            {exitSearchResults.map((ic) => (
+              <button
+                key={ic.id}
+                type="button"
+                onClick={() => { setExitIcId(ic.id); setExitSearch(''); }}
+                style={{
+                  display: 'block', width: '100%',
+                  padding: '9px 12px', textAlign: 'left',
+                  background: ic.id === exitIcId ? '#fff8e6' : 'transparent',
+                  border: 'none', borderBottom: '1px solid #f0ece0',
+                  fontSize: 13, color: '#1a1810',
+                  cursor: 'pointer', fontFamily: 'inherit',
+                }}
+              >
+                {ic.name}
+                <span style={{ fontSize: 10, color: '#9f9b8e', marginLeft: 6 }}>{ic.roadName}</span>
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
 
       {/* 高速を指定（固定3路線）— 出口OUTの下 */}
       <div>
