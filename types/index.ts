@@ -8,7 +8,8 @@ export type RoadId =
   | 'kenodo'
   | 'tomei'
   | 'shin_tomei'
-  | 'odawara_atsugi';
+  | 'odawara_atsugi'
+  | 'yamagata';
 
 export type LatLng = {
   lat: number;

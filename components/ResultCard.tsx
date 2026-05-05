@@ -16,6 +16,7 @@ const ROAD_SHORT: Record<string, string> = {
   '東関東自動車道':         '東関道',
   '首都高速道路':          '首都高',
   '小田原厚木道路':         '小田厚',
+  '山形自動車道':          '山形道',
 };
 const shortRoad = (name: string) => ROAD_SHORT[name] ?? name;
 

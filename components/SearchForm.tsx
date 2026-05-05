@@ -19,8 +19,9 @@ const DEFAULT_ORIGIN = {
 // 固定の高速ボタン（3路線のみ）
 const HIGHWAY_BUTTONS = [
   { roadId: 'tohoku',    label: '東北道', defaultExitIcId: 'tohoku_izumi' },
+  { roadId: 'yamagata',  label: '山形道', defaultExitIcId: 'yamagata_yamagata_kita' },
   { roadId: 'hokuriku',  label: '北陸道', defaultExitIcId: 'hokuriku_sanjo_tsubame' },
-  { roadId: 'tomei',      label: '東名',  defaultExitIcId: 'tomei_numazu' },
+  { roadId: 'tomei',     label: '東名',   defaultExitIcId: 'tomei_numazu' },
 ] as const;
 
 const DEFAULT_ROAD_ID = 'tohoku';
