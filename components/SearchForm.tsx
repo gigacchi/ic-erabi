@@ -82,6 +82,7 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
   const [entranceIcId, setEntranceIcId] = useState<string>(DEFAULT_ENTRANCE_IC_ID);
   const [exitIcId, setExitIcId] = useState<string>(DEFAULT_EXIT_IC_ID);
   const [exitSearch, setExitSearch] = useState('');
+  const [departureType, setDepartureType] = useState<'weekday' | 'midnight' | 'holiday'>('weekday');
 
   const applyNewOrigin = useCallback(async (lat: number, lng: number, label: string) => {
     setOrigin({ lat, lng, label, address: '' });
@@ -146,7 +147,7 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
       exitIcId: exit.id,
       vehicleType: 'standard',
       useEtc: true,
-      departureTime: 'now',
+      departureTime: departureType,
     });
   };
 
@@ -311,6 +312,43 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
                 }}
               >
                 {label}
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* 出発時間帯（ETC割引） */}
+      <div>
+        <div style={{ fontSize: 11, fontWeight: 600, color: '#6f6a5a', marginBottom: 6 }}>出発時間帯</div>
+        <div style={{ display: 'flex', gap: 6 }}>
+          {([
+            { value: 'weekday',  label: '平日',     sub: '通常料金' },
+            { value: 'midnight', label: '深夜',      sub: '0〜4時 -30%' },
+            { value: 'holiday',  label: '土日・祝',  sub: '6〜22時 -30%' },
+          ] as const).map(({ value, label, sub }) => {
+            const isSelected = departureType === value;
+            return (
+              <button
+                key={value}
+                type="button"
+                onClick={() => setDepartureType(value)}
+                style={{
+                  flex: 1, padding: '7px 4px',
+                  fontSize: 12, fontWeight: isSelected ? 700 : 500,
+                  borderRadius: 8,
+                  border: isSelected ? '1.5px solid #e89000' : '1px solid #d8d3c4',
+                  background: isSelected ? '#fff8e6' : '#fff',
+                  color: isSelected ? '#c87b00' : '#3a352a',
+                  cursor: 'pointer', fontFamily: 'inherit',
+                  transition: 'all 0.15s',
+                }}
+              >
+                {label}
+                <span style={{
+                  display: 'block', fontSize: 9, marginTop: 1,
+                  color: isSelected ? '#c87b00' : '#9f9b8e',
+                }}>{sub}</span>
               </button>
             );
           })}

@@ -40,6 +40,7 @@ export async function computeIcRoute(
       toIcId: destination.id,
       vehicleType: condition.vehicleType,
       useEtc: condition.useEtc,
+      departureTime: condition.departureTime,
     }),
     getHighwayRouteSteps({ fromIcId: entrance.id, toIcId: destination.id }),
   ]);
@@ -99,6 +100,7 @@ async function tryAddAlternative(
       toIcId: condition.exitIcId,
       vehicleType: condition.vehicleType,
       useEtc: condition.useEtc,
+      departureTime: condition.departureTime,
     });
 
     const totalDurationMinutes = localRoadDurationMinutes + fare.durationMinutes;

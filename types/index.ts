@@ -48,7 +48,7 @@ export type SearchCondition = {
   exitIcId: string;
   vehicleType: VehicleType;
   useEtc: boolean;
-  departureTime: 'now' | string;
+  departureTime: 'weekday' | 'midnight' | 'holiday';
 };
 
 export type CandidateLabel =

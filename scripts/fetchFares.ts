@@ -98,15 +98,15 @@ async function main() {
   const interchangesPath = path.join(process.cwd(), 'data', 'interchanges.json');
   const interchanges: Interchange[] = JSON.parse(fs.readFileSync(interchangesPath, 'utf-8'));
 
-  // 降りるIC: 静岡方面のIC
-  const destinationAreaPath = path.join(process.cwd(), 'data', 'destinationAreas.json');
-  const destinationAreas: { destinationIcIds: string[] }[] = JSON.parse(fs.readFileSync(destinationAreaPath, 'utf-8'));
-  const exitIcIds = [...new Set(destinationAreas.flatMap(a => a.destinationIcIds))];
-  const exitIcs = exitIcIds
-    .map(id => interchanges.find(ic => ic.id === id))
-    .filter((ic): ic is Interchange => ic !== undefined && ic.lat !== 0);
+  // 降りるIC: 現在の高速ボタンで使用する各路線の代表ICと隣接IC
+  // 東北道, 山形道, 北陸道, 東名 の exitAvailable な IC すべてが対象
+  const TARGET_ROAD_IDS = new Set(['tohoku', 'yamagata', 'hokuriku', 'tomei', 'shin_tomei']);
+  const exitIcs = interchanges.filter(
+    ic => ic.exitAvailable && ic.lat !== 0 && TARGET_ROAD_IDS.has(ic.roadId)
+  );
+  const exitIcIds = exitIcs.map(ic => ic.id);
 
-  // 乗るIC: entranceAvailable=true かつ 座標あり
+  // 乗るIC: entranceAvailable=true かつ 座標あり（出口ICは除く）
   const entranceIcs = interchanges.filter(ic => ic.entranceAvailable && ic.lat !== 0 && !exitIcIds.includes(ic.id));
 
   console.log(`乗るIC: ${entranceIcs.length}件, 降りるIC: ${exitIcs.length}件`);

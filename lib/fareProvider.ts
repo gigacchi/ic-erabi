@@ -22,13 +22,28 @@ export type FareResult = {
   source: 'precomputed' | 'google' | 'estimated';
 };
 
+/** ETC割引率を返す（useEtc=true かつ対象時間帯のみ） */
+function etcDiscountRate(useEtc: boolean, departureTime: string): number {
+  if (!useEtc) return 0;
+  if (departureTime === 'midnight') return 0.30; // 深夜割引 0:00-4:00
+  if (departureTime === 'holiday')  return 0.30; // 休日割引 土日祝 6:00-22:00
+  return 0;
+}
+
+/** 割引適用後の料金（10円単位） */
+function applyDiscount(fareYen: number, discountRate: number): number {
+  return Math.round(fareYen * (1 - discountRate) / 10) * 10;
+}
+
 export async function getHighwayFare(params: {
   fromIcId: string;
   toIcId: string;
   vehicleType: VehicleType;
   useEtc: boolean;
+  departureTime?: string;
 }): Promise<FareResult> {
   const fares = loadFares();
+  const discount = etcDiscountRate(params.useEtc, params.departureTime ?? 'weekday');
 
   // 1) プリコンピュート済みデータを探す
   const found = fares.find(
@@ -41,7 +56,7 @@ export async function getHighwayFare(params: {
 
   if (found) {
     return {
-      fareYen: found.fareYen,
+      fareYen: applyDiscount(found.fareYen, discount),
       distanceKm: found.distanceKm,
       durationMinutes: found.durationMinutes,
       source: 'precomputed',
@@ -87,7 +102,7 @@ export async function getHighwayFare(params: {
           let fareYen = parseInt(route.travelAdvisory?.tollInfo?.estimatedPrice?.[0]?.units ?? '0');
           if (!fareYen) fareYen = Math.round((distanceKm * 35 + 300) / 10) * 10;
 
-          return { fareYen, distanceKm, durationMinutes, source: 'google' };
+          return { fareYen: applyDiscount(fareYen, discount), distanceKm, durationMinutes, source: 'google' };
         }
       }
     } catch {
@@ -97,8 +112,9 @@ export async function getHighwayFare(params: {
 
   // 3) 推定値
   const estimatedDistanceKm = 130;
+  const estimatedFare = Math.round((estimatedDistanceKm * 35 + 300) / 10) * 10;
   return {
-    fareYen: Math.round((estimatedDistanceKm * 35 + 300) / 10) * 10,
+    fareYen: applyDiscount(estimatedFare, discount),
     distanceKm: estimatedDistanceKm,
     durationMinutes: Math.round((estimatedDistanceKm / 80) * 60),
     source: 'estimated',
