@@ -83,6 +83,10 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
   const [exitIcId, setExitIcId] = useState<string>(DEFAULT_EXIT_IC_ID);
   const [exitSearch, setExitSearch] = useState('');
   const [departureType, setDepartureType] = useState<'weekday' | 'midnight' | 'holiday'>('weekday');
+  const [clockTime, setClockTime] = useState<string>(() => {
+    const now = new Date();
+    return `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
+  });
 
   const applyNewOrigin = useCallback(async (lat: number, lng: number, label: string) => {
     setOrigin({ lat, lng, label, address: '' });
@@ -148,6 +152,7 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
       vehicleType: 'standard',
       useEtc: true,
       departureTime: departureType,
+      clockTime: clockTime || undefined,
     });
   };
 
@@ -321,7 +326,7 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
       {/* 出発時間帯（ETC割引） */}
       <div>
         <div style={{ fontSize: 11, fontWeight: 600, color: '#6f6a5a', marginBottom: 6 }}>出発時間帯</div>
-        <div style={{ display: 'flex', gap: 6 }}>
+        <div style={{ display: 'flex', gap: 6, marginBottom: 6 }}>
           {([
             { value: 'weekday',  label: '平日',     sub: '通常料金' },
             { value: 'midnight', label: '深夜',      sub: '0〜4時 -30%' },
@@ -352,6 +357,21 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
               </button>
             );
           })}
+        </div>
+        {/* 出発時刻 */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+          <span style={{ fontSize: 11, color: '#6f6a5a', flexShrink: 0 }}>出発時刻</span>
+          <input
+            type="time"
+            value={clockTime}
+            onChange={(e) => setClockTime(e.target.value)}
+            style={{
+              flex: 1, padding: '6px 10px', fontSize: 13,
+              border: '1px solid #d8d3c4', borderRadius: 8,
+              background: '#fff', color: '#1a1810',
+              fontFamily: 'inherit', outline: 'none',
+            }}
+          />
         </div>
       </div>
 

@@ -42,6 +42,16 @@ export type DestinationArea = {
   destinationIcIds: string[];
 };
 
+export type RouteSection = {
+  roadName: string;
+  fromIcName: string;
+  toIcName: string;
+  distanceKm: number;
+  etcFareYen: number;
+  generalFareYen: number;
+  durationMinutes: number;
+};
+
 export type SearchCondition = {
   origin: LatLng & { label?: string; address?: string };
   entranceIcId: string;
@@ -49,6 +59,7 @@ export type SearchCondition = {
   vehicleType: VehicleType;
   useEtc: boolean;
   departureTime: 'weekday' | 'midnight' | 'holiday';
+  clockTime?: string; // "HH:MM" 形式。未指定なら相対時間表示
 };
 
 export type CandidateLabel =
@@ -78,6 +89,10 @@ export type IcCandidateResult = {
   waypointIcNames: string[];
   roadChangeLine: string;
   highwaySteps?: { instruction: string; distanceKm: number }[];
+  generalFareYen: number;
+  sections: RouteSection[];
+  departureType: 'weekday' | 'midnight' | 'holiday';
+  clockTime?: string;
 };
 
 export type RecommendResponse = {

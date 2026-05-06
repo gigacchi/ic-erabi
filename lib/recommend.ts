@@ -1,4 +1,4 @@
-import type { IcCandidateResult, SearchCondition, CandidateLabel, Interchange } from '@/types';
+import type { IcCandidateResult, RouteSection, SearchCondition, CandidateLabel, Interchange } from '@/types';
 import { findInterchangeById, getAllInterchanges, getWaypointIcNames, findNearestIcOnRoad, getRoadShortName } from './ic';
 import { getHighwayFare, getHighwayRouteSteps } from './fareProvider';
 import { getLocalRoadRoute } from './routeProvider';
@@ -18,6 +18,77 @@ function buildRoadChangeLine(
   return `${getRoadShortName(fromRoadName)}：${fromIcName} → ${getRoadShortName(toRoadName)}：${junctionIc.name}`;
 }
 
+/** 路線区間（セクション）を構築する */
+function buildSections(
+  entrance: Interchange,
+  destination: Interchange,
+  etcFareYen: number,
+  generalFareYen: number,
+  durationMinutes: number,
+  distanceKm: number,
+): RouteSection[] {
+  // 同一路線: 1セクション
+  if (entrance.roadId === destination.roadId) {
+    return [{
+      roadName: entrance.roadName,
+      fromIcName: entrance.name,
+      toIcName: destination.name,
+      distanceKm,
+      etcFareYen,
+      generalFareYen,
+      durationMinutes,
+    }];
+  }
+
+  // 異路線: ジャンクションICを探して2セクションに分割
+  const junctionIc = findNearestIcOnRoad(entrance.id, destination.roadId);
+  if (!junctionIc) {
+    return [{
+      roadName: `${entrance.roadName}→${destination.roadName}`,
+      fromIcName: entrance.name,
+      toIcName: destination.name,
+      distanceKm,
+      etcFareYen,
+      generalFareYen,
+      durationMinutes,
+    }];
+  }
+
+  // 直線距離×1.3でハイウェイ係数を近似し、比率でセクション分割
+  const rawDist1 = calculateDistanceKm(
+    { lat: entrance.lat, lng: entrance.lng },
+    { lat: junctionIc.lat, lng: junctionIc.lng }
+  ) * 1.3;
+  const sec1Dist = Math.max(0.1, Math.round(rawDist1 * 10) / 10);
+  const sec2Dist = Math.max(0.1, Math.round((distanceKm - sec1Dist) * 10) / 10);
+  const ratio = sec1Dist / (sec1Dist + sec2Dist);
+
+  const sec1Etc     = Math.round(etcFareYen     * ratio / 10) * 10;
+  const sec1General = Math.round(generalFareYen  * ratio / 10) * 10;
+  const sec1Duration = Math.round(durationMinutes * ratio);
+
+  return [
+    {
+      roadName: entrance.roadName,
+      fromIcName: entrance.name,
+      toIcName: junctionIc.name,
+      distanceKm: sec1Dist,
+      etcFareYen: sec1Etc,
+      generalFareYen: sec1General,
+      durationMinutes: sec1Duration,
+    },
+    {
+      roadName: destination.roadName,
+      fromIcName: junctionIc.name,
+      toIcName: destination.name,
+      distanceKm: sec2Dist,
+      etcFareYen: etcFareYen - sec1Etc,
+      generalFareYen: generalFareYen - sec1General,
+      durationMinutes: durationMinutes - sec1Duration,
+    },
+  ];
+}
+
 export async function computeIcRoute(
   condition: SearchCondition
 ): Promise<IcCandidateResult | null> {
@@ -26,36 +97,46 @@ export async function computeIcRoute(
 
   if (!entrance || !destination) return null;
 
-  // 一般道: Google Routes API → 推定値の順でフォールバック
+  // 一般道: Google Routes API → 推定値
   const localRoad = await getLocalRoadRoute(condition.origin, {
     lat: entrance.lat,
     lng: entrance.lng,
   });
 
-  // 高速料金: fares.json → Google Routes API → 推定値の順
-  // 経路ステップ（JCT/IC通過）はライブAPIから取得（並列）
-  const [fare, highwaySteps] = await Promise.all([
+  // ETC料金・一般料金・経路ステップを並列取得
+  const [etcFare, generalFare, highwaySteps] = await Promise.all([
     getHighwayFare({
       fromIcId: entrance.id,
       toIcId: destination.id,
       vehicleType: condition.vehicleType,
-      useEtc: condition.useEtc,
-      departureTime: condition.departureTime,
+      useEtc: true,
+    }),
+    getHighwayFare({
+      fromIcId: entrance.id,
+      toIcId: destination.id,
+      vehicleType: condition.vehicleType,
+      useEtc: false,
     }),
     getHighwayRouteSteps({ fromIcId: entrance.id, toIcId: destination.id }),
   ]);
 
-  const totalDurationMinutes = localRoad.durationMinutes + fare.durationMinutes;
+  const totalDurationMinutes = localRoad.durationMinutes + etcFare.durationMinutes;
   const score = calculateScore({
-    highwayFareYen: fare.fareYen,
+    highwayFareYen: etcFare.fareYen,
     localRoadDurationMinutes: localRoad.durationMinutes,
     localRoadDistanceKm: localRoad.distanceKm,
   });
 
-  const isEstimated = fare.source === 'estimated';
+  const sections = buildSections(
+    entrance, destination,
+    etcFare.fareYen, generalFare.fareYen,
+    etcFare.durationMinutes, etcFare.distanceKm,
+  );
+
+  const isEstimated = etcFare.source === 'estimated';
   const reason = isEstimated
     ? '高速料金はデータがないため推定値です。'
-    : fare.source === 'google'
+    : etcFare.source === 'google'
     ? 'Google Routes API によるリアルタイムデータです。'
     : '';
 
@@ -68,9 +149,10 @@ export async function computeIcRoute(
     destinationRoadName: destination.roadName,
     localRoadDurationMinutes: localRoad.durationMinutes,
     localRoadDistanceKm: localRoad.distanceKm,
-    highwayDurationMinutes: fare.durationMinutes,
-    highwayDistanceKm: fare.distanceKm,
-    highwayFareYen: fare.fareYen,
+    highwayDurationMinutes: etcFare.durationMinutes,
+    highwayDistanceKm: etcFare.distanceKm,
+    highwayFareYen: etcFare.fareYen,
+    generalFareYen: generalFare.fareYen,
     totalDurationMinutes,
     score,
     labels: [],
@@ -78,6 +160,9 @@ export async function computeIcRoute(
     waypointIcNames: getWaypointIcNames(entrance.id, destination.id),
     roadChangeLine: buildRoadChangeLine(entrance.id, entrance.roadName, entrance.name, destination.roadId, destination.roadName),
     highwaySteps,
+    sections,
+    departureType: condition.departureTime,
+    clockTime: condition.clockTime,
   };
 }
 
@@ -99,12 +184,20 @@ async function tryAddAlternative(
       fromIcId: ic.id,
       toIcId: condition.exitIcId,
       vehicleType: condition.vehicleType,
-      useEtc: condition.useEtc,
-      departureTime: condition.departureTime,
+      useEtc: true,
     });
+
+    // 代替候補の一般料金は ETC と同額で近似（API 呼び出し削減）
+    const generalFareYen = fare.fareYen;
 
     const totalDurationMinutes = localRoadDurationMinutes + fare.durationMinutes;
     const score = calculateScore({ highwayFareYen: fare.fareYen, localRoadDurationMinutes, localRoadDistanceKm });
+
+    const sections = buildSections(
+      ic, destination,
+      fare.fareYen, generalFareYen,
+      fare.durationMinutes, fare.distanceKm,
+    );
 
     usedIds.add(ic.id);
     return {
@@ -119,6 +212,7 @@ async function tryAddAlternative(
       highwayDurationMinutes: fare.durationMinutes,
       highwayDistanceKm: fare.distanceKm,
       highwayFareYen: fare.fareYen,
+      generalFareYen,
       totalDurationMinutes,
       score,
       labels: [],
@@ -126,6 +220,9 @@ async function tryAddAlternative(
       waypointIcNames: getWaypointIcNames(ic.id, destination.id),
       roadChangeLine: buildRoadChangeLine(ic.id, ic.roadName, ic.name, destination.roadId, destination.roadName),
       highwaySteps: [],
+      sections,
+      departureType: condition.departureTime,
+      clockTime: condition.clockTime,
     };
   } catch {
     return null;
@@ -166,7 +263,7 @@ export async function computeMultipleRoutes(
         dist: calculateDistanceKm(condition.origin, { lat: ic.lat, lng: ic.lng }),
       }))
       .sort((a, b) => a.dist - b.dist)
-      .slice(0, 8); // 距離順の上位8件から試す
+      .slice(0, 8);
 
     for (const { ic } of candidates) {
       if (results.length >= 3) break;
@@ -189,7 +286,6 @@ export async function computeMultipleRoutes(
   });
 
   // results[0] はユーザーが選んだICのルート → 常に先頭固定
-  // 代替候補のみスコア順にソート
   const [userRoute, ...alts] = results;
   alts.sort((a, b) => a.score - b.score);
   return [userRoute, ...alts].slice(0, 3);

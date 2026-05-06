@@ -3,24 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import type { IcCandidateResult } from '@/types';
 
-const ROAD_SHORT: Record<string, string> = {
-  '東名高速道路':          '東名',
-  '新東名高速道路':         '新東名',
-  '東北自動車道':          '東北道',
-  '関越自動車道':          '関越道',
-  '東京外環自動車道':       '外環',
-  '中央自動車道':          '中央道',
-  '首都圏中央連絡自動車道':  '圏央道',
-  '北陸自動車道':          '北陸道',
-  '常磐自動車道':          '常磐道',
-  '東関東自動車道':         '東関道',
-  '首都高速道路':          '首都高',
-  '小田原厚木道路':         '小田厚',
-  '山形自動車道':          '山形道',
-};
-const shortRoad = (name: string) => ROAD_SHORT[name] ?? name;
-
-// デザイン準拠: 前の値から新しい値へアニメーション
+// 前の値から新しい値へアニメーション
 function useCountUp(target: number, duration = 600): number {
   const [v, setV] = useState(target);
   const prev = useRef(target);
@@ -44,7 +27,7 @@ function useCountUp(target: number, duration = 600): number {
 }
 
 function getBadge(isStd: boolean, savingsYen: number, timeAddMinutes: number) {
-  if (isStd) return { text: '標準', bg: '#3a352a' };
+  if (isStd) return { text: '選択ルート', bg: '#3a352a' };
   if (savingsYen > 0 && timeAddMinutes <= 0) return { text: '最安・最速', bg: '#1c8a3a' };
   if (savingsYen >= 500) return { text: 'おすすめ最安', bg: '#c87b00' };
   if (savingsYen > 0) return { text: '節約案', bg: '#1c8a3a' };
@@ -52,19 +35,36 @@ function getBadge(isStd: boolean, savingsYen: number, timeAddMinutes: number) {
   return { text: '標準', bg: '#3a352a' };
 }
 
-function Stat({ label, value, sub }: { label: string; value: string; sub: string }) {
+function addMinutes(timeStr: string, minutes: number): string {
+  const [h, m] = timeStr.split(':').map(Number);
+  const total = h * 60 + m + minutes;
+  const newH = Math.floor(total / 60) % 24;
+  const newM = total % 60;
+  return `${String(newH).padStart(2, '0')}:${String(newM).padStart(2, '0')}`;
+}
+
+function formatDuration(minutes: number): string {
+  const h = Math.floor(minutes / 60);
+  const m = minutes % 60;
+  return h > 0 ? `${h}時間${m}分` : `${m}分`;
+}
+
+function FareRow({ label, value, highlight }: { label: string; value: number; highlight?: boolean }) {
   return (
-    <div style={{ background: '#fff', padding: '8px' }}>
-      <div style={{ fontSize: 9, color: '#6f6a5a', fontWeight: 600, letterSpacing: '.03em' }}>
+    <div style={{
+      display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+      padding: '3px 0', borderBottom: '1px solid #ece8da',
+    }}>
+      <span style={{ fontSize: 10, color: highlight ? '#c87b00' : '#6f6a5a', fontWeight: highlight ? 700 : 400 }}>
         {label}
-      </div>
-      <div style={{
-        fontSize: 15, fontWeight: 700, color: '#1a1810',
-        fontVariantNumeric: 'tabular-nums', letterSpacing: '-0.02em', marginTop: 2,
+      </span>
+      <span style={{
+        fontSize: 12, fontWeight: highlight ? 700 : 600,
+        color: highlight ? '#c87b00' : '#1a1810',
+        fontVariantNumeric: 'tabular-nums',
       }}>
-        {value}
-      </div>
-      <div style={{ fontSize: 9, color: '#8a8470', marginTop: 1 }}>{sub}</div>
+        ¥{value.toLocaleString()}
+      </span>
     </div>
   );
 }
@@ -80,7 +80,6 @@ type ResultCardProps = {
 
 export default function ResultCard({
   result,
-  originLabel,
   savingsYen = 0,
   timeAddMinutes = 0,
   isSelected = false,
@@ -89,162 +88,238 @@ export default function ResultCard({
   const animatedSavings = useCountUp(savingsYen);
   const badge = getBadge(isStd, savingsYen, timeAddMinutes);
 
+  const sections = result.sections ?? [];
+  const departureType = result.departureType ?? 'weekday';
+  const clockTime = result.clockTime;
+
+  // 各セクションの到着時刻（出発時刻 + 一般道 + 累積高速時間）
+  let cumMin = result.localRoadDurationMinutes;
+  const sectionTimes = sections.map((sec) => {
+    const enterTime = clockTime ? addMinutes(clockTime, cumMin) : null;
+    cumMin += sec.durationMinutes;
+    const exitTime = clockTime ? addMinutes(clockTime, cumMin) : null;
+    return { enterTime, exitTime };
+  });
+
+  // 合計料金
+  const totalEtcFare  = sections.reduce((s, sec) => s + sec.etcFareYen, 0)    || result.highwayFareYen;
+  const totalGenFare  = sections.reduce((s, sec) => s + sec.generalFareYen, 0) || result.generalFareYen;
+
   return (
-    <div
-      style={{
-        background: '#fff',
-        border: isSelected ? '2px solid #e89000' : '1px solid #d8d3c4',
-        borderRadius: 14,
-        padding: '12px 13px',
-        boxShadow: isSelected
-          ? '0 4px 14px rgba(0,0,0,0.1), 0 0 0 4px rgba(232,144,0,0.13)'
-          : '0 1px 0 rgba(0,0,0,0.04)',
-        cursor: 'pointer',
-        transition: 'all 0.18s',
-      }}
-    >
+    <div style={{
+      background: '#fff',
+      border: isSelected ? '2px solid #e89000' : '1px solid #d8d3c4',
+      borderRadius: 14,
+      overflow: 'hidden',
+      boxShadow: isSelected
+        ? '0 4px 14px rgba(0,0,0,0.1), 0 0 0 4px rgba(232,144,0,0.13)'
+        : '0 1px 0 rgba(0,0,0,0.04)',
+      cursor: 'pointer',
+      transition: 'all 0.18s',
+    }}>
+
       {/* バッジ行 */}
       <div style={{
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-        marginBottom: 8,
+        padding: '10px 13px 8px', borderBottom: '1px solid #f0ece0',
       }}>
-        <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
           <span style={{
             background: badge.bg, color: '#fff',
             fontSize: 10, fontWeight: 700, letterSpacing: '.04em',
             padding: '3px 7px', borderRadius: 4,
-          }}>
-            {badge.text}
-          </span>
+          }}>{badge.text}</span>
           {!isStd && savingsYen > 0 && timeAddMinutes > 0 && (
             <span style={{ fontSize: 10, color: '#6f6a5a', fontVariantNumeric: 'tabular-nums' }}>
               +{timeAddMinutes}分で
             </span>
           )}
         </div>
-        {/* ラジオボタン */}
         <div style={{
           width: 18, height: 18, borderRadius: 999,
           border: isSelected ? '5px solid #e89000' : '1.5px solid #c0bba8',
-          background: '#fff',
-          flexShrink: 0,
-          transition: 'all 0.15s',
+          background: '#fff', flexShrink: 0, transition: 'all 0.15s',
         }} />
       </div>
 
-      {/* IC区間 */}
-      <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 10 }}>
-        <div style={{ flex: 1, minWidth: 0 }}>
-          <div style={{ fontSize: 9, color: '#6f6a5a', fontWeight: 600 }}>IN</div>
-          <div style={{
-            fontSize: 16, fontWeight: 700, color: '#1a1810',
-            whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis',
-          }}>
-            {result.entranceIcName}
+      {/* サマリーバー */}
+      <div style={{
+        background: '#1a1810', padding: '10px 14px',
+        display: 'flex', gap: 16, flexWrap: 'wrap', rowGap: 6,
+      }}>
+        <div>
+          <div style={{ fontSize: 8, color: '#9f9b8e', fontWeight: 600, letterSpacing: '.05em' }}>所要時間</div>
+          <div style={{ fontSize: 17, fontWeight: 800, color: '#f3efe2', fontVariantNumeric: 'tabular-nums', lineHeight: 1.1 }}>
+            {formatDuration(result.totalDurationMinutes)}
           </div>
-          <div style={{ fontSize: 9, color: '#9f9b8e' }}>{result.entranceRoadName}</div>
         </div>
-        <svg width="20" height="14" viewBox="0 0 20 14" style={{ flexShrink: 0 }}>
-          <path d="M2 7H17M14 3L18 7L14 11"
-            stroke="#a09a85" strokeWidth="1.6" fill="none"
-            strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-        <div style={{ flex: 1, minWidth: 0, textAlign: 'right' }}>
-          <div style={{ fontSize: 9, color: '#6f6a5a', fontWeight: 600 }}>OUT</div>
-          <div style={{
-            fontSize: 16, fontWeight: 700, color: '#1a1810',
-            whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis',
-          }}>
-            {result.destinationIcName}
+        <div>
+          <div style={{ fontSize: 8, color: '#9f9b8e', fontWeight: 600, letterSpacing: '.05em' }}>高速距離</div>
+          <div style={{ fontSize: 17, fontWeight: 800, color: '#f3efe2', fontVariantNumeric: 'tabular-nums', lineHeight: 1.1 }}>
+            {result.highwayDistanceKm}km
           </div>
-          <div style={{ fontSize: 9, color: '#9f9b8e' }}>{result.destinationRoadName}</div>
+        </div>
+        <div>
+          <div style={{ fontSize: 8, color: '#9f9b8e', fontWeight: 600, letterSpacing: '.05em' }}>一般 / ETC</div>
+          <div style={{ lineHeight: 1.1 }}>
+            <span style={{ fontSize: 12, fontWeight: 600, color: '#bcb6a3', fontVariantNumeric: 'tabular-nums' }}>
+              ¥{totalGenFare.toLocaleString()}
+            </span>
+            <span style={{ fontSize: 8, color: '#6f6a5a', margin: '0 4px' }}>/</span>
+            <span style={{ fontSize: 17, fontWeight: 800, color: '#f3efe2', fontVariantNumeric: 'tabular-nums' }}>
+              ¥{totalEtcFare.toLocaleString()}
+            </span>
+          </div>
         </div>
       </div>
 
-      {/* ルートタイムライン */}
-      <div style={{
-        marginBottom: 10,
-        padding: '8px 10px',
-        background: '#f7f5ed',
-        borderRadius: 8,
-      }}>
-        {/* 時間内訳 */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: 5, flexWrap: 'wrap', fontSize: 10 }}>
-          <span style={{ color: '#6f6a5a' }}>一般道</span>
-          <span style={{ fontWeight: 700, color: '#1a1810', fontVariantNumeric: 'tabular-nums' }}>
-            {result.localRoadDurationMinutes}分
-          </span>
-          <span style={{ color: '#bcb6a3' }}>→</span>
-          <span style={{
-            background: '#1c8a3a', color: '#fff',
-            fontSize: 8, fontWeight: 700, padding: '1px 4px', borderRadius: 3,
-          }}>IN</span>
-          <span style={{ color: '#6f6a5a' }}>高速</span>
-          <span style={{ fontWeight: 700, color: '#1a1810', fontVariantNumeric: 'tabular-nums' }}>
-            {result.highwayDurationMinutes}分
-          </span>
-          <span style={{ color: '#bcb6a3' }}>→</span>
-          <span style={{
-            background: '#c83232', color: '#fff',
-            fontSize: 8, fontWeight: 700, padding: '1px 4px', borderRadius: 3,
-          }}>OUT</span>
-        </div>
-        {/* 路線変更 or 経由IC */}
-        {result.entranceRoadName !== result.destinationRoadName ? (
-          // 路線が変わる場合：乗り継ぎポイントを明示
-          <div style={{ marginTop: 5, fontSize: 10, color: '#3a352a', fontWeight: 600 }}>
-            {result.roadChangeLine ||
-              `${shortRoad(result.entranceRoadName)}：${result.entranceIcName} → ${shortRoad(result.destinationRoadName)}`}
-          </div>
-        ) : (result.waypointIcNames ?? []).length > 0 ? (
-          // 同一路線：経由ICを表示
-          <div style={{ marginTop: 5, fontSize: 10, color: '#6f6a5a', display: 'flex', alignItems: 'center', gap: 3, flexWrap: 'wrap' }}>
-            <span style={{ color: '#bcb6a3', flexShrink: 0 }}>経由</span>
-            {(result.waypointIcNames ?? []).map((name, i) => (
-              <span key={i} style={{ display: 'flex', alignItems: 'center', gap: 3 }}>
-                {i > 0 && <span style={{ color: '#bcb6a3' }}>›</span>}
-                <span>{name}</span>
+      {/* タイムライン */}
+      <div style={{ padding: '14px 14px 4px' }}>
+
+        {/* 出発地（一般道開始） */}
+        {result.localRoadDurationMinutes > 0 && (
+          <div style={{ display: 'flex', marginBottom: 0 }}>
+            {/* 時刻列 */}
+            <div style={{ width: 48, textAlign: 'right', paddingRight: 10, flexShrink: 0, paddingTop: 1 }}>
+              <span style={{ fontSize: 11, fontWeight: 700, color: clockTime ? '#6f6a5a' : '#bcb6a3' }}>
+                {clockTime ?? '出発'}
               </span>
-            ))}
+            </div>
+            {/* 縦線・ドット */}
+            <div style={{ width: 20, display: 'flex', flexDirection: 'column', alignItems: 'center', flexShrink: 0 }}>
+              <div style={{ width: 8, height: 8, borderRadius: '50%', border: '2px solid #c0bba8', background: '#fff', flexShrink: 0 }} />
+              <div style={{ width: 1, flex: 1, minHeight: 28, background: '#e0dcd0' }} />
+            </div>
+            {/* 内容 */}
+            <div style={{ flex: 1, paddingLeft: 8, paddingBottom: 10 }}>
+              <div style={{ fontSize: 10, color: '#9f9b8e' }}>出発地</div>
+              <div style={{ fontSize: 10, color: '#c0bba8', marginTop: 2 }}>
+                一般道 {result.localRoadDistanceKm}km · {result.localRoadDurationMinutes}分
+              </div>
+            </div>
           </div>
-        ) : null}
+        )}
+
+        {/* 各路線セクション */}
+        {sections.map((sec, i) => {
+          const isLast = i === sections.length - 1;
+          const times = sectionTimes[i];
+          const etcHalf   = Math.round(sec.etcFareYen * 0.7 / 10) * 10;
+
+          return (
+            <div key={i}>
+              {/* 入口IC / 乗り継ぎJCT */}
+              <div style={{ display: 'flex' }}>
+                <div style={{ width: 48, textAlign: 'right', paddingRight: 10, flexShrink: 0, paddingTop: 2 }}>
+                  <span style={{
+                    fontSize: 12, fontWeight: 700,
+                    color: times.enterTime ? '#1a1810' : '#bcb6a3',
+                    fontVariantNumeric: 'tabular-nums',
+                  }}>
+                    {times.enterTime ?? (i === 0 ? 'IN' : '→')}
+                  </span>
+                </div>
+                <div style={{ width: 20, display: 'flex', flexDirection: 'column', alignItems: 'center', flexShrink: 0 }}>
+                  <div style={{
+                    width: 14, height: 14, borderRadius: '50%',
+                    background: i === 0 ? '#1c8a3a' : '#6f6a5a',
+                    flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  }}>
+                    <span style={{ fontSize: 5, color: '#fff', fontWeight: 800, letterSpacing: 0 }}>
+                      {i === 0 ? 'IN' : 'JCT'}
+                    </span>
+                  </div>
+                  <div style={{ width: 2, flex: 1, minHeight: 120, background: '#d8d3c4' }} />
+                </div>
+                <div style={{ flex: 1, paddingLeft: 8, paddingBottom: 6 }}>
+                  <div style={{ fontSize: 16, fontWeight: 800, color: '#1a1810', lineHeight: 1.2 }}>
+                    {sec.fromIcName}
+                  </div>
+                </div>
+              </div>
+
+              {/* 路線区間情報 */}
+              <div style={{ display: 'flex' }}>
+                <div style={{ width: 48, flexShrink: 0 }} />
+                <div style={{ width: 20, display: 'flex', justifyContent: 'center', flexShrink: 0 }}>
+                  <div style={{ width: 2, background: '#d8d3c4' }} />
+                </div>
+                <div style={{ flex: 1, paddingLeft: 8, paddingBottom: 14 }}>
+                  {/* 路線名・距離・時間 */}
+                  <div style={{ fontSize: 11, fontWeight: 700, color: '#3a352a', marginBottom: 2 }}>
+                    {sec.roadName}
+                  </div>
+                  <div style={{ fontSize: 10, color: '#9f9b8e', marginBottom: 6, fontVariantNumeric: 'tabular-nums' }}>
+                    {sec.distanceKm}km · {formatDuration(sec.durationMinutes)}
+                  </div>
+                  {/* 料金内訳 */}
+                  <div style={{ background: '#f7f5ed', borderRadius: 8, padding: '8px 10px' }}>
+                    <FareRow label="一般料金" value={sec.generalFareYen} />
+                    <FareRow
+                      label="ETC料金"
+                      value={sec.etcFareYen}
+                      highlight={departureType === 'weekday'}
+                    />
+                    <FareRow
+                      label="深夜割引（0〜4時 / 30%）"
+                      value={etcHalf}
+                      highlight={departureType === 'midnight'}
+                    />
+                    <div style={{ borderBottom: 'none' }}>
+                      <FareRow
+                        label="休日割引（土日祝 / 30%）"
+                        value={etcHalf}
+                        highlight={departureType === 'holiday'}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* 出口IC（最後のセクションのみ） */}
+              {isLast && (
+                <div style={{ display: 'flex', marginBottom: 10 }}>
+                  <div style={{ width: 48, textAlign: 'right', paddingRight: 10, flexShrink: 0, paddingTop: 2 }}>
+                    <span style={{
+                      fontSize: 12, fontWeight: 700,
+                      color: times.exitTime ? '#1a1810' : '#bcb6a3',
+                      fontVariantNumeric: 'tabular-nums',
+                    }}>
+                      {times.exitTime ?? 'OUT'}
+                    </span>
+                  </div>
+                  <div style={{ width: 20, display: 'flex', justifyContent: 'center', flexShrink: 0 }}>
+                    <div style={{
+                      width: 14, height: 14, borderRadius: '50%',
+                      background: '#c83232',
+                      display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0,
+                    }}>
+                      <span style={{ fontSize: 5, color: '#fff', fontWeight: 800 }}>OUT</span>
+                    </div>
+                  </div>
+                  <div style={{ flex: 1, paddingLeft: 8 }}>
+                    <div style={{ fontSize: 16, fontWeight: 800, color: '#1a1810', lineHeight: 1.2 }}>
+                      {sec.toIcName}
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+          );
+        })}
+
+        {/* sections が空のフォールバック */}
+        {sections.length === 0 && (
+          <div style={{ padding: '8px 0', color: '#9f9b8e', fontSize: 12 }}>
+            {result.entranceIcName} → {result.destinationIcName}
+          </div>
+        )}
       </div>
 
-      {/* 数値グリッド（セル間 1px 区切り） */}
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: '1fr 1fr 1fr',
-        gap: 1,
-        background: '#ece8da',
-        border: '1px solid #ece8da',
-        borderRadius: 8,
-        overflow: 'hidden',
-      }}>
-        <Stat
-          label="ETC料金"
-          value={`¥${result.highwayFareYen.toLocaleString()}`}
-          sub={`高速 ${result.highwayDistanceKm}km`}
-        />
-        <Stat
-          label="所要時間"
-          value={`${result.totalDurationMinutes}分`}
-          sub={result.localRoadDurationMinutes > 0
-            ? `一般道+${result.localRoadDurationMinutes}分`
-            : '高速のみ'}
-        />
-        <Stat
-          label="距離"
-          value={`${result.highwayDistanceKm}km`}
-          sub={result.localRoadDistanceKm > 0
-            ? `一般道+${result.localRoadDistanceKm}km`
-            : '高速のみ'}
-        />
-      </div>
-
-      {/* 節約額ハイライト */}
+      {/* 節約額 */}
       {!isStd && (
         <div style={{
-          marginTop: 8,
+          margin: '0 13px 12px',
           padding: '8px 10px',
           background: savingsYen > 0 ? '#fff8e6' : '#f3f0e6',
           border: `1px solid ${savingsYen > 0 ? '#f0d896' : '#dcd6c4'}`,
@@ -257,8 +332,7 @@ export default function ResultCard({
           <span style={{
             fontSize: 22, fontWeight: 800,
             color: savingsYen > 0 ? '#c87b00' : savingsYen < 0 ? '#c83232' : '#6f6a5a',
-            fontVariantNumeric: 'tabular-nums',
-            letterSpacing: '-0.02em',
+            fontVariantNumeric: 'tabular-nums', letterSpacing: '-0.02em',
           }}>
             {savingsYen > 0 ? '−' : savingsYen < 0 ? '+' : ''}
             ¥{Math.abs(animatedSavings).toLocaleString()}
@@ -266,31 +340,8 @@ export default function ResultCard({
         </div>
       )}
 
-      {/* 経路詳細 */}
-      {result.highwaySteps && result.highwaySteps.length > 0 && (
-        <div style={{ borderTop: '1px solid #f0ece0', marginTop: 10, paddingTop: 10 }}>
-          <div style={{ fontSize: 9, fontWeight: 600, color: '#6f6a5a', marginBottom: 4 }}>
-            経路詳細 ·{' '}
-            {result.entranceRoadName === result.destinationRoadName
-              ? result.entranceRoadName
-              : `${result.entranceRoadName} → ${result.destinationRoadName}`}
-          </div>
-          <ol style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 4 }}>
-            {result.highwaySteps.map((step, i) => (
-              <li key={i} style={{ display: 'flex', gap: 6, fontSize: 10, color: '#3a352a' }}>
-                <span style={{ color: '#bcb6a3', flexShrink: 0 }}>{i + 1}.</span>
-                <span style={{ flex: 1 }}>
-                  {step.instruction}
-                  <span style={{ color: '#bcb6a3', marginLeft: 4 }}>({step.distanceKm}km)</span>
-                </span>
-              </li>
-            ))}
-          </ol>
-        </div>
-      )}
-
       {result.reason && (
-        <p style={{ fontSize: 9, color: '#c86400', marginTop: 8, padding: '0 2px' }}>
+        <p style={{ fontSize: 9, color: '#c86400', margin: '0 13px 10px' }}>
           {result.reason}
         </p>
       )}
