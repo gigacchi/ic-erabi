@@ -233,7 +233,7 @@ export default function HomePage() {
                 cursor: 'pointer',
               }}
               onClick={() => {
-                const url = `https://maps.google.com/maps?saddr=${lastCondition?.origin.lat},${lastCondition?.origin.lng}&daddr=${selRoute.destinationIcName}`;
+                const url = `https://maps.google.com/maps?saddr=${lastCondition?.origin.lat},${lastCondition?.origin.lng}&daddr=${selRoute.destinationIcName}&dirflg=d`;
                 window.open(url, '_blank');
               }}
             >
