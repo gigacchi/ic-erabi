@@ -23,7 +23,6 @@ function buildSections(
   entrance: Interchange,
   destination: Interchange,
   etcFareYen: number,
-  generalFareYen: number,
   durationMinutes: number,
   distanceKm: number,
 ): RouteSection[] {
@@ -35,7 +34,6 @@ function buildSections(
       toIcName: destination.name,
       distanceKm,
       etcFareYen,
-      generalFareYen,
       durationMinutes,
     }];
   }
@@ -49,7 +47,6 @@ function buildSections(
       toIcName: destination.name,
       distanceKm,
       etcFareYen,
-      generalFareYen,
       durationMinutes,
     }];
   }
@@ -63,8 +60,7 @@ function buildSections(
   const sec2Dist = Math.max(0.1, Math.round((distanceKm - sec1Dist) * 10) / 10);
   const ratio = sec1Dist / (sec1Dist + sec2Dist);
 
-  const sec1Etc     = Math.round(etcFareYen     * ratio / 10) * 10;
-  const sec1General = Math.round(generalFareYen  * ratio / 10) * 10;
+  const sec1Etc = Math.round(etcFareYen * ratio / 10) * 10;
   const sec1Duration = Math.round(durationMinutes * ratio);
 
   return [
@@ -74,7 +70,6 @@ function buildSections(
       toIcName: junctionIc.name,
       distanceKm: sec1Dist,
       etcFareYen: sec1Etc,
-      generalFareYen: sec1General,
       durationMinutes: sec1Duration,
     },
     {
@@ -83,7 +78,6 @@ function buildSections(
       toIcName: destination.name,
       distanceKm: sec2Dist,
       etcFareYen: etcFareYen - sec1Etc,
-      generalFareYen: generalFareYen - sec1General,
       durationMinutes: durationMinutes - sec1Duration,
     },
   ];
@@ -103,19 +97,13 @@ export async function computeIcRoute(
     lng: entrance.lng,
   });
 
-  // ETC料金・一般料金・経路ステップを並列取得
-  const [etcFare, generalFare, highwaySteps] = await Promise.all([
+  // ETC料金・経路ステップを並列取得
+  const [etcFare, highwaySteps] = await Promise.all([
     getHighwayFare({
       fromIcId: entrance.id,
       toIcId: destination.id,
       vehicleType: condition.vehicleType,
       useEtc: true,
-    }),
-    getHighwayFare({
-      fromIcId: entrance.id,
-      toIcId: destination.id,
-      vehicleType: condition.vehicleType,
-      useEtc: false,
     }),
     getHighwayRouteSteps({ fromIcId: entrance.id, toIcId: destination.id }),
   ]);
@@ -129,7 +117,7 @@ export async function computeIcRoute(
 
   const sections = buildSections(
     entrance, destination,
-    etcFare.fareYen, generalFare.fareYen,
+    etcFare.fareYen,
     etcFare.durationMinutes, etcFare.distanceKm,
   );
 
@@ -152,7 +140,6 @@ export async function computeIcRoute(
     highwayDurationMinutes: etcFare.durationMinutes,
     highwayDistanceKm: etcFare.distanceKm,
     highwayFareYen: etcFare.fareYen,
-    generalFareYen: generalFare.fareYen,
     totalDurationMinutes,
     score,
     labels: [],
@@ -187,15 +174,12 @@ async function tryAddAlternative(
       useEtc: true,
     });
 
-    // 代替候補の一般料金は ETC と同額で近似（API 呼び出し削減）
-    const generalFareYen = fare.fareYen;
-
     const totalDurationMinutes = localRoadDurationMinutes + fare.durationMinutes;
     const score = calculateScore({ highwayFareYen: fare.fareYen, localRoadDurationMinutes, localRoadDistanceKm });
 
     const sections = buildSections(
       ic, destination,
-      fare.fareYen, generalFareYen,
+      fare.fareYen,
       fare.durationMinutes, fare.distanceKm,
     );
 
@@ -212,7 +196,6 @@ async function tryAddAlternative(
       highwayDurationMinutes: fare.durationMinutes,
       highwayDistanceKm: fare.distanceKm,
       highwayFareYen: fare.fareYen,
-      generalFareYen,
       totalDurationMinutes,
       score,
       labels: [],

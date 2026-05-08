@@ -102,8 +102,7 @@ export default function ResultCard({
   });
 
   // 合計料金
-  const totalEtcFare  = sections.reduce((s, sec) => s + sec.etcFareYen, 0)    || result.highwayFareYen;
-  const totalGenFare  = sections.reduce((s, sec) => s + sec.generalFareYen, 0) || result.generalFareYen;
+  const totalEtcFare = sections.reduce((s, sec) => s + sec.etcFareYen, 0) || result.highwayFareYen;
 
   return (
     <div style={{
@@ -160,12 +159,8 @@ export default function ResultCard({
           </div>
         </div>
         <div>
-          <div style={{ fontSize: 8, color: '#9f9b8e', fontWeight: 600, letterSpacing: '.05em' }}>一般 / ETC</div>
+          <div style={{ fontSize: 8, color: '#9f9b8e', fontWeight: 600, letterSpacing: '.05em' }}>ETC料金</div>
           <div style={{ lineHeight: 1.1 }}>
-            <span style={{ fontSize: 12, fontWeight: 600, color: '#bcb6a3', fontVariantNumeric: 'tabular-nums' }}>
-              ¥{totalGenFare.toLocaleString()}
-            </span>
-            <span style={{ fontSize: 8, color: '#6f6a5a', margin: '0 4px' }}>/</span>
             <span style={{ fontSize: 17, fontWeight: 800, color: '#f3efe2', fontVariantNumeric: 'tabular-nums' }}>
               ¥{totalEtcFare.toLocaleString()}
             </span>
@@ -254,7 +249,6 @@ export default function ResultCard({
                   </div>
                   {/* 料金内訳 */}
                   <div style={{ background: '#f7f5ed', borderRadius: 8, padding: '8px 10px' }}>
-                    <FareRow label="一般料金" value={sec.generalFareYen} />
                     <FareRow
                       label="ETC料金"
                       value={sec.etcFareYen}

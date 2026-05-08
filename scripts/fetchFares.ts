@@ -106,19 +106,33 @@ async function main() {
   );
   const exitIcIds = exitIcs.map(ic => ic.id);
 
-  // 乗るIC: entranceAvailable=true かつ 座標あり（出口ICは除く）
-  const entranceIcs = interchanges.filter(ic => ic.entranceAvailable && ic.lat !== 0 && !exitIcIds.includes(ic.id));
+  // 乗るIC: entranceAvailable=true かつ 座標あり
+  const entranceIcs = interchanges.filter(ic => ic.entranceAvailable && ic.lat !== 0);
 
   console.log(`乗るIC: ${entranceIcs.length}件, 降りるIC: ${exitIcs.length}件`);
   console.log(`総ペア数: ${entranceIcs.length * exitIcs.length * 2} (ETC/現金 各)`);
 
-  const fares: FareRecord[] = [];
+  // 既存データを読み込み（再実行時のスキップ用）
+  const outPath = path.join(process.cwd(), 'data', 'fares.json');
+  let fares: FareRecord[] = [];
+  if (fs.existsSync(outPath)) {
+    fares = JSON.parse(fs.readFileSync(outPath, 'utf-8'));
+    console.log(`既存データ: ${fares.length}件`);
+  }
+  const existingKeys = new Set(fares.map(f => `${f.fromIcId}__${f.toIcId}`));
+
   let count = 0;
+  let skipped = 0;
   const total = entranceIcs.length * exitIcs.length;
 
   for (const entrance of entranceIcs) {
     for (const exit of exitIcs) {
+      if (entrance.id === exit.id) continue;
       count++;
+      if (existingKeys.has(`${entrance.id}__${exit.id}`)) {
+        skipped++;
+        continue;
+      }
       process.stdout.write(`  [${count}/${total}] ${entrance.name} → ${exit.name}... `);
 
       // ETC あり
@@ -145,9 +159,8 @@ async function main() {
     }
   }
 
-  const outPath = path.join(process.cwd(), 'data', 'fares.json');
   fs.writeFileSync(outPath, JSON.stringify(fares, null, 2), 'utf-8');
-  console.log(`\n✅ ${fares.length}件を ${outPath} に保存しました`);
+  console.log(`\n✅ ${fares.length}件を ${outPath} に保存しました（スキップ: ${skipped}件）`);
 }
 
 main().catch(console.error);

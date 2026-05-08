@@ -48,7 +48,6 @@ export type RouteSection = {
   toIcName: string;
   distanceKm: number;
   etcFareYen: number;
-  generalFareYen: number;
   durationMinutes: number;
 };
 
@@ -89,7 +88,6 @@ export type IcCandidateResult = {
   waypointIcNames: string[];
   roadChangeLine: string;
   highwaySteps?: { instruction: string; distanceKm: number }[];
-  generalFareYen: number;
   sections: RouteSection[];
   departureType: 'weekday' | 'midnight' | 'holiday';
   clockTime?: string;
