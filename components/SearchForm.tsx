@@ -37,7 +37,7 @@ const DEFAULT_ENTRANCE_IC_ID = 'gaikan_oizumi';
 
 function computeNearbyIcs(origin: { lat: number; lng: number }): NearbyIc[] {
   return allInterchanges
-    .filter((ic) => ic.entranceAvailable && ic.lat !== 0 && !exitIcIds.includes(ic.id))
+    .filter((ic) => ic.entranceAvailable && ic.lat !== 0)
     .map((ic) => ({
       ...ic,
       distanceKm: Math.round(calculateDistanceKm(origin, { lat: ic.lat, lng: ic.lng }) * 10) / 10,
@@ -81,6 +81,7 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
   // 乗るIC・降りるICともにIDで管理（インデックスはリストから逆引き）
   const [entranceIcId, setEntranceIcId] = useState<string>(DEFAULT_ENTRANCE_IC_ID);
   const [exitIcId, setExitIcId] = useState<string>(DEFAULT_EXIT_IC_ID);
+  const [entranceSearch, setEntranceSearch] = useState('');
   const [exitSearch, setExitSearch] = useState('');
   const [departureType, setDepartureType] = useState<'weekday' | 'midnight' | 'holiday'>('weekday');
   const [clockTime, setClockTime] = useState<string>(() => {
@@ -98,8 +99,14 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
     setAddress(addr ?? label);
   }, []);
 
-  // 乗るIC: 高速に連動せず、最寄り順で表示
-  const entranceIcs = useMemo(() => nearbyIcs.slice(0, 30), [nearbyIcs]);
+  // 乗るIC: 最寄り順30件。検索で選んだICがリストにない場合は先頭に追加
+  const entranceIcs = useMemo(() => {
+    const nearby = nearbyIcs.slice(0, 30);
+    if (nearby.some((ic) => ic.id === entranceIcId)) return nearby;
+    const selected = allInterchanges.find((ic) => ic.id === entranceIcId);
+    if (!selected) return nearby;
+    return [{ ...selected, distanceKm: 0 } as NearbyIc, ...nearby];
+  }, [nearbyIcs, entranceIcId]);
   const entranceIdx = Math.max(0, entranceIcs.findIndex((ic) => ic.id === entranceIcId));
 
   // 降りるIC: 選択中の道路でフィルタ
@@ -115,6 +122,11 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
     setExitIcId(defaultExitIcId);
     setExitSearch('');
   };
+
+  // 入口IC検索
+  const entranceSearchResults = entranceSearch.trim()
+    ? allInterchanges.filter((ic) => ic.entranceAvailable && ic.name.includes(entranceSearch.trim())).slice(0, 10)
+    : [];
 
   // 出口IC検索: 全路線を横断検索（選択時に路線も切り替わる）
   const exitSearchResults = exitSearch.trim()
@@ -211,6 +223,53 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
           hasNext={entranceIdx < entranceIcs.length - 1}
         />
       )}
+
+      {/* 入口IC検索 */}
+      <div style={{ position: 'relative' }}>
+        <input
+          type="text"
+          value={entranceSearch}
+          onChange={(e) => setEntranceSearch(e.target.value)}
+          placeholder="入口ICを検索…"
+          style={{
+            width: '100%', boxSizing: 'border-box',
+            padding: '8px 12px', fontSize: 12,
+            border: '1px solid #d8d3c4', borderRadius: 8,
+            background: '#fff', color: '#1a1810',
+            fontFamily: 'inherit', outline: 'none',
+          }}
+        />
+        {entranceSearchResults.length > 0 && (
+          <div style={{
+            position: 'absolute', top: '100%', left: 0, right: 0, zIndex: 10,
+            background: '#fff', border: '1px solid #d8d3c4', borderRadius: 8,
+            marginTop: 2, boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+            maxHeight: 180, overflowY: 'auto',
+          }}>
+            {entranceSearchResults.map((ic) => (
+              <button
+                key={ic.id}
+                type="button"
+                onClick={() => {
+                  setEntranceIcId(ic.id);
+                  setEntranceSearch('');
+                }}
+                style={{
+                  display: 'block', width: '100%',
+                  padding: '9px 12px', textAlign: 'left',
+                  background: ic.id === entranceIcId ? '#fff8e6' : 'transparent',
+                  border: 'none', borderBottom: '1px solid #f0ece0',
+                  fontSize: 13, color: '#1a1810',
+                  cursor: 'pointer', fontFamily: 'inherit',
+                }}
+              >
+                {ic.name}
+                <span style={{ fontSize: 10, color: '#9f9b8e', marginLeft: 6 }}>{ic.roadName}</span>
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
 
       {/* 入れ替えボタン */}
       <div style={{ display: 'flex', justifyContent: 'center', margin: '-6px 0' }}>
