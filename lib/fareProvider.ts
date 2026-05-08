@@ -15,6 +15,41 @@ function loadFares(): Record<string, any>[] {
   return faresCache!;
 }
 
+/**
+ * NEXCO 公式料金計算式（距離逓減制）
+ * 普通車を基準とし、車種係数を掛けて10円単位に丸める
+ */
+export function calcNexcoFare(distanceKm: number, vehicleType: VehicleType = 'standard'): number {
+  const multiplier: Record<VehicleType, number> = {
+    kei: 0.8,
+    standard: 1.0,
+    middle: 1.2,
+    large: 1.65,
+  };
+
+  const brackets: [number, number][] = [
+    [40,         26.6],
+    [100,        24.6],
+    [200,        23.7],
+    [400,        22.6],
+    [Infinity,   21.2],
+  ];
+
+  let toll = 150; // 基本料金
+  let prev = 0;
+  let remaining = distanceKm;
+
+  for (const [limit, rate] of brackets) {
+    if (remaining <= 0) break;
+    const km = Math.min(remaining, limit - prev);
+    toll += km * rate;
+    remaining -= km;
+    prev = limit;
+  }
+
+  return Math.round(toll * (multiplier[vehicleType] ?? 1.0) / 10) * 10;
+}
+
 export type FareResult = {
   fareYen: number;
   distanceKm: number;
@@ -30,25 +65,25 @@ export async function getHighwayFare(params: {
 }): Promise<FareResult> {
   const fares = loadFares();
 
-  // 1) プリコンピュート済みデータを探す
+  // 1) プリコンピュート済みデータから距離・所要時間を取得し、料金はNEXCO式で再計算
   const found = fares.find(
     (item) =>
       item.fromIcId === params.fromIcId &&
       item.toIcId === params.toIcId &&
-      item.vehicleType === params.vehicleType &&
-      item.useEtc === params.useEtc
+      item.vehicleType === 'standard' &&  // standard で距離を取得
+      item.useEtc === true
   );
 
   if (found) {
     return {
-      fareYen: found.fareYen,
+      fareYen: calcNexcoFare(found.distanceKm, params.vehicleType),
       distanceKm: found.distanceKm,
       durationMinutes: found.durationMinutes,
       source: 'precomputed',
     };
   }
 
-  // 2) Google Routes API でライブ取得 (サーバーサイドのみ)
+  // 2) Google Routes API でライブ取得（距離・時間のみ使用、料金はNEXCO式）
   const apiKey = process.env.GOOGLE_MAPS_API_KEY;
   if (apiKey) {
     try {
@@ -58,14 +93,11 @@ export async function getHighwayFare(params: {
       const to = interchanges.find(ic => ic.id === params.toIcId);
 
       if (from && to && from.lat && to.lat) {
-        const tollPasses = params.useEtc ? ['JP_ETC', 'JP_ETC2'] : [];
         const body = {
           origin: { location: { latLng: { latitude: from.lat, longitude: from.lng } } },
           destination: { location: { latLng: { latitude: to.lat, longitude: to.lng } } },
           travelMode: 'DRIVE',
           routingPreference: 'TRAFFIC_UNAWARE',
-          extraComputations: ['TOLLS'],
-          ...(tollPasses.length > 0 ? { routeModifiers: { tollPasses } } : {}),
         };
 
         const res = await fetch('https://routes.googleapis.com/directions/v2:computeRoutes', {
@@ -73,7 +105,7 @@ export async function getHighwayFare(params: {
           headers: {
             'Content-Type': 'application/json',
             'X-Goog-Api-Key': apiKey,
-            'X-Goog-FieldMask': 'routes.duration,routes.distanceMeters,routes.travelAdvisory.tollInfo',
+            'X-Goog-FieldMask': 'routes.duration,routes.distanceMeters',
           },
           body: JSON.stringify(body),
         });
@@ -83,10 +115,13 @@ export async function getHighwayFare(params: {
           const route = data.routes[0];
           const distanceKm = Math.round((route.distanceMeters ?? 0) / 100) / 10;
           const durationMinutes = Math.round(parseInt(route.duration?.replace('s', '') ?? '0') / 60);
-          let fareYen = parseInt(route.travelAdvisory?.tollInfo?.estimatedPrice?.[0]?.units ?? '0');
-          if (!fareYen) fareYen = Math.round((distanceKm * 35 + 300) / 10) * 10;
 
-          return { fareYen, distanceKm, durationMinutes, source: 'google' };
+          return {
+            fareYen: calcNexcoFare(distanceKm, params.vehicleType),
+            distanceKm,
+            durationMinutes,
+            source: 'google',
+          };
         }
       }
     } catch {
@@ -94,10 +129,10 @@ export async function getHighwayFare(params: {
     }
   }
 
-  // 3) 推定値
+  // 3) 推定値（NEXCO式）
   const estimatedDistanceKm = 130;
   return {
-    fareYen: Math.round((estimatedDistanceKm * 35 + 300) / 10) * 10,
+    fareYen: calcNexcoFare(estimatedDistanceKm, params.vehicleType),
     distanceKm: estimatedDistanceKm,
     durationMinutes: Math.round((estimatedDistanceKm / 80) * 60),
     source: 'estimated',

@@ -40,20 +40,38 @@ type FareRecord = {
   durationMinutes: number;
 };
 
+/** NEXCO公式料金計算（距離逓減制）普通車基準 */
+function calcNexcoFare(distanceKm: number): number {
+  const brackets: [number, number][] = [
+    [40,        26.6],
+    [100,       24.6],
+    [200,       23.7],
+    [400,       22.6],
+    [Infinity,  21.2],
+  ];
+  let toll = 150;
+  let prev = 0;
+  let remaining = distanceKm;
+  for (const [limit, rate] of brackets) {
+    if (remaining <= 0) break;
+    const km = Math.min(remaining, limit - prev);
+    toll += km * rate;
+    remaining -= km;
+    prev = limit;
+  }
+  return Math.round(toll / 10) * 10;
+}
+
+/** Google Routes API で距離・所要時間を取得（料金はNEXCO式で計算） */
 async function getRouteWithToll(
   origin: { lat: number; lng: number },
   destination: { lat: number; lng: number },
-  useEtc: boolean
 ): Promise<{ fareYen: number; distanceKm: number; durationMinutes: number } | null> {
-  const tollPasses = useEtc ? ['JP_ETC', 'JP_ETC2'] : [];
-
   const body = {
     origin: { location: { latLng: { latitude: origin.lat, longitude: origin.lng } } },
     destination: { location: { latLng: { latitude: destination.lat, longitude: destination.lng } } },
     travelMode: 'DRIVE',
     routingPreference: 'TRAFFIC_UNAWARE',
-    extraComputations: ['TOLLS'],
-    ...(tollPasses.length > 0 ? { routeModifiers: { tollPasses } } : {}),
   };
 
   const res = await fetch('https://routes.googleapis.com/directions/v2:computeRoutes', {
@@ -61,7 +79,7 @@ async function getRouteWithToll(
     headers: {
       'Content-Type': 'application/json',
       'X-Goog-Api-Key': API_KEY!,
-      'X-Goog-FieldMask': 'routes.duration,routes.distanceMeters,routes.travelAdvisory.tollInfo',
+      'X-Goog-FieldMask': 'routes.duration,routes.distanceMeters',
     },
     body: JSON.stringify(body),
   });
@@ -75,17 +93,7 @@ async function getRouteWithToll(
   const route = data.routes[0];
   const distanceKm = Math.round((route.distanceMeters ?? 0) / 100) / 10;
   const durationMinutes = Math.round(parseInt(route.duration?.replace('s', '') ?? '0') / 60);
-
-  let fareYen = 0;
-  const tollInfo = route.travelAdvisory?.tollInfo;
-  if (tollInfo?.estimatedPrice?.length > 0) {
-    fareYen = parseInt(tollInfo.estimatedPrice[0].units ?? '0');
-  }
-
-  // 料金取得できなかった場合は距離ベースで推定
-  if (fareYen === 0 && distanceKm > 0) {
-    fareYen = Math.round((distanceKm * 35 + 300) / 10) * 10;
-  }
+  const fareYen = calcNexcoFare(distanceKm);
 
   return { fareYen, distanceKm, durationMinutes };
 }
@@ -135,11 +143,9 @@ async function main() {
       }
       process.stdout.write(`  [${count}/${total}] ${entrance.name} → ${exit.name}... `);
 
-      // ETC あり
       const etcResult = await getRouteWithToll(
         { lat: entrance.lat, lng: entrance.lng },
         { lat: exit.lat, lng: exit.lng },
-        true
       );
 
       if (etcResult) {
