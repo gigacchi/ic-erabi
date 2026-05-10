@@ -594,7 +594,8 @@
     "prevIcId": "tohoku_sano_sa_smart",
     "availableHours": "24h",
     "lat": 36.4020461,
-    "lng": 139.7077112
+    "lng": 139.7077112,
+    "nextIcId": "tohoku_utsunomiya"
   },
   {
     "id": "tohoku_utsunomiya",
@@ -609,7 +610,9 @@
     "directionGroup": "shizuoka",
     "availableHours": "24h",
     "lat": 36.6346982,
-    "lng": 139.8451134
+    "lng": 139.8451134,
+    "prevIcId": "tohoku_tochigi",
+    "nextIcId": "tohoku_yaita"
   },
   {
     "id": "tohoku_yaita",
@@ -624,7 +627,9 @@
     "directionGroup": "shizuoka",
     "availableHours": "24h",
     "lat": 36.7650072,
-    "lng": 139.9340839
+    "lng": 139.9340839,
+    "prevIcId": "tohoku_utsunomiya",
+    "nextIcId": "tohoku_nasu"
   },
   {
     "id": "tohoku_nasu",
@@ -639,7 +644,9 @@
     "directionGroup": "shizuoka",
     "availableHours": "24h",
     "lat": 37.0054196,
-    "lng": 140.0398395
+    "lng": 140.0398395,
+    "prevIcId": "tohoku_yaita",
+    "nextIcId": "tohoku_shirakawa"
   },
   {
     "id": "tohoku_shirakawa",
@@ -654,7 +661,9 @@
     "directionGroup": "shizuoka",
     "availableHours": "24h",
     "lat": 37.1173039,
-    "lng": 140.1641481
+    "lng": 140.1641481,
+    "prevIcId": "tohoku_nasu",
+    "nextIcId": "tohoku_koriyama"
   },
   {
     "id": "tohoku_koriyama",
@@ -669,7 +678,9 @@
     "directionGroup": "shizuoka",
     "availableHours": "24h",
     "lat": 37.4332629,
-    "lng": 140.3448981
+    "lng": 140.3448981,
+    "prevIcId": "tohoku_shirakawa",
+    "nextIcId": "tohoku_fukushima_nishi"
   },
   {
     "id": "tohoku_fukushima_nishi",
@@ -684,7 +695,9 @@
     "directionGroup": "shizuoka",
     "availableHours": "24h",
     "lat": 37.7367965,
-    "lng": 140.4210748
+    "lng": 140.4210748,
+    "prevIcId": "tohoku_koriyama",
+    "nextIcId": "tohoku_shiroishi"
   },
   {
     "id": "tohoku_shiroishi",
@@ -699,7 +712,9 @@
     "directionGroup": "shizuoka",
     "availableHours": "24h",
     "lat": 38.0389458,
-    "lng": 140.6319603
+    "lng": 140.6319603,
+    "prevIcId": "tohoku_fukushima_nishi",
+    "nextIcId": "tohoku_sendai_minami"
   },
   {
     "id": "tohoku_sendai_minami",
@@ -714,7 +729,9 @@
     "directionGroup": "shizuoka",
     "availableHours": "24h",
     "lat": 38.2153097,
-    "lng": 140.8030969
+    "lng": 140.8030969,
+    "prevIcId": "tohoku_shiroishi",
+    "nextIcId": "tohoku_sendai_miyagi"
   },
   {
     "id": "tohoku_sendai_miyagi",
@@ -729,7 +746,9 @@
     "directionGroup": "shizuoka",
     "availableHours": "24h",
     "lat": 38.2581589,
-    "lng": 140.8108554
+    "lng": 140.8108554,
+    "prevIcId": "tohoku_sendai_minami",
+    "nextIcId": "tohoku_izumi"
   },
   {
     "id": "tohoku_izumi",
@@ -744,7 +763,9 @@
     "directionGroup": "shizuoka",
     "availableHours": "24h",
     "lat": 38.3481564,
-    "lng": 140.8750062
+    "lng": 140.8750062,
+    "prevIcId": "tohoku_sendai_miyagi",
+    "nextIcId": "tohoku_furukawa"
   },
   {
     "id": "tohoku_furukawa",
@@ -759,7 +780,9 @@
     "directionGroup": "shizuoka",
     "availableHours": "24h",
     "lat": 38.5906589,
-    "lng": 140.9316794
+    "lng": 140.9316794,
+    "prevIcId": "tohoku_izumi",
+    "nextIcId": "tohoku_wakayagi_kanari"
   },
   {
     "id": "tohoku_wakayagi_kanari",
@@ -774,7 +797,9 @@
     "directionGroup": "shizuoka",
     "availableHours": "24h",
     "lat": 38.1152937,
-    "lng": 140.699151
+    "lng": 140.699151,
+    "prevIcId": "tohoku_furukawa",
+    "nextIcId": "tohoku_ichinoseki"
   },
   {
     "id": "tohoku_ichinoseki",
@@ -789,7 +814,9 @@
     "directionGroup": "shizuoka",
     "availableHours": "24h",
     "lat": 38.9374223,
-    "lng": 141.1015031
+    "lng": 141.1015031,
+    "prevIcId": "tohoku_wakayagi_kanari",
+    "nextIcId": "tohoku_mizusawa"
   },
   {
     "id": "tohoku_mizusawa",
@@ -804,7 +831,9 @@
     "directionGroup": "shizuoka",
     "availableHours": "24h",
     "lat": 39.1711645,
-    "lng": 141.1181556
+    "lng": 141.1181556,
+    "prevIcId": "tohoku_ichinoseki",
+    "nextIcId": "tohoku_kitakami"
   },
   {
     "id": "tohoku_kitakami",
@@ -819,7 +848,9 @@
     "directionGroup": "shizuoka",
     "availableHours": "24h",
     "lat": 39.2983554,
-    "lng": 141.087443
+    "lng": 141.087443,
+    "prevIcId": "tohoku_mizusawa",
+    "nextIcId": "tohoku_hanamaki"
   },
   {
     "id": "tohoku_hanamaki",
@@ -834,7 +865,9 @@
     "directionGroup": "shizuoka",
     "availableHours": "24h",
     "lat": 39.4449956,
-    "lng": 141.1096783
+    "lng": 141.1096783,
+    "prevIcId": "tohoku_kitakami",
+    "nextIcId": "tohoku_morioka"
   },
   {
     "id": "tohoku_morioka",
@@ -849,7 +882,9 @@
     "directionGroup": "shizuoka",
     "availableHours": "24h",
     "lat": 39.711242,
-    "lng": 141.0957371
+    "lng": 141.0957371,
+    "prevIcId": "tohoku_hanamaki",
+    "nextIcId": "tohoku_takizawa"
   },
   {
     "id": "tohoku_takizawa",
@@ -864,7 +899,9 @@
     "directionGroup": "shizuoka",
     "availableHours": "24h",
     "lat": 39.797973,
-    "lng": 141.1121595
+    "lng": 141.1121595,
+    "prevIcId": "tohoku_morioka",
+    "nextIcId": "tohoku_ashiro"
   },
   {
     "id": "tohoku_ashiro",
@@ -879,7 +916,9 @@
     "directionGroup": "shizuoka",
     "availableHours": "24h",
     "lat": 40.1087169,
-    "lng": 141.0483962
+    "lng": 141.0483962,
+    "prevIcId": "tohoku_takizawa",
+    "nextIcId": "tohoku_kosaka"
   },
   {
     "id": "tohoku_kosaka",
@@ -894,7 +933,9 @@
     "directionGroup": "shizuoka",
     "availableHours": "24h",
     "lat": 40.3201175,
-    "lng": 140.7357418
+    "lng": 140.7357418,
+    "prevIcId": "tohoku_ashiro",
+    "nextIcId": "tohoku_owani_hirosaki"
   },
   {
     "id": "tohoku_owani_hirosaki",
@@ -909,7 +950,9 @@
     "directionGroup": "shizuoka",
     "availableHours": "24h",
     "lat": 40.5574418,
-    "lng": 140.5652433
+    "lng": 140.5652433,
+    "prevIcId": "tohoku_kosaka",
+    "nextIcId": "tohoku_aomori"
   },
   {
     "id": "tohoku_aomori",
@@ -924,7 +967,8 @@
     "directionGroup": "shizuoka",
     "availableHours": "24h",
     "lat": 40.7278267,
-    "lng": 140.6131567
+    "lng": 140.6131567,
+    "prevIcId": "tohoku_owani_hirosaki"
   },
   {
     "id": "kanetsu_nerima",
@@ -2517,10 +2561,11 @@
     "exitAvailable": true,
     "area": "山形県村山市",
     "directionGroup": "shizuoka",
-    "nextIcId": "yamagata_higashine",
+    "nextIcId": "yamagata_nishikawa",
     "availableHours": "24h",
     "lat": 38.4867,
-    "lng": 140.3957
+    "lng": 140.3957,
+    "prevIcId": "yamagata_higashine"
   },
   {
     "id": "yamagata_higashine",
@@ -2533,11 +2578,11 @@
     "exitAvailable": true,
     "area": "山形県東根市",
     "directionGroup": "shizuoka",
-    "prevIcId": "yamagata_murayama",
-    "nextIcId": "yamagata_sakuranbo_higashine",
+    "prevIcId": "yamagata_sakuranbo_higashine",
+    "nextIcId": "yamagata_murayama",
     "availableHours": "24h",
     "lat": 38.4264,
-    "lng": 140.3880
+    "lng": 140.388
   },
   {
     "id": "yamagata_sakuranbo_higashine",
@@ -2550,8 +2595,8 @@
     "exitAvailable": true,
     "area": "山形県東根市",
     "directionGroup": "shizuoka",
-    "prevIcId": "yamagata_higashine",
-    "nextIcId": "yamagata_tendo_kita",
+    "prevIcId": "yamagata_tendo_kita",
+    "nextIcId": "yamagata_higashine",
     "availableHours": "24h",
     "lat": 38.4107,
     "lng": 140.3756
@@ -2567,8 +2612,8 @@
     "exitAvailable": true,
     "area": "山形県天童市",
     "directionGroup": "shizuoka",
-    "prevIcId": "yamagata_sakuranbo_higashine",
-    "nextIcId": "yamagata_tendo",
+    "prevIcId": "yamagata_tendo",
+    "nextIcId": "yamagata_sakuranbo_higashine",
     "availableHours": "24h",
     "lat": 38.3894,
     "lng": 140.3596
@@ -2584,8 +2629,8 @@
     "exitAvailable": true,
     "area": "山形県天童市",
     "directionGroup": "shizuoka",
-    "prevIcId": "yamagata_tendo_kita",
-    "nextIcId": "yamagata_yamagata_kita",
+    "prevIcId": "yamagata_yamagata_kita",
+    "nextIcId": "yamagata_tendo_kita",
     "availableHours": "24h",
     "lat": 38.3655,
     "lng": 140.3597
@@ -2601,8 +2646,8 @@
     "exitAvailable": true,
     "area": "山形県山形市",
     "directionGroup": "shizuoka",
-    "prevIcId": "yamagata_tendo",
-    "nextIcId": "yamagata_yamagata_chuo",
+    "prevIcId": "yamagata_yamagata_chuo",
+    "nextIcId": "yamagata_tendo",
     "availableHours": "24h",
     "lat": 38.3033,
     "lng": 140.3319
@@ -2618,11 +2663,11 @@
     "exitAvailable": true,
     "area": "山形県山形市",
     "directionGroup": "shizuoka",
-    "prevIcId": "yamagata_yamagata_kita",
-    "nextIcId": "yamagata_yamagata_zao",
+    "prevIcId": "yamagata_yamagata_zao",
+    "nextIcId": "yamagata_yamagata_kita",
     "availableHours": "24h",
-    "lat": 38.2590,
-    "lng": 140.2980
+    "lat": 38.259,
+    "lng": 140.298
   },
   {
     "id": "yamagata_yamagata_zao",
@@ -2635,8 +2680,8 @@
     "exitAvailable": true,
     "area": "山形県山形市",
     "directionGroup": "shizuoka",
-    "prevIcId": "yamagata_yamagata_chuo",
-    "nextIcId": "yamagata_kaminoyama",
+    "prevIcId": "yamagata_kaminoyama",
+    "nextIcId": "yamagata_yamagata_chuo",
     "availableHours": "24h",
     "lat": 38.2316,
     "lng": 140.2822
@@ -2652,10 +2697,11 @@
     "exitAvailable": true,
     "area": "山形県上山市",
     "directionGroup": "shizuoka",
-    "prevIcId": "yamagata_yamagata_zao",
+    "prevIcId": "yamagata_miyagi_kawasaki",
     "availableHours": "24h",
     "lat": 38.1967,
-    "lng": 140.2652
+    "lng": 140.2652,
+    "nextIcId": "yamagata_yamagata_zao"
   },
   {
     "id": "yamagata_miyagi_kawasaki",
@@ -2670,7 +2716,8 @@
     "directionGroup": "shizuoka",
     "availableHours": "24h",
     "lat": 38.1989,
-    "lng": 140.4587
+    "lng": 140.4587,
+    "nextIcId": "yamagata_kaminoyama"
   },
   {
     "id": "yamagata_nishikawa",
@@ -2686,7 +2733,8 @@
     "nextIcId": "yamagata_gassan",
     "availableHours": "24h",
     "lat": 38.4398,
-    "lng": 140.0573
+    "lng": 140.0573,
+    "prevIcId": "yamagata_murayama"
   },
   {
     "id": "yamagata_gassan",
@@ -2735,7 +2783,7 @@
     "directionGroup": "shizuoka",
     "prevIcId": "yamagata_shonai_asahi",
     "availableHours": "24h",
-    "lat": 38.7370,
+    "lat": 38.737,
     "lng": 139.8258
   }
 ]
