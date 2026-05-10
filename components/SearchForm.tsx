@@ -154,12 +154,11 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const entrance = entranceIcs[entranceIdx];
     const exit = exitIcs[exitIdx];
     if (!entrance || !exit) return;
     onSearch({
       origin: { lat: origin.lat, lng: origin.lng, label: origin.label, address },
-      entranceIcId: entrance.id,
+      entranceIcId: entranceIcId,
       exitIcId: exit.id,
       vehicleType: 'standard',
       useEtc: true,
@@ -170,6 +169,24 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
 
   const entrance = entranceIcs[entranceIdx];
   const exit = exitIcs[exitIdx];
+
+  // 入口IC矢印ナビ: 同一路線のprevIcId/nextIcIdを優先、なければ近傍リスト
+  const entrancePrevId = (() => {
+    const cur = allInterchanges.find((ic) => ic.id === entranceIcId);
+    if (cur?.prevIcId) {
+      const prev = allInterchanges.find((ic) => ic.id === cur.prevIcId && ic.entranceAvailable);
+      if (prev) return prev.id;
+    }
+    return entranceIcs[entranceIdx - 1]?.id ?? null;
+  })();
+  const entranceNextId = (() => {
+    const cur = allInterchanges.find((ic) => ic.id === entranceIcId);
+    if (cur?.nextIcId) {
+      const next = allInterchanges.find((ic) => ic.id === cur.nextIcId && ic.entranceAvailable);
+      if (next) return next.id;
+    }
+    return entranceIcs[entranceIdx + 1]?.id ?? null;
+  })();
 
   return (
     <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
@@ -217,10 +234,10 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
           icName={entrance.name}
           icRoadName={entrance.roadName}
           info={`現在地から ${entrance.distanceKm.toFixed(1)} km`}
-          onPrev={() => setEntranceIcId(entranceIcs[Math.max(0, entranceIdx - 1)].id)}
-          onNext={() => setEntranceIcId(entranceIcs[Math.min(entranceIcs.length - 1, entranceIdx + 1)].id)}
-          hasPrev={entranceIdx > 0}
-          hasNext={entranceIdx < entranceIcs.length - 1}
+          onPrev={() => entrancePrevId && setEntranceIcId(entrancePrevId)}
+          onNext={() => entranceNextId && setEntranceIcId(entranceNextId)}
+          hasPrev={!!entrancePrevId}
+          hasNext={!!entranceNextId}
         />
       )}
 
