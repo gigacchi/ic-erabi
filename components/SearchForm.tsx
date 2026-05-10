@@ -25,8 +25,9 @@ const HIGHWAY_BUTTONS = [
   { roadId: 'banetsu',     label: '磐越道',   defaultExitIcId: 'banetsu_aizu_wakamatsu' },
   { roadId: 'chuo',        label: '中央道',   defaultExitIcId: 'chuo_kofu_showa' },
   { roadId: 'joshinetsu',  label: '上信越',   defaultExitIcId: 'joshinetsu_nagano' },
-  { roadId: 'hokuriku',    label: '北陸道',   defaultExitIcId: 'hokuriku_sanjo_tsubame' },
-  { roadId: 'tomei',       label: '東名',     defaultExitIcId: 'tomei_numazu' },
+  { roadId: 'hokuriku',      label: '北陸道',   defaultExitIcId: 'hokuriku_sanjo_tsubame' },
+  { roadId: 'tomei',         label: '東名',     defaultExitIcId: 'tomei_numazu' },
+  { roadId: 'odawara_atsugi', label: '小田原厚木', defaultExitIcId: 'odawara_atsugi_odawara' },
 ] as const;
 
 const DEFAULT_ROAD_ID = 'tohoku';

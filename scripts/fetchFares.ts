@@ -109,7 +109,7 @@ async function main() {
   // 降りるIC: 高速ボタンで使用する各路線の exitAvailable な IC すべてが対象
   const TARGET_ROAD_IDS = new Set([
     'tohoku', 'yamagata', 'hokuriku', 'tomei', 'shin_tomei',
-    'joban', 'banetsu', 'tohoku_chuo', 'joshinetsu', 'chuo',
+    'joban', 'banetsu', 'tohoku_chuo', 'joshinetsu', 'chuo', 'odawara_atsugi',
   ]);
   const exitIcs = interchanges.filter(
     ic => ic.exitAvailable && ic.lat !== 0 && TARGET_ROAD_IDS.has(ic.roadId)
