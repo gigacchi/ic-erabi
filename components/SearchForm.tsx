@@ -18,12 +18,15 @@ const DEFAULT_ORIGIN = {
 
 // 固定の高速ボタン
 const HIGHWAY_BUTTONS = [
-  { roadId: 'tohoku',    label: '東北道', defaultExitIcId: 'tohoku_izumi' },
-  { roadId: 'yamagata',  label: '山形道', defaultExitIcId: 'yamagata_yamagata_zao' },
-  { roadId: 'joban',     label: '常磐道', defaultExitIcId: 'joban_iwaki_chuo' },
-  { roadId: 'banetsu',   label: '磐越道', defaultExitIcId: 'banetsu_aizu_wakamatsu' },
-  { roadId: 'hokuriku',  label: '北陸道', defaultExitIcId: 'hokuriku_sanjo_tsubame' },
-  { roadId: 'tomei',     label: '東名',   defaultExitIcId: 'tomei_numazu' },
+  { roadId: 'tohoku',      label: '東北道',   defaultExitIcId: 'tohoku_izumi' },
+  { roadId: 'tohoku_chuo', label: '東北中央', defaultExitIcId: 'tohoku_chuo_yonezawa_kita' },
+  { roadId: 'yamagata',    label: '山形道',   defaultExitIcId: 'yamagata_yamagata_zao' },
+  { roadId: 'joban',       label: '常磐道',   defaultExitIcId: 'joban_iwaki_chuo' },
+  { roadId: 'banetsu',     label: '磐越道',   defaultExitIcId: 'banetsu_aizu_wakamatsu' },
+  { roadId: 'chuo',        label: '中央道',   defaultExitIcId: 'chuo_kofu_showa' },
+  { roadId: 'joshinetsu',  label: '上信越',   defaultExitIcId: 'joshinetsu_nagano' },
+  { roadId: 'hokuriku',    label: '北陸道',   defaultExitIcId: 'hokuriku_sanjo_tsubame' },
+  { roadId: 'tomei',       label: '東名',     defaultExitIcId: 'tomei_numazu' },
 ] as const;
 
 const DEFAULT_ROAD_ID = 'tohoku';

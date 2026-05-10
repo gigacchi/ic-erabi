@@ -14,7 +14,9 @@ export type RoadId =
   | 'banetsu'
   | 'hokuriku'
   | 'higashikanto'
-  | 'shuto';
+  | 'shuto'
+  | 'tohoku_chuo'
+  | 'joshinetsu';
 
 export type LatLng = {
   lat: number;
