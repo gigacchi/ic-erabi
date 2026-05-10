@@ -16,10 +16,12 @@ const DEFAULT_ORIGIN = {
   address: '東京都新宿区西新宿',
 };
 
-// 固定の高速ボタン（3路線のみ）
+// 固定の高速ボタン
 const HIGHWAY_BUTTONS = [
   { roadId: 'tohoku',    label: '東北道', defaultExitIcId: 'tohoku_izumi' },
   { roadId: 'yamagata',  label: '山形道', defaultExitIcId: 'yamagata_yamagata_zao' },
+  { roadId: 'joban',     label: '常磐道', defaultExitIcId: 'joban_iwaki_chuo' },
+  { roadId: 'banetsu',   label: '磐越道', defaultExitIcId: 'banetsu_aizu_wakamatsu' },
   { roadId: 'hokuriku',  label: '北陸道', defaultExitIcId: 'hokuriku_sanjo_tsubame' },
   { roadId: 'tomei',     label: '東名',   defaultExitIcId: 'tomei_numazu' },
 ] as const;
@@ -372,10 +374,10 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
         )}
       </div>
 
-      {/* 高速を指定（固定3路線）— 出口OUTの下 */}
+      {/* 高速を指定 — 出口OUTの下 */}
       <div>
         <div style={{ fontSize: 11, fontWeight: 600, color: '#6f6a5a', marginBottom: 6 }}>高速を指定</div>
-        <div style={{ display: 'flex', gap: 6 }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
           {HIGHWAY_BUTTONS.map(({ roadId, label, defaultExitIcId }) => {
             const isSelected = selectedRoadId === roadId;
             return (
@@ -384,7 +386,8 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
                 type="button"
                 onClick={() => handleHighwaySelect(roadId, defaultExitIcId)}
                 style={{
-                  flex: 1,
+                  flex: '1 1 calc(33.333% - 4px)',
+                  minWidth: 80,
                   padding: '8px 4px',
                   fontSize: 12, fontWeight: isSelected ? 700 : 500,
                   borderRadius: 8,
