@@ -31,6 +31,9 @@ export type Interchange = {
   directionGroup: string;
   prevIcId?: string;
   nextIcId?: string;
+  /** 路線端で接続するJCT先のIC（別路線）。prev/nextが無いときの矢印ナビ先 */
+  junctionPrevIcId?: string;
+  junctionNextIcId?: string;
   availableHours: string;
   notes?: string;
 };

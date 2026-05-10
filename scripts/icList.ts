@@ -12,6 +12,8 @@ export type IcSeed = {
   directionGroup: string;
   prevIcId?: string;
   nextIcId?: string;
+  junctionPrevIcId?: string;
+  junctionNextIcId?: string;
   availableHours: string;
   notes?: string;
   geocodeQuery: string; // Google Geocoding に渡すクエリ
@@ -48,7 +50,7 @@ export const IC_LIST: IcSeed[] = [
   { id: "shin_tomei_shin_shizuoka", name: "新静岡IC", roadId: "shin_tomei", roadName: "新東名高速道路", isSmart: false, etcOnly: false, entranceAvailable: true, exitAvailable: true, area: "静岡県静岡市葵区", directionGroup: "shizuoka", prevIcId: "shin_tomei_shizuoka_sa_smart", availableHours: "24h", notes: "静岡市北側・葵区方面", geocodeQuery: "新静岡インターチェンジ 新東名高速道路" },
 
   // ========== 東北自動車道 ==========
-  { id: "tohoku_kawaguchi", name: "川口IC", roadId: "tohoku", roadName: "東北自動車道", isSmart: false, etcOnly: false, entranceAvailable: true, exitAvailable: true, area: "埼玉県川口市", directionGroup: "shizuoka", nextIcId: "tohoku_urawa", availableHours: "24h", geocodeQuery: "川口インターチェンジ 東北自動車道" },
+  { id: "tohoku_kawaguchi", name: "川口IC", roadId: "tohoku", roadName: "東北自動車道", isSmart: false, etcOnly: false, entranceAvailable: true, exitAvailable: true, area: "埼玉県川口市", directionGroup: "shizuoka", nextIcId: "tohoku_urawa", junctionPrevIcId: "gaikan_oizumi", availableHours: "24h", notes: "東北道の南端、川口JCTで首都高/外環接続", geocodeQuery: "川口インターチェンジ 東北自動車道" },
   { id: "tohoku_urawa", name: "浦和IC", roadId: "tohoku", roadName: "東北自動車道", isSmart: false, etcOnly: false, entranceAvailable: true, exitAvailable: true, area: "埼玉県さいたま市", directionGroup: "shizuoka", prevIcId: "tohoku_kawaguchi", nextIcId: "tohoku_iwatsuki", availableHours: "24h", geocodeQuery: "浦和インターチェンジ 東北自動車道" },
   { id: "tohoku_iwatsuki", name: "岩槻IC", roadId: "tohoku", roadName: "東北自動車道", isSmart: false, etcOnly: false, entranceAvailable: true, exitAvailable: true, area: "埼玉県さいたま市岩槻区", directionGroup: "shizuoka", prevIcId: "tohoku_urawa", nextIcId: "tohoku_kuki", availableHours: "24h", geocodeQuery: "岩槻インターチェンジ 東北自動車道" },
   { id: "tohoku_kuki", name: "久喜IC", roadId: "tohoku", roadName: "東北自動車道", isSmart: false, etcOnly: false, entranceAvailable: true, exitAvailable: true, area: "埼玉県久喜市", directionGroup: "shizuoka", prevIcId: "tohoku_iwatsuki", nextIcId: "tohoku_kazo", availableHours: "24h", geocodeQuery: "久喜インターチェンジ 東北自動車道" },
@@ -202,7 +204,7 @@ export const IC_LIST: IcSeed[] = [
   { id: "odawara_atsugi_odawara", name: "小田原IC", roadId: "odawara_atsugi", roadName: "小田原厚木道路", isSmart: false, etcOnly: false, entranceAvailable: true, exitAvailable: true, area: "神奈川県小田原市", directionGroup: "shizuoka", prevIcId: "odawara_atsugi_odawara_higashi", availableHours: "24h", notes: "小田原厚木道路の西端", geocodeQuery: "小田原インターチェンジ 小田原厚木道路" },
 
   // ========== 山形自動車道（村田JCT→鶴岡JCT 順）==========
-  { id: "yamagata_miyagi_kawasaki", name: "宮城川崎IC", roadId: "yamagata", roadName: "山形自動車道", isSmart: false, etcOnly: false, entranceAvailable: true, exitAvailable: true, area: "宮城県柴田郡川崎町", directionGroup: "shizuoka", nextIcId: "yamagata_sasaya", availableHours: "24h", notes: "山形道の東端、村田JCTで東北道接続", geocodeQuery: "宮城川崎インターチェンジ 山形自動車道" },
+  { id: "yamagata_miyagi_kawasaki", name: "宮城川崎IC", roadId: "yamagata", roadName: "山形自動車道", isSmart: false, etcOnly: false, entranceAvailable: true, exitAvailable: true, area: "宮城県柴田郡川崎町", directionGroup: "shizuoka", nextIcId: "yamagata_sasaya", junctionPrevIcId: "tohoku_sendai_minami", availableHours: "24h", notes: "山形道の東端、村田JCTで東北道接続", geocodeQuery: "宮城川崎インターチェンジ 山形自動車道" },
   { id: "yamagata_sasaya", name: "笹谷IC", roadId: "yamagata", roadName: "山形自動車道", isSmart: false, etcOnly: false, entranceAvailable: true, exitAvailable: true, area: "宮城県柴田郡川崎町", directionGroup: "shizuoka", prevIcId: "yamagata_miyagi_kawasaki", nextIcId: "yamagata_sekizawa", availableHours: "24h", geocodeQuery: "笹谷インターチェンジ 山形自動車道" },
   { id: "yamagata_sekizawa", name: "関沢IC", roadId: "yamagata", roadName: "山形自動車道", isSmart: false, etcOnly: false, entranceAvailable: true, exitAvailable: true, area: "山形県山形市", directionGroup: "shizuoka", prevIcId: "yamagata_sasaya", nextIcId: "yamagata_yamagata_zao", availableHours: "24h", geocodeQuery: "関沢インターチェンジ 山形自動車道" },
   { id: "yamagata_yamagata_zao", name: "山形蔵王IC", roadId: "yamagata", roadName: "山形自動車道", isSmart: false, etcOnly: false, entranceAvailable: true, exitAvailable: true, area: "山形県山形市", directionGroup: "shizuoka", prevIcId: "yamagata_sekizawa", nextIcId: "yamagata_yamagata_chuo", availableHours: "24h", geocodeQuery: "山形蔵王パーキングエリア 山形自動車道" },

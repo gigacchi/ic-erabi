@@ -170,22 +170,26 @@ export default function SearchForm({ onSearch, loading }: SearchFormProps) {
   const entrance = entranceIcs[entranceIdx];
   const exit = exitIcs[exitIdx];
 
-  // 入口IC矢印ナビ: 同一路線のprevIcId/nextIcIdを優先、なければ近傍リスト
+  // 入口IC矢印ナビ:
+  //   1) 同一路線のprevIcId/nextIcId
+  //   2) 路線端ならjunctionPrevIcId/junctionNextIcId（別路線への接続）
+  //   3) 近傍リスト
+  const findEntrance = (id: string | undefined) =>
+    id ? allInterchanges.find((ic) => ic.id === id && ic.entranceAvailable) : undefined;
+
   const entrancePrevId = (() => {
     const cur = allInterchanges.find((ic) => ic.id === entranceIcId);
-    if (cur?.prevIcId) {
-      const prev = allInterchanges.find((ic) => ic.id === cur.prevIcId && ic.entranceAvailable);
-      if (prev) return prev.id;
-    }
-    return entranceIcs[entranceIdx - 1]?.id ?? null;
+    return findEntrance(cur?.prevIcId)?.id
+        ?? findEntrance(cur?.junctionPrevIcId)?.id
+        ?? entranceIcs[entranceIdx - 1]?.id
+        ?? null;
   })();
   const entranceNextId = (() => {
     const cur = allInterchanges.find((ic) => ic.id === entranceIcId);
-    if (cur?.nextIcId) {
-      const next = allInterchanges.find((ic) => ic.id === cur.nextIcId && ic.entranceAvailable);
-      if (next) return next.id;
-    }
-    return entranceIcs[entranceIdx + 1]?.id ?? null;
+    return findEntrance(cur?.nextIcId)?.id
+        ?? findEntrance(cur?.junctionNextIcId)?.id
+        ?? entranceIcs[entranceIdx + 1]?.id
+        ?? null;
   })();
 
   return (

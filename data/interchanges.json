@@ -439,7 +439,9 @@
     "area": "埼玉県川口市",
     "directionGroup": "shizuoka",
     "nextIcId": "tohoku_urawa",
+    "junctionPrevIcId": "gaikan_oizumi",
     "availableHours": "24h",
+    "notes": "東北道の南端、川口JCTで首都高/外環接続",
     "lat": 35.8509793,
     "lng": 139.7217857
   },
@@ -2518,6 +2520,7 @@
     "area": "宮城県柴田郡川崎町",
     "directionGroup": "shizuoka",
     "nextIcId": "yamagata_sasaya",
+    "junctionPrevIcId": "tohoku_sendai_minami",
     "availableHours": "24h",
     "notes": "山形道の東端、村田JCTで東北道接続",
     "lat": 38.1989,
