@@ -35,35 +35,60 @@ async function sleep(ms: number) {
 }
 
 async function main() {
-  console.log(`${IC_LIST.length}件のICをジオコーディングします...`);
+  const outPath = path.join(process.cwd(), 'data', 'interchanges.json');
 
-  const result = [];
+  // 既存データを読み込み（座標スキップとマージ用）
+  let existing: any[] = [];
+  if (fs.existsSync(outPath)) {
+    existing = JSON.parse(fs.readFileSync(outPath, 'utf-8'));
+    console.log(`既存データ: ${existing.length}件`);
+  }
+  const existingMap = new Map(existing.map((ic) => [ic.id, ic]));
+  const seedIds = new Set(IC_LIST.map((ic) => ic.id));
+
+  console.log(`${IC_LIST.length}件のICを処理します（既存座標があればAPI呼び出しをスキップ）...`);
+
+  const result: any[] = [];
 
   for (const ic of IC_LIST) {
+    const prev = existingMap.get(ic.id);
+    const { geocodeQuery: _gq, ...icSeed } = ic;
+
+    // 既存に座標があればAPIをスキップ、メタ情報（prev/next等）のみ更新
+    if (prev && prev.lat && prev.lng) {
+      result.push({ ...icSeed, lat: prev.lat, lng: prev.lng });
+      console.log(`  ${ic.name}: ✓ 既存座標維持 (${prev.lat.toFixed(4)}, ${prev.lng.toFixed(4)})`);
+      continue;
+    }
+
     process.stdout.write(`  ${ic.name} (${ic.roadName})... `);
     const coords = await geocode(ic.geocodeQuery);
 
     if (coords) {
-      const { geocodeQuery: _, ...icWithoutQuery } = ic;
-      result.push({ ...icWithoutQuery, lat: coords.lat, lng: coords.lng });
+      result.push({ ...icSeed, lat: coords.lat, lng: coords.lng });
       console.log(`✓ ${coords.lat.toFixed(4)}, ${coords.lng.toFixed(4)}`);
     } else {
-      // フォールバック: 既存データから座標を引き継ぐ
-      const { geocodeQuery: _, ...icWithoutQuery } = ic;
-      result.push({ ...icWithoutQuery, lat: 0, lng: 0 });
-      console.log('✗ 座標取得失敗 (lat/lng=0 でスキップ)');
+      result.push({ ...icSeed, lat: 0, lng: 0 });
+      console.log('✗ 座標取得失敗 (lat/lng=0)');
     }
 
-    await sleep(200); // API レート制限対策
+    await sleep(200);
   }
 
-  const outPath = path.join(process.cwd(), 'data', 'interchanges.json');
+  // icList.ts に未登録だが既存データにあるIC（手動追加分）は保持
+  for (const ic of existing) {
+    if (!seedIds.has(ic.id)) {
+      result.push(ic);
+      console.log(`  ${ic.name}: ✓ 既存データ保持（icList.ts未登録）`);
+    }
+  }
+
   fs.writeFileSync(outPath, JSON.stringify(result, null, 2), 'utf-8');
   console.log(`\n✅ ${result.length}件を ${outPath} に保存しました`);
 
-  const failed = result.filter(ic => ic.lat === 0).length;
+  const failed = result.filter((ic) => ic.lat === 0).length;
   if (failed > 0) {
-    console.log(`⚠ ${failed}件の座標取得に失敗しました。手動で座標を確認してください。`);
+    console.log(`⚠ ${failed}件の座標取得に失敗しました。手動で確認してください。`);
   }
 }
 
