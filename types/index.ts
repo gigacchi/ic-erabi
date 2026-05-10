@@ -9,7 +9,12 @@ export type RoadId =
   | 'tomei'
   | 'shin_tomei'
   | 'odawara_atsugi'
-  | 'yamagata';
+  | 'yamagata'
+  | 'joban'
+  | 'banetsu'
+  | 'hokuriku'
+  | 'higashikanto'
+  | 'shuto';
 
 export type LatLng = {
   lat: number;
