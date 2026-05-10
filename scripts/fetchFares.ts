@@ -106,9 +106,11 @@ async function main() {
   const interchangesPath = path.join(process.cwd(), 'data', 'interchanges.json');
   const interchanges: Interchange[] = JSON.parse(fs.readFileSync(interchangesPath, 'utf-8'));
 
-  // 降りるIC: 現在の高速ボタンで使用する各路線の代表ICと隣接IC
-  // 東北道, 山形道, 北陸道, 東名 の exitAvailable な IC すべてが対象
-  const TARGET_ROAD_IDS = new Set(['tohoku', 'yamagata', 'hokuriku', 'tomei', 'shin_tomei']);
+  // 降りるIC: 高速ボタンで使用する各路線の exitAvailable な IC すべてが対象
+  const TARGET_ROAD_IDS = new Set([
+    'tohoku', 'yamagata', 'hokuriku', 'tomei', 'shin_tomei',
+    'joban', 'banetsu', 'tohoku_chuo', 'joshinetsu', 'chuo',
+  ]);
   const exitIcs = interchanges.filter(
     ic => ic.exitAvailable && ic.lat !== 0 && TARGET_ROAD_IDS.has(ic.roadId)
   );
